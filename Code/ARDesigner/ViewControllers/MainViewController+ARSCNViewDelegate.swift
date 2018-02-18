@@ -29,8 +29,6 @@ extension MainViewController: ARSCNViewDelegate {
         planeNode.eulerAngles.x = -.pi / 2
         plane.width = 0.3
         plane.height = 0.3
-        
-        planes.append(planeNode)
 
         node.addChildNode(planeNode)
     }
