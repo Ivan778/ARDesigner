@@ -20,11 +20,8 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-jR-ZlU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6L-ng-ljD">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r6L-ng-ljD">
                                 <rect key="frame" x="310" y="20" width="51" height="31"/>
-                                <connections>
-                                    <action selector="switched:" destination="Ld3-Ue-aQ9" eventType="valueChanged" id="lm1-ut-aWJ"/>
-                                </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,6 +36,7 @@
                         <viewLayoutGuide key="safeArea" id="fe1-gE-ma2"/>
                     </view>
                     <connections>
+                        <outlet property="s" destination="r6L-ng-ljD" id="Vbw-8T-Bzm"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                     </connections>
                 </viewController>
