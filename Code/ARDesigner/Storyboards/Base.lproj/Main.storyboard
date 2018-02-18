@@ -20,23 +20,17 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BvM-jR-ZlU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="r6L-ng-ljD">
-                                <rect key="frame" x="310" y="20" width="51" height="31"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
-                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="r6L-ng-ljD" secondAttribute="trailing" constant="16" id="9pT-VP-7LA"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
-                            <constraint firstItem="r6L-ng-ljD" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" id="Sy2-EB-rK9"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fe1-gE-ma2"/>
                     </view>
                     <connections>
-                        <outlet property="s" destination="r6L-ng-ljD" id="Vbw-8T-Bzm"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                     </connections>
                 </viewController>
