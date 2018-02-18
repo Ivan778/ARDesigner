@@ -12,6 +12,7 @@ import ARKit
 
 class MainViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
+    var planes = [SCNNode]()
 //    var s = SphereNode()
     
     // MARK: - viewDidLoad
@@ -24,7 +25,55 @@ class MainViewController: UIViewController {
 //        button.addTarget(self, action: #selector(touchedButton(sender:)), for: .touchUpInside)
 //        view.addSubview(button)
         
+        addTapGestureToSceneView()
         configureLighting()
+    }
+    @IBAction func switched(_ sender: Any) {
+        if (sender as! UISwitch).isOn {
+            for plane in planes {
+                plane.isHidden = true
+            }
+        } else {
+            for plane in planes {
+                plane.isHidden = false
+            }
+        }
+    }
+    
+    func addTapGestureToSceneView() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addShipToSceneView(withGestureRecognizer:)))
+        sceneView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    var scale: Float = 0.1
+    @objc func addShipToSceneView(withGestureRecognizer recognizer: UIGestureRecognizer) {
+        let tapLocation = recognizer.location(in: sceneView)
+        let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
+        
+        guard let hitTestResult = hitTestResults.first else { return }
+        let translation = hitTestResult.worldTransform.translation
+        let x = translation.x
+        let y = translation.y
+        let z = translation.z
+        
+        guard let shipScene = SCNScene(named: "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"),
+            let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
+            else { return }
+        
+        let array = [shipNode.boundingBox.max.x, shipNode.boundingBox.max.y, shipNode.boundingBox.max.z]
+        let max = array.max()!
+        var m = max
+        
+        while (m > 0.5) {
+            m /= 2
+        }
+        
+        scale = m / max
+        shipNode.scale = SCNVector3(scale, scale, scale)
+        //shipNode.eulerAngles.x = .pi/2
+        
+        shipNode.position = SCNVector3(x,y,z)
+        sceneView.scene.rootNode.addChildNode(shipNode)
     }
     
 //    @objc func touchedButton(sender: Any) {

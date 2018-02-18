@@ -18,7 +18,7 @@ extension float4x4 {
 
 extension UIColor {
     open class var transparentLightBlue: UIColor {
-        return UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 0.50)
+        return UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 0.3)
     }
 }
 
@@ -35,3 +35,5 @@ extension SCNVector3 {
         return SCNVector3(column.x, column.y, column.z)
     }
 }
+
+
