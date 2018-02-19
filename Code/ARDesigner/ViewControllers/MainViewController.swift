@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     
     func addGesturesToSceneView() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addModelToScene(withGestureRecognizer:)))
-        let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(removeModelFromScene(withGestureRecognizer:)))
+        let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(removeAndMoveModelFromScene(withGestureRecognizer:)))
         
         sceneView.addGestureRecognizer(tapGestureRecognizer)
         sceneView.addGestureRecognizer(longTapGestureRecognizer)
@@ -54,6 +54,10 @@ class MainViewController: UIViewController {
         
         // Pause the view's session
         sceneView.session.pause()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }

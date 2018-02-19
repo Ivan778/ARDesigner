@@ -18,7 +18,7 @@ extension float4x4 {
 
 extension UIColor {
     open class var transparentLightBlue: UIColor {
-        return UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 0.3)
+        return UIColor(red: 90/255, green: 200/255, blue: 250/255, alpha: 0.4)
     }
 }
 
