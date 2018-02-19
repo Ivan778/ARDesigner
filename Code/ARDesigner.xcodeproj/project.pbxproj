@@ -17,7 +17,7 @@
 		2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6282038632300FB0CAB /* Extensions.swift */; };
 		2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */; };
 		2CF8D63C2039F5E400FB0CAB /* MainViewController+AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63B2039F5E400FB0CAB /* MainViewController+AddModel.swift */; };
-		2CF8D63E2039F66200FB0CAB /* MainViewController+RemoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveModel.swift */; };
+		2CF8D63E2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift */; };
 		2CF8D6402039F6BF00FB0CAB /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63F2039F6BF00FB0CAB /* ModelManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		2CF8D6282038632300FB0CAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
 		2CF8D63B2039F5E400FB0CAB /* MainViewController+AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+AddModel.swift"; sourceTree = "<group>"; };
-		2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+RemoveModel.swift"; sourceTree = "<group>"; };
+		2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+RemoveAndMoveModel.swift"; sourceTree = "<group>"; };
 		2CF8D63F2039F6BF00FB0CAB /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 				2C3C69A22029F84B009BE216 /* MainViewController.swift */,
 				2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */,
 				2CF8D63B2039F5E400FB0CAB /* MainViewController+AddModel.swift */,
-				2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveModel.swift */,
+				2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 				2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */,
 				2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */,
 				2CF8D63C2039F5E400FB0CAB /* MainViewController+AddModel.swift in Sources */,
-				2CF8D63E2039F66200FB0CAB /* MainViewController+RemoveModel.swift in Sources */,
+				2CF8D63E2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

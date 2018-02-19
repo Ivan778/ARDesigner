@@ -27,8 +27,8 @@ extension MainViewController {
         let alertController = UIAlertController(title: "Action", message: "Choose action:", preferredStyle: .alert)
         
         let moveAction = UIAlertAction(title: "Move", style: UIAlertActionStyle.default) { UIAlertAction in
-            let object = ModelManager.parentNode(node: (res.first?.node)!)
-            
+            self.objectForMoving = ModelManager.parentNode(node: (res.first?.node)!)
+            self.shouldMoveModel = true
         }
         
         let removeAction = UIAlertAction(title: "Remove", style: UIAlertActionStyle.default) { UIAlertAction in

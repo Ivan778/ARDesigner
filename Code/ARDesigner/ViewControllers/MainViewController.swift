@@ -12,6 +12,8 @@ import ARKit
 
 class MainViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
+    var shouldMoveModel = false
+    var objectForMoving = SCNNode()
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
