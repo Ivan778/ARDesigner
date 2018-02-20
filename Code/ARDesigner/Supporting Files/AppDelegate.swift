@@ -13,9 +13,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    //ТУТ ФУНКЦИЮ ДЛЯ ПЕРЕНОСА ПАПКИ ИЗ ПРОЕКТА В УСТРОЙСТВО
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+//        // Override point for customization after application launch.
+//        let filemgr = FileManager.default
+//        let dirPaths = filemgr.urls(for: .documentDirectory, in: .userDomainMask)
+//        let docsURL = dirPaths[0]
+//
+//        let folderPath = Bundle.main.resourceURL!.appendingPathComponent("art.scnassets").path
+//        print(folderPath)
+//        let docsFolder = docsURL.appendingPathComponent("art.scnassets").path
+//        //copyFiles(pathFromBundle: folderPath, pathDestDocs: docsFolder)
+        
+        DirectoryManager.checkAvailabilityOftheFolder()
+        DirectoryManager.copyDocuments()
+        
         return true
     }
 
