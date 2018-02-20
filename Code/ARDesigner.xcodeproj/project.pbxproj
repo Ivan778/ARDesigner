@@ -13,12 +13,16 @@
 		2C3C69A62029F84B009BE216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A42029F84B009BE216 /* Main.storyboard */; };
 		2C3C69A82029F84B009BE216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A72029F84B009BE216 /* Assets.xcassets */; };
 		2C3C69AB2029F84B009BE216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A92029F84B009BE216 /* LaunchScreen.storyboard */; };
+		2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */; };
+		2C77BBA1203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */; };
+		2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA2203CBB24001EF77F /* ModelManager.swift */; };
 		2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */; };
 		2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6282038632300FB0CAB /* Extensions.swift */; };
 		2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */; };
-		2CF8D63C2039F5E400FB0CAB /* MainViewController+AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63B2039F5E400FB0CAB /* MainViewController+AddModel.swift */; };
-		2CF8D63E2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift */; };
-		2CF8D6402039F6BF00FB0CAB /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D63F2039F6BF00FB0CAB /* ModelManager.swift */; };
+		C730BC0D2039D093005ACC4F /* AddModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C730BC0C2039D093005ACC4F /* AddModelViewController.swift */; };
+		C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7394F21203C5F3F002B6494 /* DirectoryManager.swift */; };
+		C76E1093203CBAA000E75A81 /* models in Resources */ = {isa = PBXBuildFile; fileRef = C76E1092203CBA9F00E75A81 /* models */; };
+		C789F58A203AE4640053DC4D /* ModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C789F589203AE4640053DC4D /* ModelTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +34,16 @@
 		2C3C69A72029F84B009BE216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3C69AA2029F84B009BE216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3C69AC2029F84B009BE216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+AddModel.swift"; sourceTree = "<group>"; };
+		2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+RemoveAndMoveModel.swift"; sourceTree = "<group>"; };
+		2C77BBA2203CBB24001EF77F /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		2CF8D6282038632300FB0CAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
-		2CF8D63B2039F5E400FB0CAB /* MainViewController+AddModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+AddModel.swift"; sourceTree = "<group>"; };
-		2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+RemoveAndMoveModel.swift"; sourceTree = "<group>"; };
-		2CF8D63F2039F6BF00FB0CAB /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		C730BC0C2039D093005ACC4F /* AddModelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModelViewController.swift; sourceTree = "<group>"; };
+		C7394F21203C5F3F002B6494 /* DirectoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryManager.swift; sourceTree = "<group>"; };
+		C76E1092203CBA9F00E75A81 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
+		C789F589203AE4640053DC4D /* ModelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModelTableViewCell.swift; path = ARDesigner/ViewControllers/ModelTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		2C3C699D2029F84B009BE216 /* ARDesigner */ = {
 			isa = PBXGroup;
 			children = (
+				C76E1092203CBA9F00E75A81 /* models */,
 				2CF8D6242038620B00FB0CAB /* Storyboards */,
 				2CF8D623203861F100FB0CAB /* ViewControllers */,
 				2CF8D6252038622000FB0CAB /* Supporting Files */,
@@ -81,10 +90,12 @@
 		2CF8D623203861F100FB0CAB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C789F589203AE4640053DC4D /* ModelTableViewCell.swift */,
+				C730BC0C2039D093005ACC4F /* AddModelViewController.swift */,
 				2C3C69A22029F84B009BE216 /* MainViewController.swift */,
 				2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */,
-				2CF8D63B2039F5E400FB0CAB /* MainViewController+AddModel.swift */,
-				2CF8D63D2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift */,
+				2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */,
+				2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -103,8 +114,9 @@
 			children = (
 				2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */,
 				2C3C699E2029F84B009BE216 /* AppDelegate.swift */,
+				2C77BBA2203CBB24001EF77F /* ModelManager.swift */,
 				2CF8D6282038632300FB0CAB /* Extensions.swift */,
-				2CF8D63F2039F6BF00FB0CAB /* ModelManager.swift */,
+				C7394F21203C5F3F002B6494 /* DirectoryManager.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C76E1093203CBAA000E75A81 /* models in Resources */,
 				2C3C69A12029F84B009BE216 /* art.scnassets in Resources */,
 				2C3C69AB2029F84B009BE216 /* LaunchScreen.storyboard in Resources */,
 				2C3C69A82029F84B009BE216 /* Assets.xcassets in Resources */,
@@ -182,14 +195,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C730BC0D2039D093005ACC4F /* AddModelViewController.swift in Sources */,
+				C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */,
+				2C77BBA1203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift in Sources */,
 				2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */,
-				2CF8D6402039F6BF00FB0CAB /* ModelManager.swift in Sources */,
 				2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */,
 				2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */,
+				2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */,
+				2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */,
+				C789F58A203AE4640053DC4D /* ModelTableViewCell.swift in Sources */,
 				2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */,
 				2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */,
-				2CF8D63C2039F5E400FB0CAB /* MainViewController+AddModel.swift in Sources */,
-				2CF8D63E2039F66200FB0CAB /* MainViewController+RemoveAndMoveModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

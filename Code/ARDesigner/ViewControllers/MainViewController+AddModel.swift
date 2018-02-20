@@ -22,7 +22,16 @@ extension MainViewController {
         let z = translation.z
         
         if shouldMoveModel == false {
-            guard let shipScene = SCNScene(named: "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"),
+            var modelPath = UserDefaults.standard.string(forKey: "currentModelPath")
+            if modelPath == nil {
+                modelPath = "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"
+                
+                let alertController = UIAlertController(title: "Select model", message: "To add another model click on button \"Select model\"", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true, completion: nil)
+            }
+            guard let shipScene = SCNScene(named: modelPath!),
                 let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
                 else { return }
             

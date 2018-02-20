@@ -14,10 +14,13 @@ class MainViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     var shouldMoveModel = false
     var objectForMoving = SCNNode()
+    @IBOutlet weak var selectModelButton: UIButton!
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        selectModelButton.layer.cornerRadius = 5.0
         
         addGesturesToSceneView()
         configureLighting()
@@ -48,6 +51,7 @@ class MainViewController: UIViewController {
         
         sceneView.session.run(configuration)
         sceneView.delegate = self
+        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     // MARK: - viewWillDisappear
