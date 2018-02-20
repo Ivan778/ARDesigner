@@ -35,7 +35,8 @@ class AddModelViewController: UIViewController{
         let dirDocuments = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         print(dirDocuments)
     
-
+        tableView.delegate = self
+        tableView.dataSource = self
         
         // Do any additional setup after loading the view.
     }
@@ -89,8 +90,9 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
                 } else {
                     if file.range(of: ".dae") != nil{
                         pathToFile = fullPath + "/" + file
-                         print(".dae FILE = " + file)
+                        print(".dae FILE = " + file)
                         UserDefaults.standard.set(pathToFile,forKey: "currentModelPath")
+                        print(pathToFile)
                         self.dismiss(animated: true, completion: nil)
                     }
                     print("FILE = " + file)
