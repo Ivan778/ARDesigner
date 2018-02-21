@@ -78,30 +78,33 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let fullPath = currentDirectory! + "/" + content[indexPath.row]
-        content = try! FileManager.default.contentsOfDirectory(atPath: fullPath)
-        print("1 = ")
-        print(content)
+        let fullPath = /*currentDirectory! + "/" + */"art.scnassets/" + content[indexPath.row] + "/model.dae"
+        UserDefaults.standard.set(fullPath, forKey: "currentModelPath")
+        self.dismiss(animated: true, completion: nil)
         
-        for file in content {
-            if let isdir = isDir(atPath: fullPath + "/" + file) {
-                if isdir {
-                     print("FOLDER = " + file)
-                } else {
-                    if file.range(of: ".dae") != nil{
-                        pathToFile = fullPath + "/" + file
-                        print(".dae FILE = " + file)
-                        UserDefaults.standard.set(pathToFile, forKey: "currentModelPath")
-                        print(pathToFile)
-                        self.dismiss(animated: true, completion: nil)
-                    }
-                    print("FILE = " + file)
-                    
-                }
-            } else {
-                print("Error")
-            }
-        }
+//        content = try! FileManager.default.contentsOfDirectory(atPath: fullPath)
+//        print("1 = ")
+//        print(content)
+//
+//        for file in content {
+//            if let isdir = isDir(atPath: fullPath + "/" + file) {
+//                if isdir {
+//                     print("FOLDER = " + file)
+//                } else {
+//                    if file.range(of: ".dae") != nil{
+//                        pathToFile = fullPath + "/" + file
+//                        print(".dae FILE = " + file)
+//                        UserDefaults.standard.set(pathToFile, forKey: "currentModelPath")
+//                        print(pathToFile)
+//                        self.dismiss(animated: true, completion: nil)
+//                    }
+//                    print("FILE = " + file)
+//
+//                }
+//            } else {
+//                print("Error")
+//            }
+//        }
         
        // let extension = NSURL(fileURLWithPath: filePath).pathExtension
     }

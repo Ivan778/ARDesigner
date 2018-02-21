@@ -32,7 +32,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="K7Q-Lp-uN1" kind="show" id="Q5d-bL-M9q"/>
+                                    <action selector="selectModelClicked:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="xhC-9C-ZPc"/>
                                 </connections>
                             </button>
                         </subviews>

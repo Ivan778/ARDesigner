@@ -16,11 +16,15 @@ class MainViewController: UIViewController {
     var objectForMoving = SCNNode()
     @IBOutlet weak var selectModelButton: UIButton!
     
+    var tableView = UITableView()
+    var arrayOfModels = ["1920s+TT+Truck", "Black Sofa", "Chair", "Sofa with cushions", "Table+chair", "Table+Chairs", "Toy+Crain+Truck+&+Trailer"]
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
         selectModelButton.layer.cornerRadius = 5.0
+        setTableView()
         
         addGesturesToSceneView()
         configureLighting()
@@ -64,6 +68,10 @@ class MainViewController: UIViewController {
     
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    @IBAction func selectModelClicked(_ sender: Any) {
+        tableView.isHidden = false
     }
     
 }

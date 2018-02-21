@@ -16,6 +16,7 @@
 		2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */; };
 		2C77BBA1203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */; };
 		2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA2203CBB24001EF77F /* ModelManager.swift */; };
+		2C77BBA5203D3FB5001EF77F /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */; };
 		2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */; };
 		2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6282038632300FB0CAB /* Extensions.swift */; };
 		2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */; };
@@ -37,6 +38,7 @@
 		2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+AddModel.swift"; sourceTree = "<group>"; };
 		2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+RemoveAndMoveModel.swift"; sourceTree = "<group>"; };
 		2C77BBA2203CBB24001EF77F /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
 		2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		2CF8D6282038632300FB0CAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */,
 				2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */,
 				2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */,
+				2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */,
 				2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */,
 				2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */,
+				2C77BBA5203D3FB5001EF77F /* MainViewController+TableView.swift in Sources */,
 				2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */,
 				C789F58A203AE4640053DC4D /* ModelTableViewCell.swift in Sources */,
 				2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */,
