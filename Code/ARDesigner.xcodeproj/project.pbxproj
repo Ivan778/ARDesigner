@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0D4902204DABDC004DB077 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */; };
+		2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */; };
 		2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C699E2029F84B009BE216 /* AppDelegate.swift */; };
 		2C3C69A12029F84B009BE216 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A02029F84B009BE216 /* art.scnassets */; };
 		2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C69A22029F84B009BE216 /* MainViewController.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
+		2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C3C699B2029F84B009BE216 /* ARDesigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDesigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C699E2029F84B009BE216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3C69A02029F84B009BE216 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -111,6 +115,7 @@
 		2C3C69922029F84A009BE216 = {
 			isa = PBXGroup;
 			children = (
+				2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */,
 				2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */,
 				2C3C699D2029F84B009BE216 /* ARDesigner */,
 				2C3C699C2029F84B009BE216 /* Products */,
@@ -159,6 +164,7 @@
 				2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */,
 				2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */,
 				2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */,
+				2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 				2C4F9BFA20498D23003A28FD /* bug.3DS in Resources */,
 				2C4F9C0020498EF9003A28FD /* hsdc00.3DS in Resources */,
 				2C3C69A62029F84B009BE216 /* Main.storyboard in Resources */,
+				2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C730BC0D2039D093005ACC4F /* AddModelViewController.swift in Sources */,
+				2C0D4902204DABDC004DB077 /* GoogleDriveViewController.swift in Sources */,
 				C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */,
 				2C77BBA1203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift in Sources */,
 				2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */,
