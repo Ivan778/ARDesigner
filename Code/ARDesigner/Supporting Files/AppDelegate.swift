@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         DirectoryManager.checkAvailabilityOftheFolder()
         DirectoryManager.copyDocuments()
         
+        let dirPaths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docsURL = dirPaths[0].path
+        print(docsURL)
+        
         return true
     }
 

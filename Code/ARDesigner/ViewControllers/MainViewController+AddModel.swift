@@ -25,31 +25,51 @@ extension MainViewController {
             var modelPath = UserDefaults.standard.string(forKey: "currentModelPath")
             if modelPath == nil {
                 modelPath = "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"
+            }
+            
+//            guard let shipScene = SCNScene(named: modelPath!),
+//                let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
+//                else { return }
+            
+            let s = SCNScene.assimpSceneNamed("models/Crain/model.dae", postProcessFlags: [AssimpKitPostProcessSteps.process_FlipUVs, AssimpKitPostProcessSteps.process_Triangulate])
+            if s != nil {
+                let node = s?.modelScene.rootNode.childNode(withName: ((s?.modelScene.rootNode.childNodes[0])?.name)!, recursively: false)
                 
-//                let alertController = UIAlertController(title: "Select model", message: "To add another model click on button \"Select model\"", preferredStyle: .alert)
-//                let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-//                alertController.addAction(okAction)
-//                self.present(alertController, animated: true, completion: nil)
+                let max = node?.boundingBox.max.x
+                var m = max!
+    
+                while (m > 0.5) {
+                    m /= 2
+                }
+    
+                var scale: Float = 0.1
+                scale = m / max!
+                node?.scale = SCNVector3(scale, scale, scale)
+                
+                node?.position = SCNVector3(x, y, z)
+                if node != nil {
+                    sceneView.scene.rootNode.addChildNode(node!)
+                } else {
+                    print("Fuck")
+                }
             }
-            guard let shipScene = SCNScene(named: modelPath!),
-                let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
-                else { return }
             
-            let array = [shipNode.boundingBox.max.x, shipNode.boundingBox.max.y, shipNode.boundingBox.max.z]
-            let max = array.max()!
-            var m = max
             
-            while (m > 0.5) {
-                m /= 2
-            }
-            
-            var scale: Float = 0.1
-            scale = m / max
-            shipNode.scale = SCNVector3(scale, scale, scale)
-            //shipNode.eulerAngles.x = .pi/2
-            
-            shipNode.position = SCNVector3(x, y, z)
-            sceneView.scene.rootNode.addChildNode(shipNode)
+//            let array = [shipNode.boundingBox.max.x, shipNode.boundingBox.max.y, shipNode.boundingBox.max.z]
+//            let max = array.max()!
+//            var m = max
+//
+//            while (m > 0.5) {
+//                m /= 2
+//            }
+//
+//            var scale: Float = 0.1
+//            scale = m / max
+//            shipNode.scale = SCNVector3(scale, scale, scale)
+//            //shipNode.eulerAngles.x = .pi/2
+//
+//            shipNode.position = SCNVector3(x, y, z)
+//            sceneView.scene.rootNode.addChildNode(shipNode)
         } else {
             objectForMoving.position = SCNVector3(x, y, z)
             shouldMoveModel = false
