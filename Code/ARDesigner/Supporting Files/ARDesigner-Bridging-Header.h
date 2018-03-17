@@ -8,3 +8,6 @@
 
 #import <AssimpKit/SCNNode+AssimpImport.h>
 #import <AssimpKit/SCNScene+AssimpImport.h>
+
+#import <GTMSessionFetcher/GTMSessionFetcher.h>
+#import <GTMSessionFetcher/GTMSessionFetcherService.h>

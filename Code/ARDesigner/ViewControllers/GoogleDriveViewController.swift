@@ -11,8 +11,6 @@ import GoogleSignIn
 import UIKit
 
 class GoogleDriveViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
-    
-    
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeDriveReadonly]
@@ -28,7 +26,7 @@ class GoogleDriveViewController: UIViewController, GIDSignInDelegate, GIDSignInU
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().scopes = scopes
-        GIDSignIn.sharedInstance().signInSilently()
+        //GIDSignIn.sharedInstance().signIn()
         
         // Add the sign-in button.
         view.addSubview(signInButton)
@@ -42,15 +40,14 @@ class GoogleDriveViewController: UIViewController, GIDSignInDelegate, GIDSignInU
         view.addSubview(output);
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             showAlert(title: "Authentication Error", message: error.localizedDescription)
-            self.service.authorizer = nil
         } else {
             self.signInButton.isHidden = true
             self.output.isHidden = false
             self.service.authorizer = user.authentication.fetcherAuthorizer()
+            
             listFiles()
         }
     }
@@ -59,8 +56,7 @@ class GoogleDriveViewController: UIViewController, GIDSignInDelegate, GIDSignInU
     func listFiles() {
         let query = GTLRDriveQuery_FilesList.query()
         query.pageSize = 10
-        service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:))
-        )
+        service.executeQuery(query, delegate: self, didFinish: #selector(displayResultWithTicket(ticket:finishedWithObject:error:)))
     }
     
     // Process the response and display output

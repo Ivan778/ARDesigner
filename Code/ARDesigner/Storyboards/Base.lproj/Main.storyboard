@@ -59,6 +59,7 @@
         <!--Google Drive View Controller-->
         <scene sceneID="9Y1-RR-n39">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1mW-7y-k1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Sqd-tU-kHD" customClass="GoogleDriveViewController" customModule="ARDesigner" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CR1-An-bIw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -67,7 +68,6 @@
                         <viewLayoutGuide key="safeArea" id="7YK-Cq-s3X"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1mW-7y-k1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-242" y="826"/>
         </scene>

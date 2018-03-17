@@ -9,20 +9,13 @@
 /* Begin PBXBuildFile section */
 		2C0D4902204DABDC004DB077 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */; };
 		2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */; };
+		2C3B5BB32051C25700266544 /* BB in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B5BB22051C25600266544 /* BB */; };
 		2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C699E2029F84B009BE216 /* AppDelegate.swift */; };
 		2C3C69A12029F84B009BE216 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A02029F84B009BE216 /* art.scnassets */; };
 		2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C69A22029F84B009BE216 /* MainViewController.swift */; };
 		2C3C69A62029F84B009BE216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A42029F84B009BE216 /* Main.storyboard */; };
 		2C3C69A82029F84B009BE216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A72029F84B009BE216 /* Assets.xcassets */; };
 		2C3C69AB2029F84B009BE216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A92029F84B009BE216 /* LaunchScreen.storyboard */; };
-		2C4F9BF6204989F4003A28FD /* Obj in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9BF5204989F4003A28FD /* Obj */; };
-		2C4F9BF820498C52003A28FD /* Stul.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9BF720498C52003A28FD /* Stul.3DS */; };
-		2C4F9BFA20498D23003A28FD /* bug.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9BF920498D23003A28FD /* bug.3DS */; };
-		2C4F9BFE20498DFE003A28FD /* Lowpoly_tree_sample.dae in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9BFD20498DFE003A28FD /* Lowpoly_tree_sample.dae */; };
-		2C4F9C0020498EF9003A28FD /* hsdc00.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9BFF20498EF9003A28FD /* hsdc00.3DS */; };
-		2C4F9C0220498F77003A28FD /* georgetti_51521.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9C0120498F77003A28FD /* georgetti_51521.3DS */; };
-		2C4F9C1F2049C263003A28FD /* Volleyball.3DS in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9C1E2049C263003A28FD /* Volleyball.3DS */; };
-		2C4F9C212049C384003A28FD /* CubesOttomanBlack.obj in Resources */ = {isa = PBXBuildFile; fileRef = 2C4F9C202049C383003A28FD /* CubesOttomanBlack.obj */; };
 		2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */; };
 		2C77BBA1203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */; };
 		2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA2203CBB24001EF77F /* ModelManager.swift */; };
@@ -56,6 +49,7 @@
 /* Begin PBXFileReference section */
 		2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
 		2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C3B5BB22051C25600266544 /* BB */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BB; sourceTree = SOURCE_ROOT; };
 		2C3C699B2029F84B009BE216 /* ARDesigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDesigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C699E2029F84B009BE216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C3C69A02029F84B009BE216 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -64,14 +58,6 @@
 		2C3C69A72029F84B009BE216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3C69AA2029F84B009BE216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3C69AC2029F84B009BE216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C4F9BF5204989F4003A28FD /* Obj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Obj; sourceTree = "<group>"; };
-		2C4F9BF720498C52003A28FD /* Stul.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = Stul.3DS; sourceTree = "<group>"; };
-		2C4F9BF920498D23003A28FD /* bug.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = bug.3DS; sourceTree = "<group>"; };
-		2C4F9BFD20498DFE003A28FD /* Lowpoly_tree_sample.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Lowpoly_tree_sample.dae; sourceTree = "<group>"; };
-		2C4F9BFF20498EF9003A28FD /* hsdc00.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = hsdc00.3DS; sourceTree = "<group>"; };
-		2C4F9C0120498F77003A28FD /* georgetti_51521.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = georgetti_51521.3DS; sourceTree = "<group>"; };
-		2C4F9C1E2049C263003A28FD /* Volleyball.3DS */ = {isa = PBXFileReference; lastKnownFileType = file; path = Volleyball.3DS; sourceTree = "<group>"; };
-		2C4F9C202049C383003A28FD /* CubesOttomanBlack.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CubesOttomanBlack.obj; sourceTree = "<group>"; };
 		2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+AddModel.swift"; sourceTree = "<group>"; };
 		2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+RemoveAndMoveModel.swift"; sourceTree = "<group>"; };
 		2C77BBA2203CBB24001EF77F /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
@@ -135,14 +121,7 @@
 		2C3C699D2029F84B009BE216 /* ARDesigner */ = {
 			isa = PBXGroup;
 			children = (
-				2C4F9BF920498D23003A28FD /* bug.3DS */,
-				2C4F9C1E2049C263003A28FD /* Volleyball.3DS */,
-				2C4F9C202049C383003A28FD /* CubesOttomanBlack.obj */,
-				2C4F9C0120498F77003A28FD /* georgetti_51521.3DS */,
-				2C4F9BFF20498EF9003A28FD /* hsdc00.3DS */,
-				2C4F9BFD20498DFE003A28FD /* Lowpoly_tree_sample.dae */,
-				2C4F9BF720498C52003A28FD /* Stul.3DS */,
-				2C4F9BF5204989F4003A28FD /* Obj */,
+				2C3B5BB22051C25600266544 /* BB */,
 				C76E1092203CBA9F00E75A81 /* models */,
 				2CF8D6242038620B00FB0CAB /* Storyboards */,
 				2CF8D623203861F100FB0CAB /* ViewControllers */,
@@ -262,18 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C4F9C1F2049C263003A28FD /* Volleyball.3DS in Resources */,
-				2C4F9BF6204989F4003A28FD /* Obj in Resources */,
-				2C4F9C212049C384003A28FD /* CubesOttomanBlack.obj in Resources */,
 				C76E1093203CBAA000E75A81 /* models in Resources */,
 				2C3C69A12029F84B009BE216 /* art.scnassets in Resources */,
-				2C4F9C0220498F77003A28FD /* georgetti_51521.3DS in Resources */,
-				2C4F9BF820498C52003A28FD /* Stul.3DS in Resources */,
 				2C3C69AB2029F84B009BE216 /* LaunchScreen.storyboard in Resources */,
 				2C3C69A82029F84B009BE216 /* Assets.xcassets in Resources */,
-				2C4F9BFE20498DFE003A28FD /* Lowpoly_tree_sample.dae in Resources */,
-				2C4F9BFA20498D23003A28FD /* bug.3DS in Resources */,
-				2C4F9C0020498EF9003A28FD /* hsdc00.3DS in Resources */,
+				2C3B5BB32051C25700266544 /* BB in Resources */,
 				2C3C69A62029F84B009BE216 /* Main.storyboard in Resources */,
 				2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */,
 			);
@@ -311,6 +283,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ZIPFoundation/ZIPFoundation.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -318,6 +291,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZIPFoundation.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -335,7 +309,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

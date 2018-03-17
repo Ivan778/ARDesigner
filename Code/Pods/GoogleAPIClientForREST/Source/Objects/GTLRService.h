@@ -27,17 +27,9 @@
 #import "GTLRObject.h"
 #import "GTLRQuery.h"
 
-#if !defined(GTLR_USE_FRAMEWORK_IMPORTS)
-  #define GTLR_USE_FRAMEWORK_IMPORTS 0
-#endif
-
-#if GTLR_USE_FRAMEWORK_IMPORTS
-  #import <GTMSessionFetcher/GTMSessionFetcher.h>
-  #import <GTMSessionFetcher/GTMSessionFetcherService.h>
-#else
-  #import "GTMSessionFetcher.h"
-  #import "GTMSessionFetcherService.h"
-#endif  // GTLR_USE_FRAMEWORK_IMPORTS
+@class GTMSessionFetcher;
+@class GTMSessionFetcherService;
+@protocol GTMFetcherAuthorizationProtocol;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -547,12 +539,13 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
 
 /**
  *  If this service supports pretty printing the JSON on the wire, these are
- *  the names of the query params that enable it. The library disables
- *  pretty printing to save on bandwidth.
+ *  the names of the query params that enable it. If there are any values,
+ *  the library disables pretty printing to save on bandwidth.
  *
- *  Applications should typically not change this.
+ *  Applications should typically not need change this; the ServiceGenerator
+ *  will set this up when generating the custom subclass.
  */
-@property(nonatomic, strong) NSArray<NSString *> *prettyPrintQueryParameterNames;
+@property(nonatomic, strong, nullable) NSArray<NSString *> *prettyPrintQueryParameterNames;
 
 /**
  *  This indicates if the API requires a "data" JSON element to wrap the payload
@@ -581,7 +574,7 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
  *
  *  Example usage is in the unit test method @c testService_MockService_Succeeding
  *
- *  @param objectOrNil An object derived from GTLRObject to be passed to query completion handlers.
+ *  @param object An object derived from GTLRObject to be passed to query completion handlers.
  *  @param error       An error to be passed to query completion handlers.
  *
  *  @return A mock instance of the service, suitable for unit testing.
@@ -627,7 +620,7 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
  *
  *  A BOOL value should be specified.
  */
-@property(atomic) NSNumber *shouldFetchNextPages;
+@property(atomic, strong, nullable) NSNumber *shouldFetchNextPages;
 
 /**
  *  Override the service's property @c shouldFetchNextPages for enabling automatic retries.
@@ -636,7 +629,7 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
  *
  *  Retry is also enabled if the retryBlock is not nil
  */
-@property(atomic, getter=isRetryEnabled) NSNumber *retryEnabled;
+@property(atomic, strong, nullable, getter=isRetryEnabled) NSNumber *retryEnabled;
 
 /**
  *  Override the service's property @c retryBlock for customizing automatic retries.
@@ -648,7 +641,7 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
  *
  *  A NSTimeInterval (double) value should be specified.
  */
-@property(atomic) NSNumber *maxRetryInterval;
+@property(atomic, strong, nullable) NSNumber *maxRetryInterval;
 
 /**
  *  Override the service's property @c uploadProgressBlock for monitoring upload progress.
@@ -670,7 +663,7 @@ typedef void (^GTLRServiceTestBlock)(GTLRServiceTicket *testTicket,
 /**
  *  Override the service's property @c objectClassResolver for controlling object class selection.
  */
-@property(atomic, strong) id<GTLRObjectClassResolver> objectClassResolver;
+@property(atomic, strong, nullable) id<GTLRObjectClassResolver> objectClassResolver;
 
 /**
  *  The ticket's properties are the service properties, with the execution parameter's

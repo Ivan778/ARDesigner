@@ -27,49 +27,26 @@ extension MainViewController {
                 modelPath = "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"
             }
             
-//            guard let shipScene = SCNScene(named: modelPath!),
-//                let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
-//                else { return }
+            guard let shipScene = SCNScene(named: "BB/model.dae"),
+                let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
+                else { return }
             
-            let s = SCNScene.assimpSceneNamed("models/Crain/model.dae", postProcessFlags: [AssimpKitPostProcessSteps.process_FlipUVs, AssimpKitPostProcessSteps.process_Triangulate])
-            if s != nil {
-                let node = s?.modelScene.rootNode.childNode(withName: ((s?.modelScene.rootNode.childNodes[0])?.name)!, recursively: false)
-                
-                let max = node?.boundingBox.max.x
-                var m = max!
-    
-                while (m > 0.5) {
-                    m /= 2
-                }
-    
-                var scale: Float = 0.1
-                scale = m / max!
-                node?.scale = SCNVector3(scale, scale, scale)
-                
-                node?.position = SCNVector3(x, y, z)
-                if node != nil {
-                    sceneView.scene.rootNode.addChildNode(node!)
-                } else {
-                    print("Fuck")
-                }
+            
+            let array = [shipNode.boundingBox.max.x, shipNode.boundingBox.max.y, shipNode.boundingBox.max.z]
+            let max = array.max()!
+            var m = max
+
+            while (m > 0.5) {
+                m /= 2
             }
-            
-            
-//            let array = [shipNode.boundingBox.max.x, shipNode.boundingBox.max.y, shipNode.boundingBox.max.z]
-//            let max = array.max()!
-//            var m = max
-//
-//            while (m > 0.5) {
-//                m /= 2
-//            }
-//
-//            var scale: Float = 0.1
-//            scale = m / max
-//            shipNode.scale = SCNVector3(scale, scale, scale)
-//            //shipNode.eulerAngles.x = .pi/2
-//
-//            shipNode.position = SCNVector3(x, y, z)
-//            sceneView.scene.rootNode.addChildNode(shipNode)
+
+            var scale: Float = 0.1
+            scale = m / max
+            shipNode.scale = SCNVector3(scale, scale, scale)
+            //shipNode.eulerAngles.x = .pi/2
+
+            shipNode.position = SCNVector3(x, y, z)
+            sceneView.scene.rootNode.addChildNode(shipNode)
         } else {
             objectForMoving.position = SCNVector3(x, y, z)
             shouldMoveModel = false
