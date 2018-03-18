@@ -10,11 +10,22 @@ import UIKit
 import SceneKit
 import ARKit
 
+enum Axis {
+    case x
+    case y
+    case z
+}
+
 class MainViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
-    var shouldMoveModel = false
-    var objectForMoving = SCNNode()
     @IBOutlet weak var selectModelButton: UIButton!
+    
+    var objectToManage = SCNNode()
+    var shouldMoveModel = false
+    
+    var shouldRotateOrResizeModel = false
+    var axis = Axis.x
+    var previousValue = 0
     
     var tableView = UITableView()
     var arrayOfModels = ["1920s+TT+Truck", "Black Sofa", "Chair", "Sofa with cushions", "Table+chair", "Table+Chairs", "Toy+Crain+Truck+&+Trailer"]
@@ -32,10 +43,28 @@ class MainViewController: UIViewController {
     
     func addGesturesToSceneView() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(addModelToScene(withGestureRecognizer:)))
-        let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(removeAndMoveModelFromScene(withGestureRecognizer:)))
+        let longTapGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(manageModels(withGestureRecognizer:)))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(rotateOrResizeModel(_:)))
+        sceneView.isUserInteractionEnabled = true
         
+        sceneView.addGestureRecognizer(panGesture)
         sceneView.addGestureRecognizer(tapGestureRecognizer)
         sceneView.addGestureRecognizer(longTapGestureRecognizer)
+    }
+    
+    @objc func rotateOrResizeModel(_ sender:UIPanGestureRecognizer) {
+        if shouldRotateOrResizeModel {
+            let constant: Float = 0.02
+            let add = (Int(sender.translation(in: self.sceneView).y) > previousValue) ? Float(constant) : Float(-constant)
+            switch axis {
+            case .x:
+                objectToManage.eulerAngles.x += add
+            case .y:
+                objectToManage.eulerAngles.y += add
+            case .z:
+                objectToManage.eulerAngles.z += add
+            }
+        }
     }
     
     func configureLighting() {
