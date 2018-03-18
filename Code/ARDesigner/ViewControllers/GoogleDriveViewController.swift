@@ -43,6 +43,7 @@ class GoogleDriveViewController: UIViewController, GIDSignInDelegate, GIDSignInU
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             showAlert(title: "Authentication Error", message: error.localizedDescription)
+            self.service.authorizer = nil
         } else {
             self.signInButton.isHidden = true
             self.output.isHidden = false

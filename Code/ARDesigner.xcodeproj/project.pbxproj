@@ -133,16 +133,24 @@
 			path = ARDesigner;
 			sourceTree = "<group>";
 		};
-		2CF8D623203861F100FB0CAB /* ViewControllers */ = {
+		2CF521CD205E488600FE93B4 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C789F589203AE4640053DC4D /* ModelTableViewCell.swift */,
-				C730BC0C2039D093005ACC4F /* AddModelViewController.swift */,
 				2C3C69A22029F84B009BE216 /* MainViewController.swift */,
 				2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */,
 				2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */,
 				2C77BB9F203CBAF0001EF77F /* MainViewController+RemoveAndMoveModel.swift */,
 				2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		2CF8D623203861F100FB0CAB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CF521CD205E488600FE93B4 /* MainViewController */,
+				C789F589203AE4640053DC4D /* ModelTableViewCell.swift */,
+				C730BC0C2039D093005ACC4F /* AddModelViewController.swift */,
 				2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */,
 			);
 			path = ViewControllers;
