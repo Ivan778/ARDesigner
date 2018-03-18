@@ -11,6 +11,6 @@ target 'ARDesigner' do
   # Pods for ARDesigner
   pod 'Google/SignIn'
   pod 'GoogleAPIClientForREST/Drive'
-  pod 'ZIPFoundation', '~> 0.9'
+  pod 'Zip', '~> 1.1'
 
 end
