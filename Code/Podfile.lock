@@ -39,12 +39,12 @@ PODS:
   - GTMSessionFetcher/Core (1.1.14)
   - GTMSessionFetcher/Full (1.1.14):
     - GTMSessionFetcher/Core (= 1.1.14)
-  - ZIPFoundation (0.9.5)
+  - Zip (1.1.0)
 
 DEPENDENCIES:
   - Google/SignIn
   - GoogleAPIClientForREST/Drive
-  - ZIPFoundation (~> 0.9)
+  - Zip (~> 1.1)
 
 SPEC CHECKSUMS:
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
@@ -56,8 +56,8 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
-  ZIPFoundation: 9a2b911bfd129abda3a5b89dd20a8d329c3d9e8b
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
 
-PODFILE CHECKSUM: 30773cf36ef61f5dd14a70a2c31b00ddbaafd58e
+PODFILE CHECKSUM: 1b8f07311e5dd45d7e721f6917fbf8a71647a4d9
 
 COCOAPODS: 1.4.0
