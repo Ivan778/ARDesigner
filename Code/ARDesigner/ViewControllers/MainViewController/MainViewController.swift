@@ -84,7 +84,7 @@ class MainViewController: UIViewController {
         
         sceneView.session.run(configuration)
         sceneView.delegate = self
-        sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
+        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     // MARK: - viewWillDisappear
