@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C0D4902204DABDC004DB077 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */; };
 		2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */; };
+		2C2C902E206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */; };
+		2C2C902F206020CA00E48DA2 /* DownloadViewController+Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */; };
+		2C2C9030206020CA00E48DA2 /* DownloadViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C902B206020CA00E48DA2 /* DownloadViewController+TableView.swift */; };
+		2C2C9031206020CA00E48DA2 /* DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C902C206020CA00E48DA2 /* DownloadViewController.swift */; };
+		2C2C9032206020CA00E48DA2 /* DownloadViewController+FolderFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C902D206020CA00E48DA2 /* DownloadViewController+FolderFunctions.swift */; };
+		2C2C90342060211800E48DA2 /* GDMaybeDBFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C90332060211700E48DA2 /* GDMaybeDBFile.swift */; };
+		2C2C90362060217F00E48DA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C90352060217F00E48DA2 /* String.swift */; };
+		2C2C9039206025F000E48DA2 /* MainViewController+DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9038206025F000E48DA2 /* MainViewController+DownloadViewController.swift */; };
+		2C2C903B206027B400E48DA2 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C903A206027B400E48DA2 /* GoogleDriveViewController.swift */; };
 		2C3B5BB32051C25700266544 /* BB in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B5BB22051C25600266544 /* BB */; };
 		2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C699E2029F84B009BE216 /* AppDelegate.swift */; };
 		2C3C69A12029F84B009BE216 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A02029F84B009BE216 /* art.scnassets */; };
@@ -47,8 +55,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
 		2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+ViewInitialization.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+ViewInitialization.swift"; sourceTree = SOURCE_ROOT; };
+		2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+Functionality.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+Functionality.swift"; sourceTree = SOURCE_ROOT; };
+		2C2C902B206020CA00E48DA2 /* DownloadViewController+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+TableView.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+TableView.swift"; sourceTree = SOURCE_ROOT; };
+		2C2C902C206020CA00E48DA2 /* DownloadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DownloadViewController.swift; path = ARDesigner/ViewControllers/DownloadViewController/DownloadViewController.swift; sourceTree = SOURCE_ROOT; };
+		2C2C902D206020CA00E48DA2 /* DownloadViewController+FolderFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+FolderFunctions.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+FolderFunctions.swift"; sourceTree = SOURCE_ROOT; };
+		2C2C90332060211700E48DA2 /* GDMaybeDBFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GDMaybeDBFile.swift; path = ARDesigner/ViewControllers/GDMaybeDBFile.swift; sourceTree = SOURCE_ROOT; };
+		2C2C90352060217F00E48DA2 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ARDesigner/ViewControllers/String.swift; sourceTree = SOURCE_ROOT; };
+		2C2C9038206025F000E48DA2 /* MainViewController+DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DownloadViewController.swift"; sourceTree = "<group>"; };
+		2C2C903A206027B400E48DA2 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
 		2C3B5BB22051C25600266544 /* BB */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BB; sourceTree = SOURCE_ROOT; };
 		2C3C699B2029F84B009BE216 /* ARDesigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDesigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C699E2029F84B009BE216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +114,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2C2C90282060207500E48DA2 /* DownloadViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C902C206020CA00E48DA2 /* DownloadViewController.swift */,
+				2C2C902D206020CA00E48DA2 /* DownloadViewController+FolderFunctions.swift */,
+				2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */,
+				2C2C902B206020CA00E48DA2 /* DownloadViewController+TableView.swift */,
+				2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */,
+			);
+			name = DownloadViewController;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		2C2C9037206021B400E48DA2 /* GoogleDriveViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C903A206027B400E48DA2 /* GoogleDriveViewController.swift */,
+			);
+			path = GoogleDriveViewController;
+			sourceTree = "<group>";
+		};
 		2C3C69922029F84A009BE216 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +178,7 @@
 				2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */,
 				2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */,
 				2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */,
+				2C2C9038206025F000E48DA2 /* MainViewController+DownloadViewController.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -148,10 +186,11 @@
 		2CF8D623203861F100FB0CAB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C2C9037206021B400E48DA2 /* GoogleDriveViewController */,
+				2C2C90282060207500E48DA2 /* DownloadViewController */,
 				2CF521CD205E488600FE93B4 /* MainViewController */,
 				C789F589203AE4640053DC4D /* ModelTableViewCell.swift */,
 				C730BC0C2039D093005ACC4F /* AddModelViewController.swift */,
-				2C0D4901204DABDC004DB077 /* GoogleDriveViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -168,6 +207,8 @@
 		2CF8D6252038622000FB0CAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C2C90352060217F00E48DA2 /* String.swift */,
+				2C2C90332060211700E48DA2 /* GDMaybeDBFile.swift */,
 				2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */,
 				2C3C699E2029F84B009BE216 /* AppDelegate.swift */,
 				2C77BBA2203CBB24001EF77F /* ModelManager.swift */,
@@ -332,15 +373,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C730BC0D2039D093005ACC4F /* AddModelViewController.swift in Sources */,
-				2C0D4902204DABDC004DB077 /* GoogleDriveViewController.swift in Sources */,
+				2C2C90362060217F00E48DA2 /* String.swift in Sources */,
+				2C2C9031206020CA00E48DA2 /* DownloadViewController.swift in Sources */,
 				C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */,
 				2C77BBA1203CBAF0001EF77F /* MainViewController+ManageModel.swift in Sources */,
 				2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */,
 				2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */,
+				2C2C90342060211800E48DA2 /* GDMaybeDBFile.swift in Sources */,
+				2C2C9030206020CA00E48DA2 /* DownloadViewController+TableView.swift in Sources */,
+				2C2C9039206025F000E48DA2 /* MainViewController+DownloadViewController.swift in Sources */,
+				2C2C9032206020CA00E48DA2 /* DownloadViewController+FolderFunctions.swift in Sources */,
 				2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */,
 				2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */,
 				2C77BBA5203D3FB5001EF77F /* MainViewController+TableView.swift in Sources */,
+				2C2C902F206020CA00E48DA2 /* DownloadViewController+Functionality.swift in Sources */,
+				2C2C902E206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift in Sources */,
 				2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */,
+				2C2C903B206027B400E48DA2 /* GoogleDriveViewController.swift in Sources */,
 				C789F58A203AE4640053DC4D /* ModelTableViewCell.swift in Sources */,
 				2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */,
 				2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */,

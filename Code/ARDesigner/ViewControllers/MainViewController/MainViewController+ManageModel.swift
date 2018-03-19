@@ -58,6 +58,13 @@ extension MainViewController {
                 self.addDoneButton()
             }
             
+            let changeSize = UIAlertAction(title: "Change Size", style: UIAlertActionStyle.default) { UIAlertAction in
+                self.objectToManage = ModelManager.parentNode(node: (res.first?.node)!)
+                self.shouldRotateOrResizeModel = true
+                self.axis = .non
+                self.addDoneButton()
+            }
+            
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
             
             alertController.addAction(moveAction)
@@ -65,6 +72,7 @@ extension MainViewController {
             alertController.addAction(rotateX)
             alertController.addAction(rotateY)
             alertController.addAction(rotateZ)
+            alertController.addAction(changeSize)
             alertController.addAction(cancelAction)
             
             self.present(alertController, animated: true, completion: nil)

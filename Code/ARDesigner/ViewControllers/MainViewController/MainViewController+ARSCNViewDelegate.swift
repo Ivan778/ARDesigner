@@ -49,4 +49,17 @@ extension MainViewController: ARSCNViewDelegate {
         let z = CGFloat(planeAnchor.center.z)
         planeNode.position = SCNVector3(x, y, z)
     }
+    
+    func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
+        print(camera.trackingState)
+        
+//        switch camera.trackingState {
+//        case .notAvailable:
+//            fallthrough
+//        case .limited:
+//            textManager.escalateFeedback(for: camera.trackingState, inSeconds: 3.0)
+//        case .normal:
+//            textManager.cancelScheduledMessage(forType: .trackingStateEscalation)
+//        }
+    }
 }

@@ -15,11 +15,14 @@ enum Axis {
     case x
     case y
     case z
+    case non
 }
 
 class MainViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var selectModelButton: UIButton!
+    
+    var openOnce = false
     
     var objectToManage = SCNNode()
     var shouldMoveModel = false
@@ -56,15 +59,21 @@ class MainViewController: UIViewController {
     @objc func rotateOrResizeModel(_ sender:UIPanGestureRecognizer) {
         if shouldRotateOrResizeModel {
             let constant: Float = 0.02
-            let add = (Int(sender.translation(in: self.sceneView).y) > previousValue) ? Float(constant) : Float(-constant)
+            let sign = (Int(sender.translation(in: self.sceneView).y) > previousValue) ? Float(1) : Float(-1)
             switch axis {
             case .x:
-                objectToManage.eulerAngles.x += add
+                objectToManage.eulerAngles.x += sign * constant
             case .y:
-                objectToManage.eulerAngles.y += add
+                objectToManage.eulerAngles.y += sign * constant
             case .z:
-                objectToManage.eulerAngles.z += add
+                objectToManage.eulerAngles.z += sign * constant
+            case .non:
+                let const: Float = 100
+                objectToManage.scale.x += sign * objectToManage.scale.x / const
+                objectToManage.scale.y += sign * objectToManage.scale.y / const
+                objectToManage.scale.z += sign * objectToManage.scale.z / const
             }
+            
         }
     }
     
@@ -76,7 +85,10 @@ class MainViewController: UIViewController {
     // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setUpSceneView()
+        if !openOnce {
+            setUpSceneView()
+            openOnce = true
+        }
     }
     
     func setUpSceneView() {
@@ -85,7 +97,6 @@ class MainViewController: UIViewController {
         
         sceneView.session.run(configuration)
         sceneView.delegate = self
-        //sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
     }
     
     // MARK: - viewWillDisappear
@@ -93,7 +104,7 @@ class MainViewController: UIViewController {
         super.viewWillDisappear(animated)
         
         // Pause the view's session
-        sceneView.session.pause()
+        //sceneView.session.pause()
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -102,6 +113,14 @@ class MainViewController: UIViewController {
     
     @IBAction func selectModelClicked(_ sender: Any) {
         tableView.isHidden = false
+    }
+    
+    
+    @IBAction func downloadButtonPressed(_ sender: Any) {
+        let googleDriveVC = GoogleDriveViewController()
+        googleDriveVC.modalPresentationStyle = .fullScreen
+        
+        self.present(googleDriveVC, animated: true, completion: nil)
     }
     
 }

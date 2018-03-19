@@ -23,27 +23,41 @@
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUf-RL-8fP">
                                 <rect key="frame" x="126" y="598" width="122" height="49"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.34387880563735962" green="0.15543556213378906" blue="0.40112131834030151" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Z1q-Oh-CzL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="xO1-wM-HNo"/>
                                 </constraints>
                                 <state key="normal" title="Select Model">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="selectModelClicked:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="xhC-9C-ZPc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIB-cF-s0u">
+                                <rect key="frame" x="20" y="598" width="49" height="49"/>
+                                <color key="backgroundColor" red="0.34387880563735962" green="0.15543556213378906" blue="0.40112131834030151" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Jen-Tx-509"/>
+                                    <constraint firstAttribute="width" constant="49" id="s5k-VQ-Wgb"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="DownloadButton"/>
+                                <connections>
+                                    <action selector="downloadButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="T9q-Bq-oxp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CIB-cF-s0u" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="2DG-xb-wrH"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="BUf-RL-8fP" secondAttribute="bottom" constant="20" id="9fD-2V-J0I"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="Exr-rH-u38"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="CIB-cF-s0u" secondAttribute="bottom" constant="20" id="yeX-cp-y8q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fe1-gE-ma2"/>
                     </view>
@@ -54,7 +68,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22N-Ql-XrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-241" y="121"/>
+            <point key="canvasLocation" x="-242.40000000000001" y="120.98950524737631"/>
         </scene>
         <!--Google Drive View Controller-->
         <scene sceneID="9Y1-RR-n39">
@@ -141,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpr-9p-u06" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="121"/>
+            <point key="canvasLocation" x="1732" y="121"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JUZ-dF-LJX">
@@ -159,7 +173,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UYZ-2u-lh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="509" y="121"/>
+            <point key="canvasLocation" x="754" y="121"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DownloadButton" width="512" height="512"/>
+    </resources>
 </document>
