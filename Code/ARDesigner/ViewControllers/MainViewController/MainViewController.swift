@@ -18,7 +18,7 @@ enum Axis {
     case non
 }
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, SelectDownloadSourceDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var selectModelButton: UIButton!
     
@@ -32,7 +32,7 @@ class MainViewController: UIViewController {
     var previousValue = 0
     
     var tableView = UITableView()
-    var arrayOfModels = ["1920s+TT+Truck", "Black Sofa", "Chair", "Sofa with cushions", "Table+chair", "Table+Chairs", "Toy+Crain+Truck+&+Trailer"]
+    var arrayOfModels = [String]()
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -115,12 +115,34 @@ class MainViewController: UIViewController {
         tableView.isHidden = false
     }
     
-    
+    // MARK: - download button click
     @IBAction func downloadButtonPressed(_ sender: Any) {
+        shouldRotateOrResizeModel = true
+        
+        let selectDS = SelectDownloadSource()
+        selectDS.delegate = self
+        self.view.addSubview(selectDS)
+        
+        selectDS.translatesAutoresizingMaskIntoConstraints = false
+        let width = NSLayoutConstraint(item: selectDS, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.8, constant: 0)
+        let height = NSLayoutConstraint(item: selectDS, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 170)
+        
+        let centerX = NSLayoutConstraint(item: selectDS, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
+        let centerY = NSLayoutConstraint(item: selectDS, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
+        self.view.addConstraints([width, height, centerX, centerY])
+    }
+    
+    func googleDrivePressed() {
+        shouldRotateOrResizeModel = false
+        
         let googleDriveVC = GoogleDriveViewController()
         googleDriveVC.modalPresentationStyle = .fullScreen
         
         self.present(googleDriveVC, animated: true, completion: nil)
     }
     
+    func filesPressed() {
+        shouldRotateOrResizeModel = false
+        
+    }
 }

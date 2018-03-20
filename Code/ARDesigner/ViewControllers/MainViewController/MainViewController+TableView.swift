@@ -29,8 +29,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         return arrayOfModels.count
     }
     
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.textLabel?.text = arrayOfModels[indexPath.row]

@@ -17,6 +17,7 @@
 		2C2C90362060217F00E48DA2 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C90352060217F00E48DA2 /* String.swift */; };
 		2C2C9039206025F000E48DA2 /* MainViewController+DownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9038206025F000E48DA2 /* MainViewController+DownloadViewController.swift */; };
 		2C2C903B206027B400E48DA2 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C903A206027B400E48DA2 /* GoogleDriveViewController.swift */; };
+		2C31B39E206121270039AA2F /* SelectDownloadSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C31B39D206121270039AA2F /* SelectDownloadSource.swift */; };
 		2C3B5BB32051C25700266544 /* BB in Resources */ = {isa = PBXBuildFile; fileRef = 2C3B5BB22051C25600266544 /* BB */; };
 		2C3C699F2029F84B009BE216 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3C699E2029F84B009BE216 /* AppDelegate.swift */; };
 		2C3C69A12029F84B009BE216 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A02029F84B009BE216 /* art.scnassets */; };
@@ -65,6 +66,7 @@
 		2C2C90352060217F00E48DA2 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = String.swift; path = ARDesigner/ViewControllers/String.swift; sourceTree = SOURCE_ROOT; };
 		2C2C9038206025F000E48DA2 /* MainViewController+DownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+DownloadViewController.swift"; sourceTree = "<group>"; };
 		2C2C903A206027B400E48DA2 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
+		2C31B39D206121270039AA2F /* SelectDownloadSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDownloadSource.swift; sourceTree = "<group>"; };
 		2C3B5BB22051C25600266544 /* BB */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BB; sourceTree = SOURCE_ROOT; };
 		2C3C699B2029F84B009BE216 /* ARDesigner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDesigner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3C699E2029F84B009BE216 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				2CF521CD205E488600FE93B4 /* MainViewController */,
 				C789F589203AE4640053DC4D /* ModelTableViewCell.swift */,
 				C730BC0C2039D093005ACC4F /* AddModelViewController.swift */,
+				2C31B39D206121270039AA2F /* SelectDownloadSource.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */,
 				2C77BBA1203CBAF0001EF77F /* MainViewController+ManageModel.swift in Sources */,
 				2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */,
+				2C31B39E206121270039AA2F /* SelectDownloadSource.swift in Sources */,
 				2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */,
 				2C2C90342060211800E48DA2 /* GDMaybeDBFile.swift in Sources */,
 				2C2C9030206020CA00E48DA2 /* DownloadViewController+TableView.swift in Sources */,
