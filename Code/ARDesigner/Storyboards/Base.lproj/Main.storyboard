@@ -33,6 +33,7 @@
                                 </state>
                                 <connections>
                                     <action selector="selectModelClicked:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="xhC-9C-ZPc"/>
+                                    <segue destination="K7Q-Lp-uN1" kind="show" id="Xrg-v8-ePM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIB-cF-s0u">

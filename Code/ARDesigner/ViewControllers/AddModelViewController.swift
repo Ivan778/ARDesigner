@@ -32,28 +32,24 @@ class AddModelViewController: UIViewController{
             content = []
         }
         
-        let dirDocuments = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        print(dirDocuments)
-    
+        print(content)
+        
+        if content.count > 0 {
+            for i in 0...(content.count - 1) {
+                if content[i] == ".DS_Store" {
+                    content.remove(at: i)
+                    break
+                }
+            }
+        }
+        
         tableView.delegate = self
         tableView.dataSource = self
-        
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func pressedBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -69,36 +65,35 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // MARK: - ToDo refactor
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let fullPath = /*currentDirectory! + "/" + */"art.scnassets/" + content[indexPath.row] + "/model.dae"
-        UserDefaults.standard.set(fullPath, forKey: "currentModelPath")
-        self.dismiss(animated: true, completion: nil)
+        let fullPath = currentDirectory! + "/" + content[indexPath.row]
         
-//        content = try! FileManager.default.contentsOfDirectory(atPath: fullPath)
-//        print("1 = ")
-//        print(content)
-//
-//        for file in content {
-//            if let isdir = isDir(atPath: fullPath + "/" + file) {
-//                if isdir {
-//                     print("FOLDER = " + file)
-//                } else {
-//                    if file.range(of: ".dae") != nil{
-//                        pathToFile = fullPath + "/" + file
-//                        print(".dae FILE = " + file)
-//                        UserDefaults.standard.set(pathToFile, forKey: "currentModelPath")
-//                        print(pathToFile)
-//                        self.dismiss(animated: true, completion: nil)
-//                    }
-//                    print("FILE = " + file)
-//
-//                }
-//            } else {
-//                print("Error")
-//            }
-//        }
+        content = try! FileManager.default.contentsOfDirectory(atPath: fullPath)
+        print("1 = ")
+        print(content)
+
+        for file in content {
+            if let isdir = isDir(atPath: fullPath + "/" + file) {
+                if isdir {
+                     print("FOLDER = " + file)
+                } else {
+                    if file.range(of: ".dae") != nil {
+                        pathToFile = fullPath + "/" + file
+                        print(".dae FILE = " + file)
+                        UserDefaults.standard.set(pathToFile, forKey: "currentModelPath")
+                        print(pathToFile)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                    print("FILE = " + file)
+
+                }
+            } else {
+                print("Error")
+            }
+        }
         
-       // let extension = NSURL(fileURLWithPath: filePath).pathExtension
+//        let extension = NSURL(fileURLWithPath: filePath).pathExtension
     }
     
     func isDir(atPath: String) -> Bool? {

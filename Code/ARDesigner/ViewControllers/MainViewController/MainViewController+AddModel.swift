@@ -28,10 +28,15 @@ extension MainViewController {
                     modelPath = "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"
                 }
                 
-                guard let shipScene = SCNScene(named: "BB/model.dae"),
-                    let shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)
-                    else { return }
+                let url = URL(fileURLWithPath: modelPath!)
+                var shipNode = SCNNode()
                 
+                do {
+                    let shipScene = try SCNScene(url: url, options: nil)
+                    shipNode = shipScene.rootNode.childNode(withName: (shipScene.rootNode.childNodes[0]).name!, recursively: false)!
+                } catch {
+                    return
+                }
                 
                 let array = [shipNode.boundingBox.max.x, shipNode.boundingBox.max.y, shipNode.boundingBox.max.z]
                 let max = array.max()!

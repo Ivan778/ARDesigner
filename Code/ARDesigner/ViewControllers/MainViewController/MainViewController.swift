@@ -112,7 +112,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate {
     }
     
     @IBAction func selectModelClicked(_ sender: Any) {
-        tableView.isHidden = false
+//        tableView.isHidden = false
+        
     }
     
     // MARK: - download button click
@@ -143,6 +144,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate {
     
     func filesPressed() {
         shouldRotateOrResizeModel = false
+        
         
     }
 }
