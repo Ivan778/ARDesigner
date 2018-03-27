@@ -85,16 +85,16 @@ extension MainViewController {
         button.layer.cornerRadius = 7
         button.addTarget(self, action: #selector(pressedDone(_:)), for: .touchUpInside)
         
-        let width = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
-        let height = NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 80)
+        let width = NSLayoutConstraint(item: button, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 49)
+        let height = NSLayoutConstraint(item: button, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 49)
         
-        let top = NSLayoutConstraint(item: button, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .topMargin, multiplier: 1, constant: 10)
-        let trail = NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: -10)
+        let bottom = NSLayoutConstraint(item: button, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -20)
+        let trail = NSLayoutConstraint(item: button, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: -20)
         
         self.view.addSubview(button)
         button.bringSubview(toFront: button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addConstraints([width, height, top, trail])
+        self.view.addConstraints([width, height, bottom, trail])
     }
     
     @objc func pressedDone(_ sender: UIButton) {

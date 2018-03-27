@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="love" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-13-etK">
-                                <rect key="frame" x="16" y="390" width="343" height="182"/>
+                                <rect key="frame" x="4" y="390" width="343" height="182"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="W2P-6a-fVb"/>
                                     <constraint firstAttribute="height" constant="182" id="tFB-j3-yCT"/>
@@ -56,7 +56,7 @@
                             <constraint firstItem="4lF-XB-ooR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2ST-uK-Hn2"/>
                             <constraint firstItem="8Ip-13-etK" firstAttribute="top" secondItem="4lF-XB-ooR" secondAttribute="bottom" constant="8" id="8F0-bC-iFv"/>
                             <constraint firstItem="jig-t8-by0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8R0-5C-xof"/>
-                            <constraint firstItem="8Ip-13-etK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XBv-rr-7He"/>
+                            <constraint firstItem="8Ip-13-etK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-12" id="XBv-rr-7He"/>
                             <constraint firstItem="4lF-XB-ooR" firstAttribute="top" secondItem="jig-t8-by0" secondAttribute="bottom" id="Xqi-z3-xM7"/>
                             <constraint firstItem="0ki-JN-Fcj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cHG-RF-qxx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ki-JN-Fcj" secondAttribute="bottom" constant="20" id="hkF-vj-vl0"/>

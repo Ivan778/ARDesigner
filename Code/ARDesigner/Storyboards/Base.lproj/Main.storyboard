@@ -61,7 +61,7 @@
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-u0-bRn">
-                                <rect key="frame" x="310" y="40" width="49" height="49"/>
+                                <rect key="frame" x="306" y="40" width="49" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="6Ww-S6-YEU"/>
                                     <constraint firstAttribute="width" constant="49" id="rEG-l7-zC7"/>
@@ -82,7 +82,7 @@
                             <constraint firstItem="RyO-ar-jgT" firstAttribute="centerY" secondItem="oce-9i-xQA" secondAttribute="centerY" id="GMX-R8-oY7"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
-                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="16" id="ap9-4m-CvP"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="c3B-T3-BHW"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
