@@ -60,7 +60,10 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! ModelTableViewCell
-        cell.modelName?.text = content[indexPath.row]
+        
+        if indexPath.row < content.count {
+            cell.modelName?.text = content[indexPath.row]
+        }
          
         return cell
     }

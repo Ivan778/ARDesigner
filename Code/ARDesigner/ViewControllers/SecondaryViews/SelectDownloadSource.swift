@@ -16,6 +16,8 @@ protocol SelectDownloadSourceDelegate {
 class SelectDownloadSource: UIView {
     private var googleDrive: UIButton!
     private var files: UIButton!
+    private var view: UIView!
+    
     var delegate: SelectDownloadSourceDelegate!
     
     override init(frame: CGRect) {
@@ -33,29 +35,45 @@ class SelectDownloadSource: UIView {
     }
     
     func initializeView() {
-        self.backgroundColor = UIColor.init(red: 88/255.0, green: 40/255.0, blue: 102/255.0, alpha: 0.5)
-        self.layer.cornerRadius = 10.0
+        view = UIView()
+        self.addSubview(view)
+        
+        view.backgroundColor = UIColor.init(red: 88/255.0, green: 40/255.0, blue: 102/255.0, alpha: 0.5)
+        view.layer.cornerRadius = 10.0
         
         googleDrive = createButton(title: "Google Drive")
         googleDrive.addTarget(self, action: #selector(googleDrivePressed), for: .touchUpInside)
-        self.addSubview(googleDrive)
+        view.addSubview(googleDrive)
         
         files = createButton(title: "Files")
         files.addTarget(self, action: #selector(filesPressed), for: .touchUpInside)
-        self.addSubview(files)
+        view.addSubview(files)
         
+        setViewConstraints()
         setGoogleDriveButtonConstraints()
         setFilesButtonConstraints()
+    }
+    
+    private func setViewConstraints() {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        let width = NSLayoutConstraint(item: view, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.8, constant: 0)
+        let height = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 170)
+        
+        let centerX = NSLayoutConstraint(item: view, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
+        let centerY = NSLayoutConstraint(item: view, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0)
+        
+        self.addConstraints([width, height, centerX, centerY])
     }
     
     private func setGoogleDriveButtonConstraints() {
         googleDrive.translatesAutoresizingMaskIntoConstraints = false
         
-        let width = NSLayoutConstraint(item: googleDrive, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.75, constant: 0)
+        let width = NSLayoutConstraint(item: googleDrive, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.75, constant: 0)
         let height = NSLayoutConstraint(item: googleDrive, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 40)
         
-        let centerX = NSLayoutConstraint(item: googleDrive, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0)
-        let top = NSLayoutConstraint(item: googleDrive, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 30)
+        let centerX = NSLayoutConstraint(item: googleDrive, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0)
+        let top = NSLayoutConstraint(item: googleDrive, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 30)
         
         self.addConstraints([width, height, centerX, top])
     }
@@ -97,5 +115,9 @@ class SelectDownloadSource: UIView {
         if delegate != nil {
             delegate.filesPressed()
         }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.removeFromSuperview()
     }
 }

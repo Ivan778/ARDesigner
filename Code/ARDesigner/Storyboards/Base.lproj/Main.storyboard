@@ -48,21 +48,50 @@
                                     <action selector="downloadButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="T9q-Bq-oxp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="initializing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9h-Wc-oKh">
+                                <rect key="frame" x="16" y="40" width="343" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="zrq-0O-Hao"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="RyO-ar-jgT">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnl-u0-bRn">
+                                <rect key="frame" x="310" y="40" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="6Ww-S6-YEU"/>
+                                    <constraint firstAttribute="width" constant="49" id="rEG-l7-zC7"/>
+                                </constraints>
+                                <state key="normal" image="restart"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CIB-cF-s0u" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="2DG-xb-wrH"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
+                            <constraint firstItem="RyO-ar-jgT" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="8Gk-o6-Ue7"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="BUf-RL-8fP" secondAttribute="bottom" constant="20" id="9fD-2V-J0I"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="Exr-rH-u38"/>
+                            <constraint firstItem="RyO-ar-jgT" firstAttribute="centerY" secondItem="oce-9i-xQA" secondAttribute="centerY" id="GMX-R8-oY7"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
+                            <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="16" id="ap9-4m-CvP"/>
+                            <constraint firstItem="k9h-Wc-oKh" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="c3B-T3-BHW"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
+                            <constraint firstItem="bnl-u0-bRn" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="tV6-hD-bC3"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="CIB-cF-s0u" secondAttribute="bottom" constant="20" id="yeX-cp-y8q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fe1-gE-ma2"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="RyO-ar-jgT" id="VdH-VC-q9p"/>
+                        <outlet property="progressIndicator" destination="k9h-Wc-oKh" id="Ysf-Wk-RY6"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                         <outlet property="selectModelButton" destination="BUf-RL-8fP" id="9mf-22-u16"/>
                     </connections>
@@ -179,5 +208,6 @@
     </scenes>
     <resources>
         <image name="DownloadButton" width="512" height="512"/>
+        <image name="restart" width="200" height="200"/>
     </resources>
 </document>

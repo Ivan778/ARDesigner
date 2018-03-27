@@ -24,8 +24,13 @@ extension MainViewController {
             
             if shouldMoveModel == false {
                 var modelPath = UserDefaults.standard.string(forKey: "currentModelPath")
-                if modelPath == nil {
-                    modelPath = "art.scnassets/Toy+Crain+Truck+&+Trailer/model.dae"
+                if modelPath == "" {
+                    let alert = UIAlertController(title: "Select model", message: "No model was selected. Press add model.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { UIAlertAction in
+                        alert.dismiss(animated: true, completion: nil)
+                    }
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
                 }
                 
                 let url = URL(fileURLWithPath: modelPath!)
@@ -49,7 +54,6 @@ extension MainViewController {
                 var scale: Float = 0.1
                 scale = m / max
                 shipNode.scale = SCNVector3(scale, scale, scale)
-                //shipNode.eulerAngles.x = .pi/2
                 
                 shipNode.position = SCNVector3(x, y, z)
                 sceneView.scene.rootNode.addChildNode(shipNode)

@@ -153,7 +153,7 @@ class GoogleDriveViewController: DownloadViewController, GIDSignInDelegate, GIDS
             let object = result as! GTLRDataObject
             do {
                 try object.data.write(to: destUrl.deletingPathExtension().appendingPathExtension("zip"))
-                DownloadViewController.extractARD(destURL: destUrl.deletingPathExtension().appendingPathExtension("zip"))
+                print(DownloadViewController.extractARD(destURL: destUrl.deletingPathExtension().appendingPathExtension("zip")))
             }
             catch {
                 print("Something going wrong while saving file!")

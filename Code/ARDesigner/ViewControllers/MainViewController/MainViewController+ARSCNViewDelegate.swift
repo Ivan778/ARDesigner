@@ -53,13 +53,52 @@ extension MainViewController: ARSCNViewDelegate {
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
         print(camera.trackingState)
         
-//        switch camera.trackingState {
-//        case .notAvailable:
-//            fallthrough
-//        case .limited:
-//            textManager.escalateFeedback(for: camera.trackingState, inSeconds: 3.0)
-//        case .normal:
-//            textManager.cancelScheduledMessage(forType: .trackingStateEscalation)
-//        }
+        switch camera.trackingState {
+        case .notAvailable:
+            self.progressIndicator.isHidden = false
+            progressIndicator.text = "positioning not available"
+        case .limited(let reason):
+            DispatchQueue.main.async() {
+                let blurView = self.view.viewWithTag(111)
+                if blurView != nil {
+                    self.view.bringSubview(toFront: blurView!)
+                    blurView?.alpha = 1
+                }
+                
+                self.progressIndicator.isHidden = false
+                self.activityIndicator.startAnimating()
+                self.view.bringSubview(toFront: self.progressIndicator)
+                self.view.bringSubview(toFront: self.activityIndicator)
+            }
+            
+            switch reason {
+            case .excessiveMotion:
+                progressIndicator.text = "too fast moving"
+            case .initializing:
+                progressIndicator.text = "initializing"
+            case .insufficientFeatures:
+                progressIndicator.text = "not enough surface detail"
+            }
+        case .normal:
+            progressIndicator.text = "success"
+            
+            let when = DispatchTime.now() + 1
+            DispatchQueue.main.asyncAfter(deadline: when) {
+//            DispatchQueue.main.async {
+                self.progressIndicator.isHidden = true
+                self.activityIndicator.stopAnimating()
+                
+                let blurView = self.view.viewWithTag(111)
+                if blurView != nil {
+                    UIView.animate(withDuration: 1, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
+                }
+                
+                
+            }
+        }
+    }
+    
+    func completeInitializing(flag: Bool) {
+        
     }
 }

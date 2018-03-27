@@ -18,9 +18,11 @@ enum Axis {
     case non
 }
 
-class MainViewController: UIViewController, SelectDownloadSourceDelegate {
+class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var selectModelButton: UIButton!
+    @IBOutlet weak var progressIndicator: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var openOnce = false
     
@@ -43,6 +45,22 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate {
         
         addGesturesToSceneView()
         configureLighting()
+        
+        if !UIAccessibilityIsReduceTransparencyEnabled() {
+            self.view.backgroundColor = .clear
+            
+            let blurEffect = UIBlurEffect(style: .dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            //always fill the view
+            blurEffectView.frame = self.view.bounds
+            blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            blurEffectView.tag = 111
+            blurEffectView.alpha = 1
+            
+            self.view.addSubview(blurEffectView)
+        }
+        
+        UserDefaults.standard.set("", forKey: "currentModelPath")
     }
     
     func addGesturesToSceneView() {
@@ -125,12 +143,12 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate {
         self.view.addSubview(selectDS)
         
         selectDS.translatesAutoresizingMaskIntoConstraints = false
-        let width = NSLayoutConstraint(item: selectDS, attribute: .width, relatedBy: .equal, toItem: self.view, attribute: .width, multiplier: 0.8, constant: 0)
-        let height = NSLayoutConstraint(item: selectDS, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 170)
+        let top = NSLayoutConstraint(item: selectDS, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1, constant: 0)
+        let bottom = NSLayoutConstraint(item: selectDS, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: 0)
         
-        let centerX = NSLayoutConstraint(item: selectDS, attribute: .centerX, relatedBy: .equal, toItem: self.view, attribute: .centerX, multiplier: 1, constant: 0)
-        let centerY = NSLayoutConstraint(item: selectDS, attribute: .centerY, relatedBy: .equal, toItem: self.view, attribute: .centerY, multiplier: 1, constant: 0)
-        self.view.addConstraints([width, height, centerX, centerY])
+        let lead = NSLayoutConstraint(item: selectDS, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 0)
+        let trail = NSLayoutConstraint(item: selectDS, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: 0)
+        self.view.addConstraints([top, bottom, lead, trail])
     }
     
     func googleDrivePressed() {
@@ -145,6 +163,27 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate {
     func filesPressed() {
         shouldRotateOrResizeModel = false
         
+        let filesVC = UIDocumentPickerViewController(documentTypes: ["public.item"], in: .import)
+        filesVC.modalPresentationStyle = .fullScreen
+        filesVC.allowsMultipleSelection = true
+        filesVC.delegate = self
         
+        self.present(filesVC, animated: true, completion: nil)
+    }
+    
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        print(urls)
+        for file in urls {
+            if file.pathExtension.lowercased() == "ard" {
+                do {
+                    let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("models").appendingPathComponent(file.lastPathComponent)
+                    try FileManager.default.copyItem(at: file, to: path.deletingPathExtension().appendingPathExtension("zip"))
+                    print(DownloadViewController.extractARD(destURL: path.deletingPathExtension().appendingPathExtension("zip")))
+                } catch {
+                    
+                }
+                
+            }
+        }
     }
 }
