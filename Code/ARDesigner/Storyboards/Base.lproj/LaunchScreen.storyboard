@@ -24,10 +24,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed with love" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lF-XB-ooR">
-                                <rect key="frame" x="55" y="370" width="264" height="58"/>
+                                <rect key="frame" x="55" y="354" width="264" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="0N4-3F-Iut"/>
-                                    <constraint firstAttribute="height" constant="58" id="9F2-fE-Yua"/>
+                                    <constraint firstAttribute="height" constant="28" id="9F2-fE-Yua"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="love" translatesAutoresizingMaskIntoConstraints="NO" id="8Ip-13-etK">
+                                <rect key="frame" x="16" y="390" width="343" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="W2P-6a-fVb"/>
+                                    <constraint firstAttribute="height" constant="182" id="tFB-j3-yCT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ki-JN-Fcj">
+                                <rect key="frame" x="166" y="626" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="4kE-ne-hFj"/>
+                                    <constraint firstAttribute="height" constant="21" id="fhr-Js-yYV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,8 +54,12 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4lF-XB-ooR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2ST-uK-Hn2"/>
+                            <constraint firstItem="8Ip-13-etK" firstAttribute="top" secondItem="4lF-XB-ooR" secondAttribute="bottom" constant="8" id="8F0-bC-iFv"/>
                             <constraint firstItem="jig-t8-by0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8R0-5C-xof"/>
-                            <constraint firstItem="4lF-XB-ooR" firstAttribute="top" secondItem="jig-t8-by0" secondAttribute="bottom" constant="16" id="Xqi-z3-xM7"/>
+                            <constraint firstItem="8Ip-13-etK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XBv-rr-7He"/>
+                            <constraint firstItem="4lF-XB-ooR" firstAttribute="top" secondItem="jig-t8-by0" secondAttribute="bottom" id="Xqi-z3-xM7"/>
+                            <constraint firstItem="0ki-JN-Fcj" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cHG-RF-qxx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ki-JN-Fcj" secondAttribute="bottom" constant="20" id="hkF-vj-vl0"/>
                             <constraint firstItem="jig-t8-by0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vcJ-lj-yxV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -49,4 +70,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="love" width="600" height="344"/>
+    </resources>
 </document>

@@ -29,7 +29,7 @@ extension MainViewController: ARSCNViewDelegate {
         planeNode.eulerAngles.x = -.pi / 2
         plane.width = 0.3
         plane.height = 0.3
-
+        
         node.addChildNode(planeNode)
     }
     
@@ -84,21 +84,14 @@ extension MainViewController: ARSCNViewDelegate {
             
             let when = DispatchTime.now() + 1
             DispatchQueue.main.asyncAfter(deadline: when) {
-//            DispatchQueue.main.async {
                 self.progressIndicator.isHidden = true
                 self.activityIndicator.stopAnimating()
                 
                 let blurView = self.view.viewWithTag(111)
                 if blurView != nil {
-                    UIView.animate(withDuration: 1, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
+                    UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
                 }
-                
-                
             }
         }
-    }
-    
-    func completeInitializing(flag: Bool) {
-        
     }
 }

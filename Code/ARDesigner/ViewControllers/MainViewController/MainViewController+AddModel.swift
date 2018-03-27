@@ -23,7 +23,7 @@ extension MainViewController {
             let z = translation.z
             
             if shouldMoveModel == false {
-                var modelPath = UserDefaults.standard.string(forKey: "currentModelPath")
+                let modelPath = UserDefaults.standard.string(forKey: "currentModelPath")
                 if modelPath == "" {
                     let alert = UIAlertController(title: "Select model", message: "No model was selected. Press add model.", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { UIAlertAction in

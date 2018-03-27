@@ -186,4 +186,38 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             }
         }
     }
+    
+    // MARK: - restart session
+    @IBAction func pressedRestartSessionButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Session restart", message: "Would You like to restart session? It will remove all models from the scene.", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default) { UIAlertAction in
+            let blurView = self.view.viewWithTag(111)
+            if blurView != nil {
+                self.view.bringSubview(toFront: blurView!)
+                UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 1 }, completion: nil)
+            }
+            
+            self.sceneView.session.pause()
+            self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
+                node.removeFromParentNode()
+            }
+            
+            let configuration = ARWorldTrackingConfiguration()
+            configuration.planeDetection = .horizontal
+            
+            self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
+            
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(okAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) { UIAlertAction in
+            alert.dismiss(animated: true, completion: nil)
+        }
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
