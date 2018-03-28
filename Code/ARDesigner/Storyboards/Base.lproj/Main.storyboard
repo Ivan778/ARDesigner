@@ -103,21 +103,6 @@
             </objects>
             <point key="canvasLocation" x="-242.40000000000001" y="120.98950524737631"/>
         </scene>
-        <!--Google Drive View Controller-->
-        <scene sceneID="9Y1-RR-n39">
-            <objects>
-                <viewController id="Sqd-tU-kHD" customClass="GoogleDriveViewController" customModule="ARDesigner" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CR1-An-bIw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="7YK-Cq-s3X"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1mW-7y-k1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-242" y="940"/>
-        </scene>
         <!--Select model-->
         <scene sceneID="h9N-hZ-cIM">
             <objects>
