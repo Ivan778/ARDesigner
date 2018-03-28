@@ -30,21 +30,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func application(_ application: UIApplication,
-                     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url,
-                                                 sourceApplication: sourceApplication,
-                                                 annotation: annotation)
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
     }
     
     @available(iOS 9.0, *)
-    func application(_ app: UIApplication, open url: URL,
-                     options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
         let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
         let annotation = options[UIApplicationOpenURLOptionsKey.annotation]
-        return GIDSignIn.sharedInstance().handle(url,
-                                                 sourceApplication: sourceApplication,
-                                                 annotation: annotation)
+        
+        if url.pathExtension.lowercased() == "ard" {
+            do {
+                let manager = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+                let destUrl = manager.appendingPathComponent("models/\(url.deletingPathExtension().appendingPathExtension("zip").lastPathComponent)")
+                try FileManager.default.moveItem(at: url, to: destUrl)
+                print(DownloadViewController.extractARD(destURL: destUrl))
+                
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "getModel"), object: nil)
+            } catch {
+                print("Error moving in AppDelegate!")
+            }
+        }
+        
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication, annotation: annotation)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

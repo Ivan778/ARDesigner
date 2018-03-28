@@ -9,8 +9,7 @@
 import UIKit
 
 //UITableViewDelegate, UITableViewDataSource
-class AddModelViewController: UIViewController{
-    
+class AddModelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var pathToFile: String = ""
     var arrayWithURL = [String]()
@@ -59,10 +58,10 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as! ModelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath)
         
         if indexPath.row < content.count {
-            cell.modelName?.text = content[indexPath.row]
+            (cell.viewWithTag(100) as! UILabel).text = content[indexPath.row]
         }
          
         return cell
@@ -81,7 +80,7 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
                 if isdir {
                      print("FOLDER = " + file)
                 } else {
-                    if file.range(of: ".dae") != nil {
+                    if file.lowercased().hasSuffix("dae") || file.range(of: ".scn") != nil {
                         pathToFile = fullPath + "/" + file
                         print(".dae FILE = " + file)
                         UserDefaults.standard.set(pathToFile, forKey: "currentModelPath")

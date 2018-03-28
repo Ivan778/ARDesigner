@@ -67,9 +67,6 @@
                                     <constraint firstAttribute="width" constant="49" id="rEG-l7-zC7"/>
                                 </constraints>
                                 <state key="normal" image="restart"/>
-                                <connections>
-                                    <action selector="pressedRestartSessionButton:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="aOk-UH-Izh"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,11 +115,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="44" id="Zxc-Ct-vTb" userLabel="CustomCell" customClass="ModelTableViewCell" customModule="ARDesigner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zxc-Ct-vTb" id="iEL-bs-kVQ" customClass="ModelTableViewCell" customModule="ARDesigner" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zxc-Ct-vTb" id="iEL-bs-kVQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP0-4p-aTt">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP0-4p-aTt">
                                                     <rect key="frame" x="15" y="11" width="345" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -135,13 +132,7 @@
                                                 <constraint firstItem="sP0-4p-aTt" firstAttribute="trailing" secondItem="iEL-bs-kVQ" secondAttribute="trailingMargin" id="JCO-AF-7y8"/>
                                                 <constraint firstItem="sP0-4p-aTt" firstAttribute="top" secondItem="iEL-bs-kVQ" secondAttribute="topMargin" id="Owp-q8-QTE"/>
                                             </constraints>
-                                            <connections>
-                                                <outlet property="modelName" destination="sP0-4p-aTt" id="POy-cg-aoN"/>
-                                            </connections>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="modelName" destination="sP0-4p-aTt" id="Hkw-eN-guK"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

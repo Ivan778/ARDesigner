@@ -61,6 +61,18 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         }
         
         UserDefaults.standard.set("", forKey: "currentModelPath")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(getModel), name: Notification.Name("getModel"), object: nil)
+    }
+    
+    @objc func getModel() {
+        let alert = UIAlertController(title: "New Model", message: "New model(s) was(were) successfully added!", preferredStyle: UIAlertControllerStyle.actionSheet)
+        self.present(alert, animated: true, completion: nil)
+        
+        let when = DispatchTime.now() + 1
+        DispatchQueue.main.asyncAfter(deadline: when) {
+            alert.dismiss(animated: true, completion: nil)
+        }
     }
     
     func addGesturesToSceneView() {

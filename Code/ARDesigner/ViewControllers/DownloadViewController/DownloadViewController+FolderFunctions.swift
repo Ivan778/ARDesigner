@@ -110,10 +110,10 @@ extension DownloadViewController {
             print(try FileManager.default.contentsOfDirectory(atPath: destURL.deletingLastPathComponent().deletingLastPathComponent().path))
             let directory = try FileManager.default.contentsOfDirectory(atPath: pathZip.path)
             
-            if directory.count == 1 {
+//            if directory.count == 1 {
                 try FileManager.default.moveItem(at: pathZip.appendingPathComponent(directory[0]), to: path)
                 try FileManager.default.removeItem(at: pathZip)
-            }
+//            }
         } catch {
             print("error while unzipping")
         }
