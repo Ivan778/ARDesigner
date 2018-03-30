@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C2C9003205EB0A500E48DA2 /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9002205EB0A500E48DA2 /* Converter.m */; };
+		2C2C9016205EBC3300E48DA2 /* scntool in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C9015205EBC3300E48DA2 /* scntool */; };
+		2C2C901F205ECE4000E48DA2 /* DesktopFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */; };
+		2CF521DB205E84C500FE93B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF521DA205E84C500FE93B4 /* AppDelegate.swift */; };
+		2CF521DD205E84C500FE93B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF521DC205E84C500FE93B4 /* ViewController.swift */; };
+		2CF521DF205E84C500FE93B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF521DE205E84C500FE93B4 /* Assets.xcassets */; };
+		2CF521E2205E84C500FE93B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CF521E0205E84C500FE93B4 /* Main.storyboard */; };
+		B3432122D154B83E8D502687 /* Pods_ARDesignerConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC511C7D202C9D36DA3BD1E5 /* Pods_ARDesignerConverter.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C2C9001205EB0A500E48DA2 /* ARDesignerConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARDesignerConverter-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C2C9002205EB0A500E48DA2 /* Converter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
+		2C2C9004205EB0B600E48DA2 /* Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
+		2C2C9015205EBC3300E48DA2 /* scntool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = scntool; sourceTree = "<group>"; };
+		2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopFolder.swift; sourceTree = "<group>"; };
+		2CF521D7205E84C500FE93B4 /* ARDesignerConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDesignerConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF521DA205E84C500FE93B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CF521DC205E84C500FE93B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CF521DE205E84C500FE93B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CF521E1205E84C500FE93B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CF521E3205E84C500FE93B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF521E4205E84C500FE93B4 /* ARDesignerConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ARDesignerConverter.entitlements; sourceTree = "<group>"; };
+		42F914CCE443923F3ECBD668 /* Pods-ARDesignerConverter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDesignerConverter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARDesignerConverter/Pods-ARDesignerConverter.debug.xcconfig"; sourceTree = "<group>"; };
+		BC511C7D202C9D36DA3BD1E5 /* Pods_ARDesignerConverter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARDesignerConverter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB78F54E57BE0312F3081656 /* Pods-ARDesignerConverter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARDesignerConverter.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARDesignerConverter/Pods-ARDesignerConverter.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CF521D4205E84C500FE93B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3432122D154B83E8D502687 /* Pods_ARDesignerConverter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1AFA32450969B51CE59E21EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC511C7D202C9D36DA3BD1E5 /* Pods_ARDesignerConverter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C2C9005205EB0BD00E48DA2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2CF521DC205E84C500FE93B4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2C2C9006205EB0C900E48DA2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C901D205EC4CB00E48DA2 /* AppDelegate */,
+				2C2C9008205EB10200E48DA2 /* Converter */,
+				2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */,
+				2C2C9001205EB0A500E48DA2 /* ARDesignerConverter-Bridging-Header.h */,
+				2CF521E4205E84C500FE93B4 /* ARDesignerConverter.entitlements */,
+				2CF521E3205E84C500FE93B4 /* Info.plist */,
+				2CF521DE205E84C500FE93B4 /* Assets.xcassets */,
+				2C2C9015205EBC3300E48DA2 /* scntool */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C2C9007205EB0E600E48DA2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2CF521E0205E84C500FE93B4 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		2C2C9008205EB10200E48DA2 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C9002205EB0A500E48DA2 /* Converter.m */,
+				2C2C9004205EB0B600E48DA2 /* Converter.h */,
+			);
+			path = Converter;
+			sourceTree = "<group>";
+		};
+		2C2C901D205EC4CB00E48DA2 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				2CF521DA205E84C500FE93B4 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		2CF521CE205E84C500FE93B4 = {
+			isa = PBXGroup;
+			children = (
+				2CF521D9205E84C500FE93B4 /* ARDesignerConverter */,
+				2CF521D8205E84C500FE93B4 /* Products */,
+				694629D7A2CBC561FF8A60F7 /* Pods */,
+				1AFA32450969B51CE59E21EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2CF521D8205E84C500FE93B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CF521D7205E84C500FE93B4 /* ARDesignerConverter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CF521D9205E84C500FE93B4 /* ARDesignerConverter */ = {
+			isa = PBXGroup;
+			children = (
+				2C2C9005205EB0BD00E48DA2 /* ViewControllers */,
+				2C2C9007205EB0E600E48DA2 /* Storyboards */,
+				2C2C9006205EB0C900E48DA2 /* Supporting Files */,
+			);
+			path = ARDesignerConverter;
+			sourceTree = "<group>";
+		};
+		694629D7A2CBC561FF8A60F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42F914CCE443923F3ECBD668 /* Pods-ARDesignerConverter.debug.xcconfig */,
+				DB78F54E57BE0312F3081656 /* Pods-ARDesignerConverter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CF521D6205E84C500FE93B4 /* ARDesignerConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF521E7205E84C500FE93B4 /* Build configuration list for PBXNativeTarget "ARDesignerConverter" */;
+			buildPhases = (
+				1DE110297C9460FDC20C764D /* [CP] Check Pods Manifest.lock */,
+				2CF521D3205E84C500FE93B4 /* Sources */,
+				2CF521D4205E84C500FE93B4 /* Frameworks */,
+				2CF521D5205E84C500FE93B4 /* Resources */,
+				72E49306397E86810461399F /* [CP] Embed Pods Frameworks */,
+				BB80DAFEFC8AC90A9712C3AA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ARDesignerConverter;
+			productName = ARDesignerConverter;
+			productReference = 2CF521D7205E84C500FE93B4 /* ARDesignerConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CF521CF205E84C500FE93B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Ivan;
+				TargetAttributes = {
+					2CF521D6205E84C500FE93B4 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2CF521D2205E84C500FE93B4 /* Build configuration list for PBXProject "ARDesignerConverter" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CF521CE205E84C500FE93B4;
+			productRefGroup = 2CF521D8205E84C500FE93B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CF521D6205E84C500FE93B4 /* ARDesignerConverter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CF521D5205E84C500FE93B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2C9016205EBC3300E48DA2 /* scntool in Resources */,
+				2CF521DF205E84C500FE93B4 /* Assets.xcassets in Resources */,
+				2CF521E2205E84C500FE93B4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DE110297C9460FDC20C764D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARDesignerConverter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72E49306397E86810461399F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARDesignerConverter/Pods-ARDesignerConverter-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARDesignerConverter/Pods-ARDesignerConverter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB80DAFEFC8AC90A9712C3AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARDesignerConverter/Pods-ARDesignerConverter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CF521D3205E84C500FE93B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C2C9003205EB0A500E48DA2 /* Converter.m in Sources */,
+				2CF521DD205E84C500FE93B4 /* ViewController.swift in Sources */,
+				2C2C901F205ECE4000E48DA2 /* DesktopFolder.swift in Sources */,
+				2CF521DB205E84C500FE93B4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2CF521E0205E84C500FE93B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CF521E1205E84C500FE93B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CF521E5205E84C500FE93B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CF521E6205E84C500FE93B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		2CF521E8205E84C500FE93B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42F914CCE443923F3ECBD668 /* Pods-ARDesignerConverter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ARDesignerConverter/ARDesignerConverter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXCL7H2Z3W;
+				INFOPLIST_FILE = "ARDesignerConverter/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanKseniyaAlexandraEugen.ARDesignerConverter.ARDesignerConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARDesignerConverter/Supporting Files/ARDesignerConverter-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		2CF521E9205E84C500FE93B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB78F54E57BE0312F3081656 /* Pods-ARDesignerConverter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ARDesignerConverter/ARDesignerConverter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXCL7H2Z3W;
+				INFOPLIST_FILE = "ARDesignerConverter/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanKseniyaAlexandraEugen.ARDesignerConverter.ARDesignerConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ARDesignerConverter/Supporting Files/ARDesignerConverter-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CF521D2205E84C500FE93B4 /* Build configuration list for PBXProject "ARDesignerConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF521E5205E84C500FE93B4 /* Debug */,
+				2CF521E6205E84C500FE93B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CF521E7205E84C500FE93B4 /* Build configuration list for PBXNativeTarget "ARDesignerConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF521E8205E84C500FE93B4 /* Debug */,
+				2CF521E9205E84C500FE93B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CF521CF205E84C500FE93B4 /* Project object */;
+}

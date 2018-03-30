@@ -1,0 +1,6 @@
+framework module Pods_ARDesignerConverter {
+  umbrella header "Pods-ARDesignerConverter-umbrella.h"
+
+  export *
+  module * { export * }
+}
