@@ -67,6 +67,9 @@
                                     <constraint firstAttribute="width" constant="49" id="rEG-l7-zC7"/>
                                 </constraints>
                                 <state key="normal" image="restart"/>
+                                <connections>
+                                    <action selector="pressedRestartSessionButton:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="Tyk-6S-nwc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,21 +114,23 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAy-ca-34L">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="44" id="Zxc-Ct-vTb" userLabel="CustomCell" customClass="ModelTableViewCell" customModule="ARDesigner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="77" id="Zxc-Ct-vTb" userLabel="CustomCell" customClass="ModelTableViewCell" customModule="ARDesigner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zxc-Ct-vTb" id="iEL-bs-kVQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="76.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sP0-4p-aTt">
-                                                    <rect key="frame" x="15" y="11" width="345" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="11" width="345" height="55"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="sP0-4p-aTt" secondAttribute="bottom" id="1NJ-wG-RBd"/>
                                                 <constraint firstItem="sP0-4p-aTt" firstAttribute="leading" secondItem="iEL-bs-kVQ" secondAttribute="leadingMargin" id="DPh-35-ESD"/>
@@ -141,7 +146,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bbg-MJ-euG" firstAttribute="bottom" secondItem="BAy-ca-34L" secondAttribute="bottom" id="aaI-NA-Q6O"/>
                             <constraint firstItem="BAy-ca-34L" firstAttribute="leading" secondItem="Bbg-MJ-euG" secondAttribute="leading" id="eHS-2r-l1R"/>
@@ -152,7 +156,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select model" id="Qd4-18-P7S">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="3JC-Oi-Jfn"/>
-                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Sdg-uN-jRG">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="Sdg-uN-jRG">
                             <connections>
                                 <action selector="pressedBack:" destination="Gnq-oU-H3v" id="Z3V-Rc-yiL"/>
                             </connections>
@@ -164,7 +168,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpr-9p-u06" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1732" y="121"/>
+            <point key="canvasLocation" x="1732" y="120.98950524737631"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JUZ-dF-LJX">

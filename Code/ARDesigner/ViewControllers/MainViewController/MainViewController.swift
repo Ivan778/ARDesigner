@@ -16,6 +16,7 @@ enum Axis {
     case y
     case z
     case non
+    case upDown
 }
 
 class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate {
@@ -102,8 +103,9 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
                 objectToManage.scale.x += sign * objectToManage.scale.x / const
                 objectToManage.scale.y += sign * objectToManage.scale.y / const
                 objectToManage.scale.z += sign * objectToManage.scale.z / const
+            case .upDown:
+                objectToManage.position.y += sign * constant
             }
-            
         }
     }
     

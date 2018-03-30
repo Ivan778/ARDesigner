@@ -58,7 +58,7 @@ extension MainViewController {
                 shipNode.position = SCNVector3(x, y, z)
                 sceneView.scene.rootNode.addChildNode(shipNode)
             } else {
-                objectToManage.position = SCNVector3(x, y, z)
+                objectToManage.position = SCNVector3(x, objectToManage.position.y, z)
                 shouldMoveModel = false
             }
             

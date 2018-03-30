@@ -13,7 +13,7 @@ class AddModelViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var pathToFile: String = ""
     var arrayWithURL = [String]()
-    var content: [String] = []
+    var content = [String]()
     var currentDirectory: String?
 
     override func viewDidLoad() {
@@ -67,15 +67,39 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // this method handles row deletion
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            // remove the item from the data model
+            if content.count > indexPath.row {
+                let fullPath = currentDirectory! + "/" + content[indexPath.row]
+                
+                do {
+                    try FileManager.default.removeItem(atPath: fullPath)
+                    content.remove(at: indexPath.row)
+                } catch {
+                    print("Error deleting file")
+                }
+                
+                
+            }
+            
+            // delete the table view row
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+    
     // MARK: - ToDo refactor
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let fullPath = currentDirectory! + "/" + content[indexPath.row]
         
-        content = try! FileManager.default.contentsOfDirectory(atPath: fullPath)
+        arrayWithURL = try! FileManager.default.contentsOfDirectory(atPath: fullPath)
         print("1 = ")
-        print(content)
+        print(arrayWithURL)
 
-        for file in content {
+        for file in arrayWithURL {
             if let isdir = isDir(atPath: fullPath + "/" + file) {
                 if isdir {
                      print("FOLDER = " + file)
@@ -96,6 +120,7 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
 //        let extension = NSURL(fileURLWithPath: filePath).pathExtension
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func isDir(atPath: String) -> Bool? {
