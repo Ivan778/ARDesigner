@@ -1,0 +1,12 @@
+PODS:
+  - Zip (1.1.0)
+
+DEPENDENCIES:
+  - Zip (~> 1.1)
+
+SPEC CHECKSUMS:
+  Zip: 8877eede3dda76bcac281225c20e71c25270774c
+
+PODFILE CHECKSUM: 9172ed1c5a2cb283385daaefae67ea5bbdfa0f36
+
+COCOAPODS: 1.4.0
