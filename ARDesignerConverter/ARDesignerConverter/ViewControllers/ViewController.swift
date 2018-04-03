@@ -51,7 +51,7 @@ class ViewController: NSViewController {
             myGroup = DispatchGroup()
             
             for directory in dialog.urls {
-                checkFolder(url: directory)
+                print(checkFolder(url: directory))
             }
         }
         
@@ -67,7 +67,7 @@ class ViewController: NSViewController {
         })
     }
     
-    func checkFolder(url: URL) {
+    func checkFolder(url: URL) -> Bool {
         var gotDae = 0
         var modelName = ""
         
@@ -114,8 +114,10 @@ class ViewController: NSViewController {
             DispatchQueue.global(qos: .utility).async {
                 self.createModel(url: url, pathToModel: modelName, pathToFolderWithTextures: textureFolder)
             }
+            return true
         } else {
             print("Nope")
+            return false
         }
     }
     

@@ -10,6 +10,9 @@
 		2C2C9003205EB0A500E48DA2 /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9002205EB0A500E48DA2 /* Converter.m */; };
 		2C2C9016205EBC3300E48DA2 /* scntool in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C9015205EBC3300E48DA2 /* scntool */; };
 		2C2C901F205ECE4000E48DA2 /* DesktopFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */; };
+		2CA3CA55207296F800B1297D /* TestInput in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3CA54207296F700B1297D /* TestInput */; };
+		2CA3CA6E2072B5FA00B1297D /* SyncLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3CA6D2072B5FA00B1297D /* SyncLogic.swift */; };
+		2CA3CA7A2073936800B1297D /* ARDesignerConverterCheckFolderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3CA792073936800B1297D /* ARDesignerConverterCheckFolderTests.swift */; };
 		2CF521DB205E84C500FE93B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF521DA205E84C500FE93B4 /* AppDelegate.swift */; };
 		2CF521DD205E84C500FE93B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF521DC205E84C500FE93B4 /* ViewController.swift */; };
 		2CF521DF205E84C500FE93B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CF521DE205E84C500FE93B4 /* Assets.xcassets */; };
@@ -17,12 +20,27 @@
 		B3432122D154B83E8D502687 /* Pods_ARDesignerConverter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC511C7D202C9D36DA3BD1E5 /* Pods_ARDesignerConverter.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		2CA3CA7C2073936800B1297D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CF521CF205E84C500FE93B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CF521D6205E84C500FE93B4;
+			remoteInfo = ARDesignerConverter;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		2C2C9001205EB0A500E48DA2 /* ARDesignerConverter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARDesignerConverter-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C2C9002205EB0A500E48DA2 /* Converter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Converter.m; sourceTree = "<group>"; };
 		2C2C9004205EB0B600E48DA2 /* Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
 		2C2C9015205EBC3300E48DA2 /* scntool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = scntool; sourceTree = "<group>"; };
 		2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopFolder.swift; sourceTree = "<group>"; };
+		2CA3CA54207296F700B1297D /* TestInput */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestInput; sourceTree = "<group>"; };
+		2CA3CA6D2072B5FA00B1297D /* SyncLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncLogic.swift; sourceTree = "<group>"; };
+		2CA3CA772073936800B1297D /* ARDesignerConverterCheckFolderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDesignerConverterCheckFolderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA3CA792073936800B1297D /* ARDesignerConverterCheckFolderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDesignerConverterCheckFolderTests.swift; sourceTree = "<group>"; };
+		2CA3CA7B2073936800B1297D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2CF521D7205E84C500FE93B4 /* ARDesignerConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARDesignerConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF521DA205E84C500FE93B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2CF521DC205E84C500FE93B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +54,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2CA3CA742073936800B1297D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF521D4205E84C500FE93B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,10 +128,21 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		2CA3CA782073936800B1297D /* ARDesignerConverterCheckFolderTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA3CA792073936800B1297D /* ARDesignerConverterCheckFolderTests.swift */,
+				2CA3CA7B2073936800B1297D /* Info.plist */,
+			);
+			path = ARDesignerConverterCheckFolderTests;
+			sourceTree = "<group>";
+		};
 		2CF521CE205E84C500FE93B4 = {
 			isa = PBXGroup;
 			children = (
+				2CA3CA54207296F700B1297D /* TestInput */,
 				2CF521D9205E84C500FE93B4 /* ARDesignerConverter */,
+				2CA3CA782073936800B1297D /* ARDesignerConverterCheckFolderTests */,
 				2CF521D8205E84C500FE93B4 /* Products */,
 				694629D7A2CBC561FF8A60F7 /* Pods */,
 				1AFA32450969B51CE59E21EE /* Frameworks */,
@@ -117,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				2CF521D7205E84C500FE93B4 /* ARDesignerConverter.app */,
+				2CA3CA772073936800B1297D /* ARDesignerConverterCheckFolderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +164,7 @@
 				2C2C9005205EB0BD00E48DA2 /* ViewControllers */,
 				2C2C9007205EB0E600E48DA2 /* Storyboards */,
 				2C2C9006205EB0C900E48DA2 /* Supporting Files */,
+				2CA3CA6D2072B5FA00B1297D /* SyncLogic.swift */,
 			);
 			path = ARDesignerConverter;
 			sourceTree = "<group>";
@@ -143,6 +181,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2CA3CA762073936800B1297D /* ARDesignerConverterCheckFolderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA3CA802073936800B1297D /* Build configuration list for PBXNativeTarget "ARDesignerConverterCheckFolderTests" */;
+			buildPhases = (
+				2CA3CA732073936800B1297D /* Sources */,
+				2CA3CA742073936800B1297D /* Frameworks */,
+				2CA3CA752073936800B1297D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA3CA7D2073936800B1297D /* PBXTargetDependency */,
+			);
+			name = ARDesignerConverterCheckFolderTests;
+			productName = ARDesignerConverterCheckFolderTests;
+			productReference = 2CA3CA772073936800B1297D /* ARDesignerConverterCheckFolderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2CF521D6205E84C500FE93B4 /* ARDesignerConverter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2CF521E7205E84C500FE93B4 /* Build configuration list for PBXNativeTarget "ARDesignerConverter" */;
@@ -173,6 +229,11 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = Ivan;
 				TargetAttributes = {
+					2CA3CA762073936800B1297D = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2CF521D6205E84C500FE93B4;
+					};
 					2CF521D6205E84C500FE93B4 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -194,16 +255,25 @@
 			projectRoot = "";
 			targets = (
 				2CF521D6205E84C500FE93B4 /* ARDesignerConverter */,
+				2CA3CA762073936800B1297D /* ARDesignerConverterCheckFolderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2CA3CA752073936800B1297D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF521D5205E84C500FE93B4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2C2C9016205EBC3300E48DA2 /* scntool in Resources */,
+				2CA3CA55207296F800B1297D /* TestInput in Resources */,
 				2CF521DF205E84C500FE93B4 /* Assets.xcassets in Resources */,
 				2CF521E2205E84C500FE93B4 /* Main.storyboard in Resources */,
 			);
@@ -266,18 +336,35 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2CA3CA732073936800B1297D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA3CA7A2073936800B1297D /* ARDesignerConverterCheckFolderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2CF521D3205E84C500FE93B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2C2C9003205EB0A500E48DA2 /* Converter.m in Sources */,
 				2CF521DD205E84C500FE93B4 /* ViewController.swift in Sources */,
+				2CA3CA6E2072B5FA00B1297D /* SyncLogic.swift in Sources */,
 				2C2C901F205ECE4000E48DA2 /* DesktopFolder.swift in Sources */,
 				2CF521DB205E84C500FE93B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CA3CA7D2073936800B1297D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CF521D6205E84C500FE93B4 /* ARDesignerConverter */;
+			targetProxy = 2CA3CA7C2073936800B1297D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2CF521E0205E84C500FE93B4 /* Main.storyboard */ = {
@@ -291,6 +378,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2CA3CA7E2073936800B1297D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXCL7H2Z3W;
+				INFOPLIST_FILE = ARDesignerConverterCheckFolderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanKseniyaAlexandraEugen.ARDesignerConverter.ARDesignerConverterCheckFolderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARDesignerConverter.app/Contents/MacOS/ARDesignerConverter";
+			};
+			name = Debug;
+		};
+		2CA3CA7F2073936800B1297D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = JXCL7H2Z3W;
+				INFOPLIST_FILE = ARDesignerConverterCheckFolderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.IvanKseniyaAlexandraEugen.ARDesignerConverter.ARDesignerConverterCheckFolderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARDesignerConverter.app/Contents/MacOS/ARDesignerConverter";
+			};
+			name = Release;
+		};
 		2CF521E5205E84C500FE93B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -409,7 +528,7 @@
 				DEVELOPMENT_TEAM = JXCL7H2Z3W;
 				INFOPLIST_FILE = "ARDesignerConverter/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanKseniyaAlexandraEugen.ARDesignerConverter.ARDesignerConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ARDesignerConverter/Supporting Files/ARDesignerConverter-Bridging-Header.h";
@@ -430,7 +549,7 @@
 				DEVELOPMENT_TEAM = JXCL7H2Z3W;
 				INFOPLIST_FILE = "ARDesignerConverter/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.IvanKseniyaAlexandraEugen.ARDesignerConverter.ARDesignerConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ARDesignerConverter/Supporting Files/ARDesignerConverter-Bridging-Header.h";
@@ -441,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2CA3CA802073936800B1297D /* Build configuration list for PBXNativeTarget "ARDesignerConverterCheckFolderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA3CA7E2073936800B1297D /* Debug */,
+				2CA3CA7F2073936800B1297D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2CF521D2205E84C500FE93B4 /* Build configuration list for PBXProject "ARDesignerConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
