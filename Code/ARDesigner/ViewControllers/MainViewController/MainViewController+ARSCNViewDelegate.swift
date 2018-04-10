@@ -78,7 +78,10 @@ extension MainViewController: ARSCNViewDelegate {
                 progressIndicator.text = "initializing"
             case .insufficientFeatures:
                 progressIndicator.text = "not enough surface detail"
+            case .relocalizing:
+                progressIndicator.text = "relocation"
             }
+            
         case .normal:
             progressIndicator.text = "success"
             

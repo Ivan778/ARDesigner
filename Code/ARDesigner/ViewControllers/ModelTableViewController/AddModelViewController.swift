@@ -81,13 +81,10 @@ extension AddModelViewController: UITableViewDataSource, UITableViewDelegate {
                 } catch {
                     print("Error deleting file")
                 }
-                
-                
             }
             
             // delete the table view row
             tableView.deleteRows(at: [indexPath], with: .fade)
-            
         }
     }
     
