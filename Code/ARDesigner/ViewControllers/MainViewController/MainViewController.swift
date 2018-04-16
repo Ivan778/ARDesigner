@@ -10,6 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 import Zip
+import ReplayKit
 
 enum Axis {
     case x
@@ -19,10 +20,15 @@ enum Axis {
     case upDown
 }
 
-class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate {
+class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate, RPPreviewViewControllerDelegate {
     @IBOutlet var sceneView: ARSCNView!
+    
     @IBOutlet weak var selectModelButton: UIButton!
     @IBOutlet weak var progressIndicator: UILabel!
+    @IBOutlet weak var downloadModelButton: UIButton!
+    @IBOutlet weak var restartSessionButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var openOnce = false
@@ -36,6 +42,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     var tableView = UITableView()
     var arrayOfModels = [String]()
+    
+    var isVideoRecording = false
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -232,6 +240,30 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         alert.addAction(cancelAction)
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: - camera click
+    @IBAction func cameraButtonClicked(_ sender: Any) {
+        DispatchQueue.main.async {
+            self.selectModelButton.isHidden = true
+            self.downloadModelButton.isHidden = true
+            self.restartSessionButton.isHidden = true
+            self.cameraButton.isHidden = true
+        }
+        
+        let alert = UIAlertController(title: "", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            alert.dismiss(animated: true, completion: { () -> Void in
+                self.isVideoRecording = true
+                VideoRecorder.startRecording()
+            })
+        })
+        
+    }
+    
+    func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
+        dismiss(animated: true)
     }
     
 }

@@ -12,7 +12,7 @@ import ARKit
 
 extension MainViewController {
     @objc func manageModels(withGestureRecognizer recognizer: UIGestureRecognizer) {
-        if !shouldRotateOrResizeModel {
+        if !shouldRotateOrResizeModel && !isVideoRecording {
             // Taptic feedback
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()

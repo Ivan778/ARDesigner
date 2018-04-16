@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ld3-Ue-aQ9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ld3-Ue-aQ9">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -71,11 +72,23 @@
                                     <action selector="pressedRestartSessionButton:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="Tyk-6S-nwc"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osa-Kz-m5q">
+                                <rect key="frame" x="306" y="598" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="JQ9-kU-n6P"/>
+                                    <constraint firstAttribute="width" constant="49" id="oe6-iS-Zo1"/>
+                                </constraints>
+                                <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="cameraButtonClicked:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="zYf-bt-k1Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="CIB-cF-s0u" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="2DG-xb-wrH"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="Osa-Kz-m5q" secondAttribute="trailing" constant="20" id="7MS-hr-ZdS"/>
                             <constraint firstItem="RyO-ar-jgT" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="8Gk-o6-Ue7"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="BUf-RL-8fP" secondAttribute="bottom" constant="20" id="9fD-2V-J0I"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="Exr-rH-u38"/>
@@ -83,6 +96,7 @@
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="Osa-Kz-m5q" secondAttribute="bottom" constant="20" id="c2X-eB-fNp"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="c3B-T3-BHW"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
@@ -94,7 +108,10 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="RyO-ar-jgT" id="VdH-VC-q9p"/>
+                        <outlet property="cameraButton" destination="Osa-Kz-m5q" id="gbK-J9-NzB"/>
+                        <outlet property="downloadModelButton" destination="CIB-cF-s0u" id="bz2-zE-8sy"/>
                         <outlet property="progressIndicator" destination="k9h-Wc-oKh" id="Ysf-Wk-RY6"/>
+                        <outlet property="restartSessionButton" destination="bnl-u0-bRn" id="Vvh-5s-nHY"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                         <outlet property="selectModelButton" destination="BUf-RL-8fP" id="9mf-22-u16"/>
                     </connections>
@@ -191,6 +208,7 @@
     </scenes>
     <resources>
         <image name="DownloadButton" width="512" height="512"/>
+        <image name="camera" width="100" height="100"/>
         <image name="restart" width="200" height="200"/>
     </resources>
 </document>

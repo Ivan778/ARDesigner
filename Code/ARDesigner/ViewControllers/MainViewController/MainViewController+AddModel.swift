@@ -12,7 +12,7 @@ import ARKit
 
 extension MainViewController {
     @objc func addModelToScene(withGestureRecognizer recognizer: UIGestureRecognizer) {
-        if !shouldRotateOrResizeModel {
+        if !shouldRotateOrResizeModel && !isVideoRecording {
             let tapLocation = recognizer.location(in: sceneView)
             let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
             
@@ -62,6 +62,17 @@ extension MainViewController {
                 shouldMoveModel = false
             }
             
+        } else if isVideoRecording {
+            VideoRecorder.stopRecording(target: self)
+            
+            DispatchQueue.main.async {
+                self.selectModelButton.isHidden = false
+                self.downloadModelButton.isHidden = false
+                self.restartSessionButton.isHidden = false
+                self.cameraButton.isHidden = false
+            }
+            
+            isVideoRecording = false
         }
     }
 }
