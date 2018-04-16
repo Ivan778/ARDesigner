@@ -40,6 +40,9 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     var axis = Axis.x
     var previousValue = 0
     
+    var counter: Int = 3
+    var alertCounter = UIAlertController()
+    
     var tableView = UITableView()
     var arrayOfModels = [String]()
     
@@ -251,15 +254,28 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             self.cameraButton.isHidden = true
         }
         
-        let alert = UIAlertController(title: "", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
+        let alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
         self.present(alert, animated: true, completion: nil)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+        self.alertCounter = alert
+        
+        self.counter = 3
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeLabelText), userInfo: nil, repeats: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
             alert.dismiss(animated: true, completion: { () -> Void in
                 self.isVideoRecording = true
+                timer.invalidate()
                 VideoRecorder.startRecording()
             })
         })
         
+    }
+    
+    @objc func changeLabelText() {
+        alertCounter.title = "\(counter)"
+        
+        print(counter)
+        counter -= 1
     }
     
     func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
