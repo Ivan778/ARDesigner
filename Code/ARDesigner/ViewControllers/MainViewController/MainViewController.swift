@@ -246,31 +246,34 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     }
     
     // MARK: - camera click
-   /* @IBAction func cameraButtonClicked(_ sender: Any) {
-        DispatchQueue.main.async {
-            self.selectModelButton.isHidden = true
-            self.downloadModelButton.isHidden = true
-            self.restartSessionButton.isHidden = true
-            self.cameraButton.isHidden = true
-        }
-        
-        let alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
-        self.present(alert, animated: true, completion: nil)
-        self.alertCounter = alert
-        
-        self.counter = 3
-        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeLabelText), userInfo: nil, repeats: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
-            alert.dismiss(animated: true, completion: { () -> Void in
-                self.isVideoRecording = true
-                timer.invalidate()
-                VideoRecorder.startRecording()
-            })
-        })
-        
+    @IBAction func cameraButtonClicked(_ sender: Any) {
+//        DispatchQueue.main.async {
+//            self.selectModelButton.isHidden = true
+//            self.downloadModelButton.isHidden = true
+//            self.restartSessionButton.isHidden = true
+//            self.cameraButton.isHidden = true
+//        }
+//
+//        let alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
+//        self.present(alert, animated: true, completion: nil)
+//        self.alertCounter = alert
+//
+//        self.counter = 3
+//        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeLabelText), userInfo: nil, repeats: true)
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+//            alert.dismiss(animated: true, completion: { () -> Void in
+//                self.isVideoRecording = true
+//                timer.invalidate()
+//                VideoRecorder.startRecording()
+//            })
+//        })
+        var image = UIImage()
+        image = sceneView.toImage()
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+     
     }
-    */
+ 
     @objc func changeLabelText() {
         alertCounter.title = "\(counter)"
         
@@ -280,28 +283,6 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
         dismiss(animated: true)
-    }
-    
-    @IBAction func screenshotWriteToSavedPhotosAlbum(_ sender: Any) {
-        var image: UIImage
-        image = takeScreenshot()!
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-    }
-    
-    func takeScreenshot(_ shouldSave: Bool = true) -> UIImage? {
-        let screenshotImage :UIImage?
-
-        buttonsStatus(true)
-        
-        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
-        guard let context = UIGraphicsGetCurrentContext() else {return .none}
-        view.layer.render(in: context)
-        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        buttonsStatus(false)
-        
-        return screenshotImage
     }
     
     func buttonsStatus(_ buttonsIsHidden: Bool) {
@@ -318,4 +299,16 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         }
     }
 
+}
+
+extension UIView {
+    func toImage() -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
+        
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image!
+    }
 }
