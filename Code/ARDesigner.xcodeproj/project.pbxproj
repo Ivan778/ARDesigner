@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C087F122086777B002C4C60 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C087F112086777B002C4C60 /* OnboardViewController.swift */; };
+		2C087F1520867D0B002C4C60 /* paper_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C087F1420867D0B002C4C60 /* paper_onboarding.framework */; };
+		2C087F1620867D0B002C4C60 /* paper_onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C087F1420867D0B002C4C60 /* paper_onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */; };
 		2C2C902E206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */; };
 		2C2C902F206020CA00E48DA2 /* DownloadViewController+Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */; };
@@ -47,6 +50,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2C087F1620867D0B002C4C60 /* paper_onboarding.framework in Embed Frameworks */,
 				2CE9CFCB20497F5D00ACCDB7 /* AssimpKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -55,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C087F0E208676A2002C4C60 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C087F112086777B002C4C60 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
+		2C087F1420867D0B002C4C60 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+ViewInitialization.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+ViewInitialization.swift"; sourceTree = SOURCE_ROOT; };
 		2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+Functionality.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+Functionality.swift"; sourceTree = SOURCE_ROOT; };
@@ -98,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE9CFCA20497F5D00ACCDB7 /* AssimpKit.framework in Frameworks */,
+				2C087F1520867D0B002C4C60 /* paper_onboarding.framework in Frameworks */,
 				9709D50605A49C8668634900 /* Pods_ARDesigner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +120,14 @@
 				EC80B1CBD77CBA3A9961A0A5 /* Pods-ARDesigner.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		2C087F1320867787002C4C60 /* OnboardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C087F112086777B002C4C60 /* OnboardViewController.swift */,
+			);
+			path = OnboardViewController;
 			sourceTree = "<group>";
 		};
 		2C2C90282060207500E48DA2 /* DownloadViewController */ = {
@@ -154,6 +170,8 @@
 		2C3C69922029F84A009BE216 = {
 			isa = PBXGroup;
 			children = (
+				2C087F1420867D0B002C4C60 /* paper_onboarding.framework */,
+				2C087F0E208676A2002C4C60 /* paper_onboarding.framework */,
 				2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */,
 				2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */,
 				2C3C699D2029F84B009BE216 /* ARDesigner */,
@@ -209,6 +227,7 @@
 		2CF8D623203861F100FB0CAB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2C087F1320867787002C4C60 /* OnboardViewController */,
 				2CBB77042084A9AD007D8559 /* VideoRecorder */,
 				2C31B3A8206145C20039AA2F /* SecondaryViews */,
 				2C31B3A7206145A40039AA2F /* ModelTableViewController */,
@@ -357,6 +376,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -365,6 +385,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -413,6 +434,7 @@
 				2C77BBA5203D3FB5001EF77F /* MainViewController+TableView.swift in Sources */,
 				2C2C902F206020CA00E48DA2 /* DownloadViewController+Functionality.swift in Sources */,
 				2C2C902E206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift in Sources */,
+				2C087F122086777B002C4C60 /* OnboardViewController.swift in Sources */,
 				2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */,
 				2C2C903B206027B400E48DA2 /* GoogleDriveViewController.swift in Sources */,
 				2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */,

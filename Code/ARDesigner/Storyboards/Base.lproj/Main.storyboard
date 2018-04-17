@@ -83,6 +83,17 @@
                                     <action selector="cameraButtonClicked:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="zYf-bt-k1Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lv-X8-wsi">
+                                <rect key="frame" x="20" y="40" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="JbA-3n-V9G"/>
+                                    <constraint firstAttribute="width" constant="49" id="cjB-PN-tJf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="question"/>
+                                <connections>
+                                    <action selector="questionButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="Lq6-qZ-tYb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -98,8 +109,10 @@
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="Osa-Kz-m5q" secondAttribute="bottom" constant="20" id="c2X-eB-fNp"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="c3B-T3-BHW"/>
+                            <constraint firstItem="8lv-X8-wsi" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="cHy-gB-kcv"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
+                            <constraint firstItem="8lv-X8-wsi" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="q7E-Tx-u0I"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
                             <constraint firstItem="bnl-u0-bRn" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="tV6-hD-bC3"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="CIB-cF-s0u" secondAttribute="bottom" constant="20" id="yeX-cp-y8q"/>
@@ -110,6 +123,7 @@
                         <outlet property="activityIndicator" destination="RyO-ar-jgT" id="VdH-VC-q9p"/>
                         <outlet property="cameraButton" destination="Osa-Kz-m5q" id="gbK-J9-NzB"/>
                         <outlet property="downloadModelButton" destination="CIB-cF-s0u" id="bz2-zE-8sy"/>
+                        <outlet property="instructionButton" destination="8lv-X8-wsi" id="l7X-ib-Pfk"/>
                         <outlet property="progressIndicator" destination="k9h-Wc-oKh" id="Ysf-Wk-RY6"/>
                         <outlet property="restartSessionButton" destination="bnl-u0-bRn" id="Vvh-5s-nHY"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
@@ -119,6 +133,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22N-Ql-XrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-242.40000000000001" y="120.98950524737631"/>
+        </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="fIk-rh-bHe">
+            <objects>
+                <viewController storyboardIdentifier="onboard" id="KkW-LA-7Mi" customClass="InstructionViewController" customModule="ARDesigner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BIQ-8T-2CN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a36-mH-y0K">
+                                <rect key="frame" x="301" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="dcc-QP-ErH"/>
+                                    <constraint firstAttribute="height" constant="50" id="fiC-6Q-CXf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonTapped:" destination="KkW-LA-7Mi" eventType="touchUpInside" id="zT8-K4-WGQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="09X-1d-wH7" firstAttribute="trailing" secondItem="a36-mH-y0K" secondAttribute="trailing" constant="24" id="cDQ-mx-4MV"/>
+                            <constraint firstItem="a36-mH-y0K" firstAttribute="top" secondItem="09X-1d-wH7" secondAttribute="top" id="yM9-MD-uJ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="09X-1d-wH7"/>
+                    </view>
+                    <connections>
+                        <outlet property="skipButton" destination="a36-mH-y0K" id="Gfw-v9-i1p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uAb-dz-1Tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="805"/>
         </scene>
         <!--Select model-->
         <scene sceneID="h9N-hZ-cIM">
@@ -209,6 +261,7 @@
     <resources>
         <image name="DownloadButton" width="512" height="512"/>
         <image name="camera" width="100" height="100"/>
+        <image name="question" width="200" height="200"/>
         <image name="restart" width="200" height="200"/>
     </resources>
 </document>

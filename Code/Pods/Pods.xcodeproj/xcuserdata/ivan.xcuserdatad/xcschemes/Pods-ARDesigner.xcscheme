@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA58AC2F79BC38DA527C420C0A332B1D"
+               BlueprintIdentifier = "BE741479AC0EF51D2D9E4DC09935E323"
                BuildableName = "Pods_ARDesigner.framework"
                BlueprintName = "Pods-ARDesigner"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA58AC2F79BC38DA527C420C0A332B1D"
+            BlueprintIdentifier = "BE741479AC0EF51D2D9E4DC09935E323"
             BuildableName = "Pods_ARDesigner.framework"
             BlueprintName = "Pods-ARDesigner"
             ReferencedContainer = "container:Pods.xcodeproj">

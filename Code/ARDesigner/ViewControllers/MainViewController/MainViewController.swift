@@ -28,6 +28,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     @IBOutlet weak var downloadModelButton: UIButton!
     @IBOutlet weak var restartSessionButton: UIButton!
     @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var instructionButton: UIButton!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -39,9 +40,6 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     var shouldRotateOrResizeModel = false
     var axis = Axis.x
     var previousValue = 0
-    
-    var counter: Int = 3
-    var alertCounter = UIAlertController()
     
     var tableView = UITableView()
     var arrayOfModels = [String]()
@@ -274,7 +272,14 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             self.downloadModelButton.isHidden = status
             self.restartSessionButton.isHidden = status
             self.cameraButton.isHidden = status
+            self.instructionButton.isHidden = status
         }
     }
-
+    
+    @IBAction func questionButtonPressed(_ sender: Any) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let onboard = storyBoard.instantiateViewController(withIdentifier: "onboard")
+        self.present(onboard, animated: true, completion: nil)
+    }
+    
 }
