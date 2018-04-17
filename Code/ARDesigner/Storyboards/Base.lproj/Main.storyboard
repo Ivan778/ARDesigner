@@ -81,6 +81,7 @@
                                 <state key="normal" image="camera"/>
                                 <connections>
                                     <action selector="cameraButtonClicked:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="zYf-bt-k1Z"/>
+                                    <action selector="screenshoteWriteToSavedPhotosAlbum:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="2X3-TO-HCa"/>
                                 </connections>
                             </button>
                         </subviews>

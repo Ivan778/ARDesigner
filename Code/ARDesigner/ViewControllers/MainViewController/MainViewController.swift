@@ -246,7 +246,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     }
     
     // MARK: - camera click
-    @IBAction func cameraButtonClicked(_ sender: Any) {
+   /* @IBAction func cameraButtonClicked(_ sender: Any) {
         DispatchQueue.main.async {
             self.selectModelButton.isHidden = true
             self.downloadModelButton.isHidden = true
@@ -270,7 +270,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         })
         
     }
-    
+    */
     @objc func changeLabelText() {
         alertCounter.title = "\(counter)"
         
@@ -282,4 +282,40 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         dismiss(animated: true)
     }
     
+    @IBAction func screenshotWriteToSavedPhotosAlbum(_ sender: Any) {
+        var image: UIImage
+        image = takeScreenshot()!
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+    
+    func takeScreenshot(_ shouldSave: Bool = true) -> UIImage? {
+        let screenshotImage :UIImage?
+
+        buttonsStatus(true)
+        
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, UIScreen.main.scale)
+        guard let context = UIGraphicsGetCurrentContext() else {return .none}
+        view.layer.render(in: context)
+        screenshotImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        buttonsStatus(false)
+        
+        return screenshotImage
+    }
+    
+    func buttonsStatus(_ buttonsIsHidden: Bool) {
+        if buttonsIsHidden == true {
+            selectModelButton.isHidden = true
+            restartSessionButton.isHidden = true
+            downloadModelButton.isHidden = true
+            cameraButton.isHidden = true
+        } else {
+            selectModelButton.isHidden = false
+            restartSessionButton.isHidden = false
+            downloadModelButton.isHidden = false
+            cameraButton.isHidden = false
+        }
+    }
+
 }
