@@ -8,8 +8,12 @@
 
 import Foundation
 import ReplayKit
+import ARKit
 
-class VideoRecorder {
+class PhotoAndVideoRecorder {
+    var alert: UIAlertController!
+    var counter: Int = 3
+    
     class func startRecording() {
         guard RPScreenRecorder.shared().isAvailable else {
             print("Recording is not available at this time.")
@@ -44,7 +48,7 @@ class VideoRecorder {
             })
             
             let editAction = UIAlertAction(title: "Edit", style: .default, handler: { (action: UIAlertAction) -> Void in
-                preview?.previewControllerDelegate = target as! RPPreviewViewControllerDelegate
+                preview?.previewControllerDelegate = (target as! RPPreviewViewControllerDelegate)
                 target.present(preview!, animated: true, completion: nil)
             })
             
@@ -55,6 +59,34 @@ class VideoRecorder {
             }
             
         }
-        
     }
+    
+    func videoPrepare(vc: UIViewController) {
+        alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
+        vc.present(alert, animated: true, completion: nil)
+
+        counter = 3
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeAlertTitle), userInfo: nil, repeats: true)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+            self.alert.dismiss(animated: true, completion: { () -> Void in
+                timer.invalidate()
+                PhotoAndVideoRecorder.startRecording()
+            })
+        })
+    }
+    
+    class func takePhoto(sceneView: ARSCNView) {
+        var image = UIImage()
+        image = sceneView.toImage()
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+    
+    @objc func changeAlertTitle() {
+        alert.title = "\(counter)"
+        
+        print(counter)
+        counter -= 1
+    }
+    
 }

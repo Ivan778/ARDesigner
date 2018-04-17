@@ -247,68 +247,34 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     // MARK: - camera click
     @IBAction func cameraButtonClicked(_ sender: Any) {
-//        DispatchQueue.main.async {
-//            self.selectModelButton.isHidden = true
-//            self.downloadModelButton.isHidden = true
-//            self.restartSessionButton.isHidden = true
-//            self.cameraButton.isHidden = true
-//        }
-//
-//        let alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
-//        self.present(alert, animated: true, completion: nil)
-//        self.alertCounter = alert
-//
-//        self.counter = 3
-//        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeLabelText), userInfo: nil, repeats: true)
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
-//            alert.dismiss(animated: true, completion: { () -> Void in
-//                self.isVideoRecording = true
-//                timer.invalidate()
-//                VideoRecorder.startRecording()
-//            })
-//        })
-        var image = UIImage()
-        image = sceneView.toImage()
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-     
-    }
- 
-    @objc func changeLabelText() {
-        alertCounter.title = "\(counter)"
+        let alert = UIAlertController(title: "Camera", message: "Select mode:", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Photo", style: .default, handler: {(UIAlertAction) -> Void in
+            PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
+        }))
+        alert.addAction(UIAlertAction(title: "Video", style: .default, handler: {(UIAlertAction) -> Void in
+            self.isVideoRecording = true
+            self.setButtonsStatus(status: true)
+            let videoRecorder = PhotoAndVideoRecorder()
+            videoRecorder.videoPrepare(vc: self)
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {(UIAlertAction) -> Void in
+            alert.dismiss(animated: true, completion: nil)
+        }))
         
-        print(counter)
-        counter -= 1
+        self.present(alert, animated: true, completion: nil)
     }
     
     func previewControllerDidFinish(_ previewController: RPPreviewViewController) {
         dismiss(animated: true)
     }
     
-    func buttonsStatus(_ buttonsIsHidden: Bool) {
-        if buttonsIsHidden == true {
-            selectModelButton.isHidden = true
-            restartSessionButton.isHidden = true
-            downloadModelButton.isHidden = true
-            cameraButton.isHidden = true
-        } else {
-            selectModelButton.isHidden = false
-            restartSessionButton.isHidden = false
-            downloadModelButton.isHidden = false
-            cameraButton.isHidden = false
+    func setButtonsStatus(status: Bool) {
+        DispatchQueue.main.async {
+            self.selectModelButton.isHidden = status
+            self.downloadModelButton.isHidden = status
+            self.restartSessionButton.isHidden = status
+            self.cameraButton.isHidden = status
         }
     }
 
-}
-
-extension UIView {
-    func toImage() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(bounds.size, false, UIScreen.main.scale)
-        
-        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-        
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return image!
-    }
 }

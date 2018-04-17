@@ -63,15 +63,8 @@ extension MainViewController {
             }
             
         } else if isVideoRecording {
-            VideoRecorder.stopRecording(target: self)
-            
-            DispatchQueue.main.async {
-                self.selectModelButton.isHidden = false
-                self.downloadModelButton.isHidden = false
-                self.restartSessionButton.isHidden = false
-                self.cameraButton.isHidden = false
-            }
-            
+            PhotoAndVideoRecorder.stopRecording(target: self)
+            setButtonsStatus(status: false)
             isVideoRecording = false
         }
     }

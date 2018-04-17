@@ -28,7 +28,7 @@
 		2C77BBA1203CBAF0001EF77F /* MainViewController+ManageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */; };
 		2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA2203CBB24001EF77F /* ModelManager.swift */; };
 		2C77BBA5203D3FB5001EF77F /* MainViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */; };
-		2CBB77062084A9C6007D8559 /* VideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB77052084A9C6007D8559 /* VideoRecorder.swift */; };
+		2CBB77062084A9C6007D8559 /* PhotoAndVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB77052084A9C6007D8559 /* PhotoAndVideoRecorder.swift */; };
 		2CE9CFCA20497F5D00ACCDB7 /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */; };
 		2CE9CFCB20497F5D00ACCDB7 /* AssimpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */; };
@@ -78,7 +78,7 @@
 		2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+ManageModel.swift"; sourceTree = "<group>"; };
 		2C77BBA2203CBB24001EF77F /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+TableView.swift"; sourceTree = "<group>"; };
-		2CBB77052084A9C6007D8559 /* VideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRecorder.swift; sourceTree = "<group>"; };
+		2CBB77052084A9C6007D8559 /* PhotoAndVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAndVideoRecorder.swift; sourceTree = "<group>"; };
 		2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssimpKit.framework; path = Frameworks/AssimpKit.framework; sourceTree = "<group>"; };
 		2CE9CFC520497A8600ACCDB7 /* ARDesigner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARDesigner-Bridging-Header.h"; sourceTree = "<group>"; };
 		2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		2CBB77042084A9AD007D8559 /* VideoRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				2CBB77052084A9C6007D8559 /* VideoRecorder.swift */,
+				2CBB77052084A9C6007D8559 /* PhotoAndVideoRecorder.swift */,
 			);
 			path = VideoRecorder;
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 				2C2C9031206020CA00E48DA2 /* DownloadViewController.swift in Sources */,
 				C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */,
 				2C77BBA1203CBAF0001EF77F /* MainViewController+ManageModel.swift in Sources */,
-				2CBB77062084A9C6007D8559 /* VideoRecorder.swift in Sources */,
+				2CBB77062084A9C6007D8559 /* PhotoAndVideoRecorder.swift in Sources */,
 				2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */,
 				2C31B39E206121270039AA2F /* SelectDownloadSource.swift in Sources */,
 				2C3C69A32029F84B009BE216 /* MainViewController.swift in Sources */,
