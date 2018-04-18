@@ -61,6 +61,21 @@ class PhotoAndVideoRecorder {
         }
     }
     
+    func photoPrepare(vc: UIViewController) {
+        alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO TAKE A PHOTO", preferredStyle: .alert)
+        vc.present(alert, animated: true, completion: nil)
+        
+        counter = 3
+        let timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.changeAlertTitle), userInfo: nil, repeats: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4.0, execute: {
+            self.alert.dismiss(animated: true, completion: { () -> Void in
+                timer.invalidate()
+                PhotoAndVideoRecorder.startRecording()
+            })
+        })
+    }
+    
     func videoPrepare(vc: UIViewController) {
         alert = UIAlertController(title: " ", message: "TAP ANYWHERE TO STOP RECORDING", preferredStyle: .alert)
         vc.present(alert, animated: true, completion: nil)

@@ -94,9 +94,32 @@
                                     <action selector="questionButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="Lq6-qZ-tYb"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-ue-DLK">
+                                <rect key="frame" x="153" y="577" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="ch2-c7-zF2"/>
+                                    <constraint firstAttribute="width" constant="70" id="tVK-Xj-pbd"/>
+                                </constraints>
+                                <state key="normal" image="take_photo_black"/>
+                                <connections>
+                                    <action selector="takePhotoPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="GD1-Ht-hRh"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3J-qp-X0t">
+                                <rect key="frame" x="285" y="577" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="9Mh-OB-HRD"/>
+                                    <constraint firstAttribute="height" constant="70" id="BNe-8g-SrW"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="close_photo_mode"/>
+                                <connections>
+                                    <action selector="closePhotoModeButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="D62-MV-Y7u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="gWi-ue-DLK" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="1Wm-Of-Tlr"/>
                             <constraint firstItem="CIB-cF-s0u" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="2DG-xb-wrH"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="Osa-Kz-m5q" secondAttribute="trailing" constant="20" id="7MS-hr-ZdS"/>
@@ -104,7 +127,9 @@
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="BUf-RL-8fP" secondAttribute="bottom" constant="20" id="9fD-2V-J0I"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="Exr-rH-u38"/>
                             <constraint firstItem="RyO-ar-jgT" firstAttribute="centerY" secondItem="oce-9i-xQA" secondAttribute="centerY" id="GMX-R8-oY7"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="gWi-ue-DLK" secondAttribute="bottom" constant="20" id="HsU-e1-ezd"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="k3J-qp-X0t" secondAttribute="bottom" constant="20" id="Rz9-xm-Cqf"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="Osa-Kz-m5q" secondAttribute="bottom" constant="20" id="c2X-eB-fNp"/>
@@ -112,6 +137,7 @@
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="cHy-gB-kcv"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k3J-qp-X0t" secondAttribute="trailing" constant="20" id="opJ-zV-7DD"/>
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="q7E-Tx-u0I"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
                             <constraint firstItem="bnl-u0-bRn" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="tV6-hD-bC3"/>
@@ -122,12 +148,14 @@
                     <connections>
                         <outlet property="activityIndicator" destination="RyO-ar-jgT" id="VdH-VC-q9p"/>
                         <outlet property="cameraButton" destination="Osa-Kz-m5q" id="gbK-J9-NzB"/>
+                        <outlet property="closePhotoModeButton" destination="k3J-qp-X0t" id="HRk-G1-SxN"/>
                         <outlet property="downloadModelButton" destination="CIB-cF-s0u" id="bz2-zE-8sy"/>
                         <outlet property="instructionButton" destination="8lv-X8-wsi" id="l7X-ib-Pfk"/>
                         <outlet property="progressIndicator" destination="k9h-Wc-oKh" id="Ysf-Wk-RY6"/>
                         <outlet property="restartSessionButton" destination="bnl-u0-bRn" id="Vvh-5s-nHY"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                         <outlet property="selectModelButton" destination="BUf-RL-8fP" id="9mf-22-u16"/>
+                        <outlet property="takePhotoButton" destination="gWi-ue-DLK" id="Tjc-bX-tgV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22N-Ql-XrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,7 +289,9 @@
     <resources>
         <image name="DownloadButton" width="512" height="512"/>
         <image name="camera" width="100" height="100"/>
+        <image name="close_photo_mode" width="512" height="512"/>
         <image name="question" width="200" height="200"/>
         <image name="restart" width="200" height="200"/>
+        <image name="take_photo_black" width="1200" height="1200"/>
     </resources>
 </document>

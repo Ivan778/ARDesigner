@@ -29,6 +29,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     @IBOutlet weak var restartSessionButton: UIButton!
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var instructionButton: UIButton!
+    @IBOutlet weak var takePhotoButton: UIButton!
+    @IBOutlet weak var closePhotoModeButton: UIButton!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -45,10 +47,14 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     var arrayOfModels = [String]()
     
     var isVideoRecording = false
+    var isTakingPhoto = false
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        takePhotoButton.setImage(#imageLiteral(resourceName: "take_photo_black"), for: .normal)
+        takePhotoButton.setImage(#imageLiteral(resourceName: "take_photo_gray"), for: .highlighted)
         
         selectModelButton.layer.cornerRadius = 5.0
         setTableView()
@@ -247,7 +253,13 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     @IBAction func cameraButtonClicked(_ sender: Any) {
         let alert = UIAlertController(title: "Camera", message: "Select mode:", preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Photo", style: .default, handler: {(UIAlertAction) -> Void in
-            PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
+            self.setButtonsStatus(status: true)
+            
+            self.isTakingPhoto = true
+            self.takePhotoButton.isHidden = false
+            self.closePhotoModeButton.isHidden = false
+            
+            //PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
         }))
         alert.addAction(UIAlertAction(title: "Video", style: .default, handler: {(UIAlertAction) -> Void in
             self.isVideoRecording = true
@@ -280,6 +292,18 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let onboard = storyBoard.instantiateViewController(withIdentifier: "onboard")
         self.present(onboard, animated: true, completion: nil)
+    }
+    
+    @IBAction func takePhotoPressed(_ sender: Any) {
+        PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
+    }
+    
+    @IBAction func closePhotoModeButtonPressed(_ sender: Any) {
+        isTakingPhoto = false
+        
+        setButtonsStatus(status: false)
+        takePhotoButton.isHidden = true
+        closePhotoModeButton.isHidden = true
     }
     
 }

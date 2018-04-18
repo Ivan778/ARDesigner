@@ -12,7 +12,7 @@ import ARKit
 
 extension MainViewController {
     @objc func manageModels(withGestureRecognizer recognizer: UIGestureRecognizer) {
-        if !shouldRotateOrResizeModel && !isVideoRecording {
+        if !shouldRotateOrResizeModel && !isVideoRecording && !isTakingPhoto {
             // Taptic feedback
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
@@ -103,10 +103,14 @@ extension MainViewController {
         button.bringSubview(toFront: button)
         button.translatesAutoresizingMaskIntoConstraints = false
         self.view.addConstraints([width, height, bottom, trail])
+        
+        cameraButton.isHidden = true
     }
     
     @objc func pressedDone(_ sender: UIButton) {
         shouldRotateOrResizeModel = false
+        cameraButton.isHidden = false
+        
         sender.removeFromSuperview()
     }
 }

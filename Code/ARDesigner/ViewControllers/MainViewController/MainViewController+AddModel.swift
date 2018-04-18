@@ -12,7 +12,7 @@ import ARKit
 
 extension MainViewController {
     @objc func addModelToScene(withGestureRecognizer recognizer: UIGestureRecognizer) {
-        if !shouldRotateOrResizeModel && !isVideoRecording {
+        if !shouldRotateOrResizeModel && !isVideoRecording && !isTakingPhoto {
             let tapLocation = recognizer.location(in: sceneView)
             let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
             

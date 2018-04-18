@@ -12,7 +12,7 @@ import ARKit
 
 extension MainViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        if !isVideoRecording {
+        if !isVideoRecording && !isTakingPhoto {
             guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
 
             let width = CGFloat(planeAnchor.extent.x)
@@ -36,7 +36,7 @@ extension MainViewController: ARSCNViewDelegate {
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        if !isVideoRecording {
+        if !isVideoRecording && !isTakingPhoto {
             guard let planeAnchor = anchor as?  ARPlaneAnchor,
                 let planeNode = node.childNodes.first,
                 let plane = planeNode.geometry as? SCNPlane
@@ -55,7 +55,7 @@ extension MainViewController: ARSCNViewDelegate {
     }
     
     func session(_ session: ARSession, cameraDidChangeTrackingState camera: ARCamera) {
-        if !isVideoRecording {
+        if !isVideoRecording && !isTakingPhoto {
             print(camera.trackingState)
             
             switch camera.trackingState {

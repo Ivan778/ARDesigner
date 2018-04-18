@@ -17,49 +17,49 @@ class InstructionViewController: UIViewController {
                            title: "Welcome",
                            description: "Let's explore ARDesigner and all its features",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 218.0 / 255.0, green: 112.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "single_click"),
                            title: "Tap",
                            description: "Add models with a single click",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "long_click"),
                            title: "Tap & Hold",
                            description: "Manage models with a simple tap and hold gesture",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 218.0 / 255.0, green: 112.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "folder"),
                            title: "Be Creative",
                            description: "Create your own models in Google Sketchup",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "drive"),
                            title: "Model Import",
                            description: "Import models from Google Drive or AirDrop",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 218.0 / 255.0, green: 112.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "photo_camera"),
                            title: "Capture Your Work",
                            description: "Take amazing photos and videos of your scenes",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: #imageLiteral(resourceName: "instagram"),
                            title: "Be Sociable",
                            description: "Show your friends your design talents",
                            pageIcon: UIImage(),
-                           color: UIColor(red: 128.0 / 255.0, green: 0.0 / 255.0, blue: 128.0 / 255.0, alpha: 1.00),
+                           color: UIColor(red: 218.0 / 255.0, green: 112.0 / 255.0, blue: 214.0 / 255.0, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         ]
@@ -109,6 +109,7 @@ extension InstructionViewController: PaperOnboardingDelegate {
     }
     
     func onboardingDidTransitonToIndex(_: Int) {
+        
     }
     
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
