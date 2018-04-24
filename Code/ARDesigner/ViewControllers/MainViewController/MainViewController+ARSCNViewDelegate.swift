@@ -35,6 +35,7 @@ extension MainViewController: ARSCNViewDelegate {
         }
     }
     
+    //Ваня лохааапвпункпаовп
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         if !isVideoRecording && !isTakingPhoto {
             guard let planeAnchor = anchor as?  ARPlaneAnchor,

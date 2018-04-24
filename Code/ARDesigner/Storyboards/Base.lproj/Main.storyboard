@@ -100,7 +100,9 @@
                                     <constraint firstAttribute="height" constant="70" id="ch2-c7-zF2"/>
                                     <constraint firstAttribute="width" constant="70" id="tVK-Xj-pbd"/>
                                 </constraints>
-                                <state key="normal" image="take_photo_black"/>
+                                <state key="normal" image="take_photo_black">
+                                    <color key="titleColor" red="0.59711371527777779" green="0.4360116920757735" blue="0.73848564171838282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="takePhotoPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="GD1-Ht-hRh"/>
                                 </connections>

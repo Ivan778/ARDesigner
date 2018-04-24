@@ -20,7 +20,7 @@ enum Axis {
     case upDown
 }
 
-class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate, RPPreviewViewControllerDelegate {
+class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate, RPPreviewViewControllerDelegate, AVAudioPlayerDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     @IBOutlet weak var selectModelButton: UIButton!
@@ -48,6 +48,9 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     var isVideoRecording = false
     var isTakingPhoto = false
+    
+    var paintingPosition = SCNVector3()
+    var planePaint = SCNNode()
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -140,7 +143,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     func setUpSceneView() {
         let configuration = ARWorldTrackingConfiguration()
-        configuration.planeDetection = .horizontal
+        configuration.planeDetection = [.horizontal, .vertical]
         
         sceneView.session.run(configuration)
         sceneView.delegate = self
@@ -233,7 +236,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             }
             
             let configuration = ARWorldTrackingConfiguration()
-            configuration.planeDetection = .horizontal
+            configuration.planeDetection = [.horizontal]
             
             self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
             
@@ -295,6 +298,20 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     }
     
     @IBAction func takePhotoPressed(_ sender: Any) {
+//        let soundURL = URL(string: (Bundle.main.path(forResource: "flash", ofType: "mp3"))!)!
+//        var audioPlayer = AVAudioPlayer()
+//        do {
+////            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+////            try AVAudioSession.sharedInstance().setActive(true)
+//
+//            try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
+//            audioPlayer.prepareToPlay()
+//            audioPlayer.delegate = self
+//            audioPlayer.play()
+//        } catch {
+//            print("Error sound play")
+//        }
+        
         PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
     }
     

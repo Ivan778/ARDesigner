@@ -22,6 +22,38 @@ extension MainViewController {
             let y = translation.y
             let z = translation.z
             
+            let res = ModelManager.virtualObject(at: tapLocation, of: sceneView)
+            if res.first != nil {
+                let planeNode = ModelManager.parentNode(node: (res.first?.node)!)
+                
+                if planeNode.orientation.x == 0.0 {
+                    print("horizontal detected")
+                } else {
+                    print("vertical detected")
+                    
+                    let alert = UIAlertController(title: "Add Image", message: "Would You like to add an image to the wall?", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Open Photos", style: .default, handler: { (UIAlertAction) -> Void in
+                        let picker = UIImagePickerController()
+                        picker.delegate = self
+                        picker.allowsEditing = false
+                        picker.sourceType = .photoLibrary
+                        
+                        // UserDefaults.standard.set(SCNVector3(x, y, z), forKey: "PaintingCoordinates")
+                        self.paintingPosition = SCNVector3(x, y, z)
+                        self.planePaint = planeNode
+                        
+                        self.present(picker, animated: true, completion: { () -> Void in
+                            alert.dismiss(animated: true, completion: nil)
+                        })
+                    }))
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) -> Void in
+                        alert.dismiss(animated: true, completion: nil)
+                    }))
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            
             if shouldMoveModel == false {
                 let modelPath = UserDefaults.standard.string(forKey: "currentModelPath")
                 if modelPath == "" {
