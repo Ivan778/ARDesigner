@@ -118,6 +118,20 @@
                                     <action selector="closePhotoModeButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="D62-MV-Y7u"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toy-Gw-Pdk">
+                                <rect key="frame" x="307" y="104" width="49" height="49"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Lo3-I1-qu0"/>
+                                    <constraint firstAttribute="width" constant="49" id="rta-Bd-oKy"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideUnhide:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="lQs-L0-mVI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -129,9 +143,11 @@
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="BUf-RL-8fP" secondAttribute="bottom" constant="20" id="9fD-2V-J0I"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="Exr-rH-u38"/>
                             <constraint firstItem="RyO-ar-jgT" firstAttribute="centerY" secondItem="oce-9i-xQA" secondAttribute="centerY" id="GMX-R8-oY7"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="Toy-Gw-Pdk" secondAttribute="trailing" constant="19" id="GMn-KM-X6e"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="gWi-ue-DLK" secondAttribute="bottom" constant="20" id="HsU-e1-ezd"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="k3J-qp-X0t" secondAttribute="bottom" constant="20" id="Rz9-xm-Cqf"/>
+                            <constraint firstItem="Toy-Gw-Pdk" firstAttribute="top" secondItem="bnl-u0-bRn" secondAttribute="bottom" constant="15" id="TTw-aF-BLW"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="Osa-Kz-m5q" secondAttribute="bottom" constant="20" id="c2X-eB-fNp"/>

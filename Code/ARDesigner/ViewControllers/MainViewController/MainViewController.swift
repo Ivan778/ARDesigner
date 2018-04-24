@@ -52,6 +52,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     var paintingPosition = SCNVector3()
     var planePaint = SCNNode()
     
+    var allPlanes = [SCNNode]()
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -236,7 +238,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             }
             
             let configuration = ARWorldTrackingConfiguration()
-            configuration.planeDetection = [.horizontal]
+            configuration.planeDetection = [.horizontal, .vertical]
             
             self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
             
@@ -255,9 +257,11 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
 
             self.isVideoRecording = false
             self.isTakingPhoto = false
+            self.isHidden = false
 
             self.paintingPosition = SCNVector3()
             self.planePaint = SCNNode()
+            self.allPlanes = [SCNNode]()
             
             alert.dismiss(animated: true, completion: nil)
         }
@@ -317,20 +321,6 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     }
     
     @IBAction func takePhotoPressed(_ sender: Any) {
-//        let soundURL = URL(string: (Bundle.main.path(forResource: "flash", ofType: "mp3"))!)!
-//        var audioPlayer = AVAudioPlayer()
-//        do {
-////            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-////            try AVAudioSession.sharedInstance().setActive(true)
-//
-//            try audioPlayer = AVAudioPlayer(contentsOf: soundURL)
-//            audioPlayer.prepareToPlay()
-//            audioPlayer.delegate = self
-//            audioPlayer.play()
-//        } catch {
-//            print("Error sound play")
-//        }
-        
         PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
     }
     
@@ -340,6 +330,22 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         setButtonsStatus(status: false)
         takePhotoButton.isHidden = true
         closePhotoModeButton.isHidden = true
+    }
+    
+    var isHidden = false
+    @IBAction func hideUnhide(_ sender: Any) {
+        if !isHidden {
+            for plane in allPlanes {
+                plane.geometry?.materials.first?.diffuse.contents = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+            }
+            isHidden = true
+        } else {
+            for plane in allPlanes {
+                plane.isHidden = false
+                plane.geometry?.materials.first?.diffuse.contents = UIColor.transparentLightBlue
+            }
+            isHidden = false
+        }
     }
     
 }

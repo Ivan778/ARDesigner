@@ -18,8 +18,13 @@ extension MainViewController: ARSCNViewDelegate {
             let width = CGFloat(planeAnchor.extent.x)
             let height = CGFloat(planeAnchor.extent.z)
             let plane = SCNPlane(width: width, height: height)
-
-            plane.materials.first?.diffuse.contents = UIColor.transparentLightBlue
+            
+            if !isHidden {
+                plane.materials.first?.diffuse.contents = UIColor.transparentLightBlue
+            } else {
+                plane.materials.first?.diffuse.contents = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+            }
+            
 
             let planeNode = SCNNode(geometry: plane)
 
@@ -32,6 +37,7 @@ extension MainViewController: ARSCNViewDelegate {
             plane.height = 0.3
             
             node.addChildNode(planeNode)
+            allPlanes.append(planeNode)
         }
     }
     
