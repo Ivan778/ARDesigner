@@ -1,0 +1,11 @@
+framework module paper_onboarding {
+  umbrella header "paper-onboarding-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module paper_onboarding.Swift {
+    header "paper_onboarding-Swift.h"
+    requires objc
+}

@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C087F122086777B002C4C60 /* OnboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C087F112086777B002C4C60 /* OnboardViewController.swift */; };
-		2C087F1520867D0B002C4C60 /* paper_onboarding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C087F1420867D0B002C4C60 /* paper_onboarding.framework */; };
-		2C087F1620867D0B002C4C60 /* paper_onboarding.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C087F1420867D0B002C4C60 /* paper_onboarding.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C0C898F208DC91C0096E6DB /* Pods_ARDesigner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6672F71678831FB411C0875 /* Pods_ARDesigner.framework */; };
+		2C0C8990208DC91C0096E6DB /* Pods_ARDesigner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6672F71678831FB411C0875 /* Pods_ARDesigner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C0C8992208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C8991208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift */; };
 		2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */; };
 		2C2C902E206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */; };
 		2C2C902F206020CA00E48DA2 /* DownloadViewController+Functionality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */; };
@@ -34,6 +35,7 @@
 		2CBB77062084A9C6007D8559 /* PhotoAndVideoRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CBB77052084A9C6007D8559 /* PhotoAndVideoRecorder.swift */; };
 		2CE9CFCA20497F5D00ACCDB7 /* AssimpKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */; };
 		2CE9CFCB20497F5D00ACCDB7 /* AssimpKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2CE9D246208716020083F6FA /* flash.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2CE9D245208716020083F6FA /* flash.mp3 */; };
 		2CF8D627203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */; };
 		2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D6282038632300FB0CAB /* Extensions.swift */; };
 		2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */; };
@@ -50,7 +52,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2C087F1620867D0B002C4C60 /* paper_onboarding.framework in Embed Frameworks */,
+				2C0C8990208DC91C0096E6DB /* Pods_ARDesigner.framework in Embed Frameworks */,
 				2CE9CFCB20497F5D00ACCDB7 /* AssimpKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -62,6 +64,7 @@
 		2C087F0E208676A2002C4C60 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C087F112086777B002C4C60 /* OnboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardViewController.swift; sourceTree = "<group>"; };
 		2C087F1420867D0B002C4C60 /* paper_onboarding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = paper_onboarding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C0C8991208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ImagePickerControllerDelegate.swift"; sourceTree = "<group>"; };
 		2C0D4903204DADB4004DB077 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2C2C9029206020CA00E48DA2 /* DownloadViewController+ViewInitialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+ViewInitialization.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+ViewInitialization.swift"; sourceTree = SOURCE_ROOT; };
 		2C2C902A206020CA00E48DA2 /* DownloadViewController+Functionality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DownloadViewController+Functionality.swift"; path = "ARDesigner/ViewControllers/DownloadViewController/DownloadViewController+Functionality.swift"; sourceTree = SOURCE_ROOT; };
@@ -88,6 +91,7 @@
 		2CBB77052084A9C6007D8559 /* PhotoAndVideoRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAndVideoRecorder.swift; sourceTree = "<group>"; };
 		2CE9CFC32049791500ACCDB7 /* AssimpKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssimpKit.framework; path = Frameworks/AssimpKit.framework; sourceTree = "<group>"; };
 		2CE9CFC520497A8600ACCDB7 /* ARDesigner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARDesigner-Bridging-Header.h"; sourceTree = "<group>"; };
+		2CE9D245208716020083F6FA /* flash.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flash.mp3; sourceTree = "<group>"; };
 		2CF8D626203862C300FB0CAB /* MainViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		2CF8D6282038632300FB0CAB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereNode.swift; sourceTree = "<group>"; };
@@ -105,8 +109,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CE9CFCA20497F5D00ACCDB7 /* AssimpKit.framework in Frameworks */,
-				2C087F1520867D0B002C4C60 /* paper_onboarding.framework in Frameworks */,
 				9709D50605A49C8668634900 /* Pods_ARDesigner.framework in Frameworks */,
+				2C0C898F208DC91C0096E6DB /* Pods_ARDesigner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +196,7 @@
 		2C3C699D2029F84B009BE216 /* ARDesigner */ = {
 			isa = PBXGroup;
 			children = (
+				2CE9D245208716020083F6FA /* flash.mp3 */,
 				2C3B5BB22051C25600266544 /* BB */,
 				C76E1092203CBA9F00E75A81 /* models */,
 				2CF8D6242038620B00FB0CAB /* Storyboards */,
@@ -220,6 +225,7 @@
 				2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */,
 				2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */,
 				2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */,
+				2C0C8991208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -338,6 +344,7 @@
 				2C3C69AB2029F84B009BE216 /* LaunchScreen.storyboard in Resources */,
 				2C3C69A82029F84B009BE216 /* Assets.xcassets in Resources */,
 				2C3B5BB32051C25700266544 /* BB in Resources */,
+				2CE9D246208716020083F6FA /* flash.mp3 in Resources */,
 				2C3C69A62029F84B009BE216 /* Main.storyboard in Resources */,
 				2C0D4904204DADB5004DB077 /* GoogleService-Info.plist in Resources */,
 			);
@@ -417,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0C8992208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift in Sources */,
 				C730BC0D2039D093005ACC4F /* AddModelViewController.swift in Sources */,
 				2C2C90362060217F00E48DA2 /* String.swift in Sources */,
 				2C2C9031206020CA00E48DA2 /* DownloadViewController.swift in Sources */,
