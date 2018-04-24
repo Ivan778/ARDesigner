@@ -168,7 +168,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     // MARK: - download button click
     @IBAction func downloadButtonPressed(_ sender: Any) {
-        shouldRotateOrResizeModel = true
+        //shouldRotateOrResizeModel = true
         
         let selectDS = SelectDownloadSource()
         selectDS.delegate = self

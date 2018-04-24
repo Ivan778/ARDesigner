@@ -38,7 +38,6 @@ extension MainViewController {
                         picker.allowsEditing = false
                         picker.sourceType = .photoLibrary
                         
-                        // UserDefaults.standard.set(SCNVector3(x, y, z), forKey: "PaintingCoordinates")
                         self.paintingPosition = SCNVector3(x, y, z)
                         self.planePaint = planeNode
                         
@@ -51,6 +50,7 @@ extension MainViewController {
                     }))
                     
                     self.present(alert, animated: true, completion: nil)
+                    return
                 }
             }
             
