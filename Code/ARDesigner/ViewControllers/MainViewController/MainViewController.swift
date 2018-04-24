@@ -240,6 +240,25 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             
             self.sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
             
+            // Reset flags
+            self.openOnce = false
+
+            self.objectToManage = SCNNode()
+            self.shouldMoveModel = false
+
+            self.shouldRotateOrResizeModel = false
+            self.axis = Axis.x
+            self.previousValue = 0
+
+            self.tableView = UITableView()
+            self.arrayOfModels = [String]()
+
+            self.isVideoRecording = false
+            self.isTakingPhoto = false
+
+            self.paintingPosition = SCNVector3()
+            self.planePaint = SCNNode()
+            
             alert.dismiss(animated: true, completion: nil)
         }
         alert.addAction(okAction)
