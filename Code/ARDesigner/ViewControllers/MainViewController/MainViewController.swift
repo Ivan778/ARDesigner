@@ -31,8 +31,15 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     @IBOutlet weak var instructionButton: UIButton!
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var closePhotoModeButton: UIButton!
+    @IBOutlet weak var hidePlanesButton: UIButton!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    // MARK: - Onboarding texts
+    @IBOutlet weak var text1: UITextView!
+    @IBOutlet weak var text2: UITextView!
+    @IBOutlet weak var text3: UITextView!
+    @IBOutlet weak var text4: UITextView!
     
     var openOnce = false
     
@@ -53,6 +60,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     var planePaint = SCNNode()
     
     var allPlanes = [SCNNode]()
+    var isHidden = false
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -60,6 +68,11 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         
         takePhotoButton.setImage(#imageLiteral(resourceName: "take_photo_black"), for: .normal)
         takePhotoButton.setImage(#imageLiteral(resourceName: "take_photo_gray"), for: .highlighted)
+        
+        text1.layer.cornerRadius = 5.0
+        text2.layer.cornerRadius = 5.0
+        text3.layer.cornerRadius = 5.0
+        text4.layer.cornerRadius = 5.0
         
         selectModelButton.layer.cornerRadius = 5.0
         setTableView()
@@ -260,6 +273,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             self.isHidden = false
 
             self.paintingPosition = SCNVector3()
+            
             self.planePaint = SCNNode()
             self.allPlanes = [SCNNode]()
             
@@ -311,17 +325,41 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             self.restartSessionButton.isHidden = status
             self.cameraButton.isHidden = status
             self.instructionButton.isHidden = status
+            self.hidePlanesButton.isHidden = status
         }
     }
     
+    var questionPressed = false
     @IBAction func questionButtonPressed(_ sender: Any) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let onboard = storyBoard.instantiateViewController(withIdentifier: "onboard")
-        self.present(onboard, animated: true, completion: nil)
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let onboard = storyBoard.instantiateViewController(withIdentifier: "onboard")
+//        self.present(onboard, animated: true, completion: nil)
+        
+        if !questionPressed {
+            text1.isHidden = false
+            text2.isHidden = false
+            text3.isHidden = false
+            text4.isHidden = false
+            
+            questionPressed = true
+            instructionButton.isHidden = true
+        } else {
+            text1.isHidden = true
+            text2.isHidden = true
+            text3.isHidden = true
+            text4.isHidden = true
+            
+            questionPressed = false
+        }
     }
     
     @IBAction func takePhotoPressed(_ sender: Any) {
         PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
+        
+        let blurView = self.view.viewWithTag(111)
+        UIView.animate(withDuration: 0.15, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 1.0 }, completion: { (Bool) -> Void in
+            UIView.animate(withDuration: 0.15, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
+        })
     }
     
     @IBAction func closePhotoModeButtonPressed(_ sender: Any) {
@@ -332,19 +370,21 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         closePhotoModeButton.isHidden = true
     }
     
-    var isHidden = false
     @IBAction func hideUnhide(_ sender: Any) {
         if !isHidden {
             for plane in allPlanes {
-                plane.geometry?.materials.first?.diffuse.contents = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+                plane.isHidden = true
+                //plane.geometry?.materials.first?.diffuse.contents = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
             }
             isHidden = true
+            hidePlanesButton.setImage(#imageLiteral(resourceName: "unhide"), for: .normal)
         } else {
             for plane in allPlanes {
                 plane.isHidden = false
-                plane.geometry?.materials.first?.diffuse.contents = UIColor.transparentLightBlue
+                //plane.geometry?.materials.first?.diffuse.contents = UIColor.transparentLightBlue
             }
             isHidden = false
+            hidePlanesButton.setImage(#imageLiteral(resourceName: "hide"), for: .normal)
         }
     }
     

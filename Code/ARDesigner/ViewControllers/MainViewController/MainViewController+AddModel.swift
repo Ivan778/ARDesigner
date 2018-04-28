@@ -12,6 +12,18 @@ import ARKit
 
 extension MainViewController {
     @objc func addModelToScene(withGestureRecognizer recognizer: UIGestureRecognizer) {
+        if questionPressed {
+            instructionButton.isHidden = false
+            
+            text1.isHidden = true
+            text2.isHidden = true
+            text3.isHidden = true
+            text4.isHidden = true
+            
+            questionPressed = false
+            
+            return
+        }
         if !shouldRotateOrResizeModel && !isVideoRecording && !isTakingPhoto {
             let tapLocation = recognizer.location(in: sceneView)
             let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
@@ -52,6 +64,8 @@ extension MainViewController {
                     self.present(alert, animated: true, completion: nil)
                     return
                 }
+            } else {
+                return
             }
             
             if shouldMoveModel == false {

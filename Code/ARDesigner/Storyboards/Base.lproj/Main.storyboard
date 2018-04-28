@@ -118,36 +118,80 @@
                                     <action selector="closePhotoModeButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="D62-MV-Y7u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toy-Gw-Pdk">
-                                <rect key="frame" x="307" y="104" width="49" height="49"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Toy-Gw-Pdk">
+                                <rect key="frame" x="163" y="40" width="49" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="Lo3-I1-qu0"/>
                                     <constraint firstAttribute="width" constant="49" id="rta-Bd-oKy"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Button" image="hide">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="hideUnhide:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="lQs-L0-mVI"/>
                                 </connections>
                             </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Press this button to hide blue planes." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-Rc-v9f">
+                                <rect key="frame" x="20" y="97" width="192" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="AeA-OE-WdS"/>
+                                    <constraint firstAttribute="width" constant="192" id="Hsp-iJ-Zdj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Press this button to restart session. Restart of the session will remove all objects from the scene and all detected planes." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rM8-bo-VZb">
+                                <rect key="frame" x="226" y="97" width="129" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="Cu4-Fb-etF"/>
+                                    <constraint firstAttribute="height" constant="94" id="syc-FE-g15"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-mM-qoD">
+                                <rect key="frame" x="20" y="486" width="129" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="dks-l4-qRB"/>
+                                    <constraint firstAttribute="width" constant="129" id="hfY-dU-gyc"/>
+                                </constraints>
+                                <string key="text">Click this button to select download source. You can download models from Google Drive and local storage. Also you can receive models send via AirDrop.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Click this button to select camera mode. You are able to take photos or videos." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-du-xa4">
+                                <rect key="frame" x="226" y="486" width="129" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="gtz-bD-X8z"/>
+                                    <constraint firstAttribute="width" constant="129" id="yHt-Rw-ttK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="G3X-mM-qoD" firstAttribute="leading" secondItem="CIB-cF-s0u" secondAttribute="leading" id="0T4-vS-9pf"/>
+                            <constraint firstItem="BUf-RL-8fP" firstAttribute="top" secondItem="G3X-mM-qoD" secondAttribute="bottom" constant="18" id="160-RS-XHX"/>
                             <constraint firstItem="gWi-ue-DLK" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="1Wm-Of-Tlr"/>
                             <constraint firstItem="CIB-cF-s0u" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="2DG-xb-wrH"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
+                            <constraint firstItem="DqW-du-xa4" firstAttribute="trailing" secondItem="Osa-Kz-m5q" secondAttribute="trailing" id="6hk-dP-odx"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="Osa-Kz-m5q" secondAttribute="trailing" constant="20" id="7MS-hr-ZdS"/>
                             <constraint firstItem="RyO-ar-jgT" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="8Gk-o6-Ue7"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="BUf-RL-8fP" secondAttribute="bottom" constant="20" id="9fD-2V-J0I"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="Exr-rH-u38"/>
                             <constraint firstItem="RyO-ar-jgT" firstAttribute="centerY" secondItem="oce-9i-xQA" secondAttribute="centerY" id="GMX-R8-oY7"/>
-                            <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="Toy-Gw-Pdk" secondAttribute="trailing" constant="19" id="GMn-KM-X6e"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="gWi-ue-DLK" secondAttribute="bottom" constant="20" id="HsU-e1-ezd"/>
+                            <constraint firstItem="Tgv-Rc-v9f" firstAttribute="top" secondItem="Toy-Gw-Pdk" secondAttribute="bottom" constant="8" id="JJI-tg-v7x"/>
+                            <constraint firstItem="Tgv-Rc-v9f" firstAttribute="trailing" secondItem="Toy-Gw-Pdk" secondAttribute="trailing" id="Jh8-VU-mdu"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
+                            <constraint firstItem="BUf-RL-8fP" firstAttribute="top" secondItem="DqW-du-xa4" secondAttribute="bottom" constant="18" id="O0z-Xw-bUe"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="k3J-qp-X0t" secondAttribute="bottom" constant="20" id="Rz9-xm-Cqf"/>
-                            <constraint firstItem="Toy-Gw-Pdk" firstAttribute="top" secondItem="bnl-u0-bRn" secondAttribute="bottom" constant="15" id="TTw-aF-BLW"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="Osa-Kz-m5q" secondAttribute="bottom" constant="20" id="c2X-eB-fNp"/>
@@ -155,6 +199,10 @@
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="cHy-gB-kcv"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
+                            <constraint firstItem="Toy-Gw-Pdk" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="gB3-0C-LIp"/>
+                            <constraint firstItem="rM8-bo-VZb" firstAttribute="top" secondItem="bnl-u0-bRn" secondAttribute="bottom" constant="8" id="iTL-ir-Exa"/>
+                            <constraint firstItem="Toy-Gw-Pdk" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="isR-Pn-LKP"/>
+                            <constraint firstItem="rM8-bo-VZb" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" id="jFD-hd-GME"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k3J-qp-X0t" secondAttribute="trailing" constant="20" id="opJ-zV-7DD"/>
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="q7E-Tx-u0I"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
@@ -168,12 +216,17 @@
                         <outlet property="cameraButton" destination="Osa-Kz-m5q" id="gbK-J9-NzB"/>
                         <outlet property="closePhotoModeButton" destination="k3J-qp-X0t" id="HRk-G1-SxN"/>
                         <outlet property="downloadModelButton" destination="CIB-cF-s0u" id="bz2-zE-8sy"/>
+                        <outlet property="hidePlanesButton" destination="Toy-Gw-Pdk" id="zCV-mf-YLo"/>
                         <outlet property="instructionButton" destination="8lv-X8-wsi" id="l7X-ib-Pfk"/>
                         <outlet property="progressIndicator" destination="k9h-Wc-oKh" id="Ysf-Wk-RY6"/>
                         <outlet property="restartSessionButton" destination="bnl-u0-bRn" id="Vvh-5s-nHY"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                         <outlet property="selectModelButton" destination="BUf-RL-8fP" id="9mf-22-u16"/>
                         <outlet property="takePhotoButton" destination="gWi-ue-DLK" id="Tjc-bX-tgV"/>
+                        <outlet property="text1" destination="Tgv-Rc-v9f" id="vNN-Pd-8Gw"/>
+                        <outlet property="text2" destination="rM8-bo-VZb" id="dfR-KX-azm"/>
+                        <outlet property="text3" destination="G3X-mM-qoD" id="1fC-PI-g6Q"/>
+                        <outlet property="text4" destination="DqW-du-xa4" id="xkh-rb-J3O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22N-Ql-XrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -308,6 +361,7 @@
         <image name="DownloadButton" width="512" height="512"/>
         <image name="camera" width="100" height="100"/>
         <image name="close_photo_mode" width="512" height="512"/>
+        <image name="hide" width="626" height="626"/>
         <image name="question" width="200" height="200"/>
         <image name="restart" width="200" height="200"/>
         <image name="take_photo_black" width="1200" height="1200"/>
