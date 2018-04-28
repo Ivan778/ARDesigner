@@ -10,6 +10,7 @@
 		2C2C9003205EB0A500E48DA2 /* Converter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C9002205EB0A500E48DA2 /* Converter.m */; };
 		2C2C9016205EBC3300E48DA2 /* scntool in Resources */ = {isa = PBXBuildFile; fileRef = 2C2C9015205EBC3300E48DA2 /* scntool */; };
 		2C2C901F205ECE4000E48DA2 /* DesktopFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */; };
+		2C4C20A92094D44500DB5DAA /* ARDesignerConverter.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2C4C20A82094D44500DB5DAA /* ARDesignerConverter.icns */; };
 		2CA3CA4C20728FD700B1297D /* ARDesignerConverterInputTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3CA4B20728FD700B1297D /* ARDesignerConverterInputTest.swift */; };
 		2CA3CA55207296F800B1297D /* TestInput in Resources */ = {isa = PBXBuildFile; fileRef = 2CA3CA54207296F700B1297D /* TestInput */; };
 		2CA3CA6E2072B5FA00B1297D /* SyncLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA3CA6D2072B5FA00B1297D /* SyncLogic.swift */; };
@@ -44,6 +45,7 @@
 		2C2C9004205EB0B600E48DA2 /* Converter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Converter.h; sourceTree = "<group>"; };
 		2C2C9015205EBC3300E48DA2 /* scntool */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = scntool; sourceTree = "<group>"; };
 		2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopFolder.swift; sourceTree = "<group>"; };
+		2C4C20A82094D44500DB5DAA /* ARDesignerConverter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ARDesignerConverter.icns; sourceTree = "<group>"; };
 		2CA3CA4920728FD700B1297D /* ARDesignerConverterInputTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARDesignerConverterInputTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CA3CA4B20728FD700B1297D /* ARDesignerConverterInputTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDesignerConverterInputTest.swift; sourceTree = "<group>"; };
 		2CA3CA4D20728FD700B1297D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		2C2C9006205EB0C900E48DA2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C4C20A82094D44500DB5DAA /* ARDesignerConverter.icns */,
 				2C2C901D205EC4CB00E48DA2 /* AppDelegate */,
 				2C2C9008205EB10200E48DA2 /* Converter */,
 				2C2C901E205ECE4000E48DA2 /* DesktopFolder.swift */,
@@ -336,6 +339,7 @@
 				2CA3CA55207296F800B1297D /* TestInput in Resources */,
 				2CF521DF205E84C500FE93B4 /* Assets.xcassets in Resources */,
 				2CF521E2205E84C500FE93B4 /* Main.storyboard in Resources */,
+				2C4C20A92094D44500DB5DAA /* ARDesignerConverter.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
