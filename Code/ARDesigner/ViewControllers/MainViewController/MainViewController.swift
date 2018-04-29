@@ -18,6 +18,7 @@ enum Axis {
     case z
     case non
     case upDown
+    case xyz
 }
 
 class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocumentPickerDelegate, RPPreviewViewControllerDelegate, AVAudioPlayerDelegate {
@@ -129,6 +130,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         if shouldRotateOrResizeModel {
             let constant: Float = 0.02
             let sign = (Int(sender.translation(in: self.sceneView).y) > previousValue) ? Float(1) : Float(-1)
+            
+            let sign2 = (Int(sender.translation(in: self.sceneView).x) > previousValue) ? Float(1) : Float(-1)
             switch axis {
             case .x:
                 objectToManage.eulerAngles.x += sign * constant
@@ -143,6 +146,15 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
                 objectToManage.scale.z += sign * objectToManage.scale.z / const
             case .upDown:
                 objectToManage.position.y += sign * constant
+            case .xyz:
+                let tapLocation = sender.location(in: sceneView)
+                let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
+                
+                guard let hitTestResult = hitTestResults.first else { return }
+                let translation = hitTestResult.worldTransform.translation
+                
+                objectToManage.position.x = translation.x
+                objectToManage.position.z = translation.z
             }
         }
     }
@@ -392,14 +404,12 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         if !isHidden {
             for plane in allPlanes {
                 plane.isHidden = true
-                //plane.geometry?.materials.first?.diffuse.contents = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
             }
             isHidden = true
             hidePlanesButton.setImage(#imageLiteral(resourceName: "unhide"), for: .normal)
         } else {
             for plane in allPlanes {
                 plane.isHidden = false
-                //plane.geometry?.materials.first?.diffuse.contents = UIColor.transparentLightBlue
             }
             isHidden = false
             hidePlanesButton.setImage(#imageLiteral(resourceName: "hide"), for: .normal)

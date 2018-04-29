@@ -29,7 +29,16 @@ extension MainViewController {
             
             let moveAction = UIAlertAction(title: "Move", style: UIAlertActionStyle.default) { UIAlertAction in
                 self.objectToManage = ModelManager.parentNode(node: (res.first?.node)!)
-                self.shouldMoveModel = true
+                //self.shouldMoveModel = true
+                self.shouldRotateOrResizeModel = true
+                self.axis = .xyz
+                
+                for plane in self.allPlanes {
+                    plane.isHidden = false
+                }
+                self.isHidden = false
+                self.hidePlanesButton.setImage(#imageLiteral(resourceName: "hide"), for: .normal)
+                self.addDoneButton()
             }
             
             let removeAction = UIAlertAction(title: "Remove", style: UIAlertActionStyle.default) { UIAlertAction in
@@ -76,6 +85,7 @@ extension MainViewController {
                 self.setButtonsStatus(status: true)
                 self.measurementMode = true
                 self.closePhotoModeButton.isHidden = false
+                self.cameraButton.isHidden = true
             }
             
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
