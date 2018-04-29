@@ -28,6 +28,8 @@
 		2C3C69A62029F84B009BE216 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A42029F84B009BE216 /* Main.storyboard */; };
 		2C3C69A82029F84B009BE216 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A72029F84B009BE216 /* Assets.xcassets */; };
 		2C3C69AB2029F84B009BE216 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3C69A92029F84B009BE216 /* LaunchScreen.storyboard */; };
+		2C487F6C2094FFE8003AC608 /* MainViewController+ToolBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C487F6B2094FFE8003AC608 /* MainViewController+ToolBox.swift */; };
+		2C487F6E2095F4F8003AC608 /* MeasurementTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C487F6D2095F4F8003AC608 /* MeasurementTool.swift */; };
 		2C77BBA0203CBAF0001EF77F /* MainViewController+AddModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */; };
 		2C77BBA1203CBAF0001EF77F /* MainViewController+ManageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */; };
 		2C77BBA3203CBB24001EF77F /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C77BBA2203CBB24001EF77F /* ModelManager.swift */; };
@@ -84,6 +86,8 @@
 		2C3C69A72029F84B009BE216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C3C69AA2029F84B009BE216 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C3C69AC2029F84B009BE216 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C487F6B2094FFE8003AC608 /* MainViewController+ToolBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ToolBox.swift"; sourceTree = "<group>"; };
+		2C487F6D2095F4F8003AC608 /* MeasurementTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementTool.swift; sourceTree = "<group>"; };
 		2C77BB9E203CBAF0001EF77F /* MainViewController+AddModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+AddModel.swift"; sourceTree = "<group>"; };
 		2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MainViewController+ManageModel.swift"; sourceTree = "<group>"; };
 		2C77BBA2203CBB24001EF77F /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 				2C77BB9F203CBAF0001EF77F /* MainViewController+ManageModel.swift */,
 				2C77BBA4203D3FB5001EF77F /* MainViewController+TableView.swift */,
 				2C0C8991208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift */,
+				2C487F6B2094FFE8003AC608 /* MainViewController+ToolBox.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -256,9 +261,10 @@
 		2CF8D6252038622000FB0CAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2C487F6D2095F4F8003AC608 /* MeasurementTool.swift */,
+				2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */,
 				2C2C90352060217F00E48DA2 /* String.swift */,
 				2C2C90332060211700E48DA2 /* GDMaybeDBFile.swift */,
-				2CF8D62C2038B8EF00FB0CAB /* SphereNode.swift */,
 				2C3C699E2029F84B009BE216 /* AppDelegate.swift */,
 				2C77BBA2203CBB24001EF77F /* ModelManager.swift */,
 				2CF8D6282038632300FB0CAB /* Extensions.swift */,
@@ -426,6 +432,7 @@
 			files = (
 				2C0C8992208E25E40096E6DB /* MainViewController+ImagePickerControllerDelegate.swift in Sources */,
 				C730BC0D2039D093005ACC4F /* AddModelViewController.swift in Sources */,
+				2C487F6C2094FFE8003AC608 /* MainViewController+ToolBox.swift in Sources */,
 				2C2C90362060217F00E48DA2 /* String.swift in Sources */,
 				2C2C9031206020CA00E48DA2 /* DownloadViewController.swift in Sources */,
 				C7394F22203C5F3F002B6494 /* DirectoryManager.swift in Sources */,
@@ -447,6 +454,7 @@
 				2C2C903B206027B400E48DA2 /* GoogleDriveViewController.swift in Sources */,
 				2CF8D62D2038B8EF00FB0CAB /* SphereNode.swift in Sources */,
 				2CF8D6292038632300FB0CAB /* Extensions.swift in Sources */,
+				2C487F6E2095F4F8003AC608 /* MeasurementTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

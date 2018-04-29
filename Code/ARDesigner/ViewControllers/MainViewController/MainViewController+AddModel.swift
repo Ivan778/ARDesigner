@@ -12,6 +12,64 @@ import ARKit
 
 extension MainViewController {
     @objc func addModelToScene(withGestureRecognizer recognizer: UIGestureRecognizer) {
+        if measurementMode {
+            let tapLocation = recognizer.location(in: sceneView)
+            let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)
+            
+            guard let hitTestResult = hitTestResults.first else { return }
+            let translation = hitTestResult.worldTransform.translation
+            let x = translation.x
+            let y = translation.y
+            let z = translation.z
+            
+            if measurementTool.firstNode == nil {
+                measurementTool.firstNode = SphereNode(position: SCNVector3.init(x, y, z))
+                measurementTool.firstNode?.name = "sphere"
+                sceneView.scene.rootNode.addChildNode(measurementTool.firstNode!)
+            } else {
+                measurementTool.secondNode = SphereNode(position: SCNVector3.init(x, y, z))
+                measurementTool.secondNode?.name = "sphere"
+                sceneView.scene.rootNode.addChildNode(measurementTool.secondNode!)
+                
+                let line = SCNGeometry.line(from: (measurementTool.firstNode?.position)!, to: (measurementTool.secondNode?.position)!)
+                let lineNode = SCNNode(geometry: line)
+                lineNode.position = SCNVector3Zero
+                lineNode.name = "line"
+                sceneView.scene.rootNode.addChildNode(lineNode)
+                
+                
+                let text = SCNText(string: String(format: "%.2f sm", measurementTool.getLength() * 100), extrusionDepth: 1)
+                text.firstMaterial?.diffuse.contents = UIColor.blue
+                
+                let textNode = SCNNode(geometry: text)
+                
+                var minVec = SCNVector3Zero
+                var maxVec = SCNVector3Zero
+                if textNode.__getBoundingBoxMin(&minVec, max: &maxVec) {
+                    let bound = SCNVector3(
+                        x: maxVec.x - minVec.x,
+                        y: maxVec.y - minVec.y,
+                        z: maxVec.z - minVec.z)
+                    
+                    textNode.pivot = SCNMatrix4MakeTranslation(bound.x / 2, bound.y / 2, bound.z / 2)
+                }
+                
+                textNode.position = measurementTool.centerPosition()
+                textNode.position.y += 0.1
+                textNode.scale = SCNVector3(0.003, 0.003, 0.003)
+                textNode.name = "text"
+                
+                Timer.scheduledTimer(withTimeInterval: 0.02, repeats: true, block: { (Timer) -> Void in
+                    textNode.eulerAngles.y += .pi / 180
+                })
+                
+                sceneView.scene.rootNode.addChildNode(textNode)
+                measurementTool.firstNode = nil
+            }
+            
+            return
+        }
+        
         if questionPressed {
             instructionButton.isHidden = false
             
@@ -24,6 +82,7 @@ extension MainViewController {
             
             return
         }
+        
         if !shouldRotateOrResizeModel && !isVideoRecording && !isTakingPhoto {
             let tapLocation = recognizer.location(in: sceneView)
             let hitTestResults = sceneView.hitTest(tapLocation, types: .existingPlaneUsingExtent)

@@ -72,16 +72,28 @@ extension MainViewController {
                 self.addDoneButton()
             }
             
+            let measurementMode = UIAlertAction(title: "Measure tool", style: UIAlertActionStyle.default) { UIAlertAction in
+                self.setButtonsStatus(status: true)
+                self.measurementMode = true
+                self.closePhotoModeButton.isHidden = false
+            }
+            
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel)
             
-            alertController.addAction(moveAction)
-            alertController.addAction(removeAction)
-            alertController.addAction(rotateX)
-            alertController.addAction(rotateY)
-            alertController.addAction(rotateZ)
-            alertController.addAction(moveUpDown)
-            alertController.addAction(changeSize)
-            alertController.addAction(cancelAction)
+            let object = (res.first?.node)!
+            if object.name == "plane" {
+                alertController.addAction(measurementMode)
+                alertController.addAction(cancelAction)
+            } else {
+                alertController.addAction(moveAction)
+                alertController.addAction(removeAction)
+                alertController.addAction(rotateX)
+                alertController.addAction(rotateY)
+                alertController.addAction(rotateZ)
+                alertController.addAction(moveUpDown)
+                alertController.addAction(changeSize)
+                alertController.addAction(cancelAction)
+            }
             
             self.present(alertController, animated: true, completion: nil)
         }

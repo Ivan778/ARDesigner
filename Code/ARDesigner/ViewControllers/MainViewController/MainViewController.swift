@@ -62,9 +62,14 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     var allPlanes = [SCNNode]()
     var isHidden = false
     
+    var measurementMode = false
+    var measurementTool = MeasurementTool()
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        listenVolumeButton()
         
         takePhotoButton.setImage(#imageLiteral(resourceName: "take_photo_black"), for: .normal)
         takePhotoButton.setImage(#imageLiteral(resourceName: "take_photo_gray"), for: .highlighted)
@@ -358,16 +363,29 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         
         let blurView = self.view.viewWithTag(111)
         UIView.animate(withDuration: 0.15, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 1.0 }, completion: { (Bool) -> Void in
-            UIView.animate(withDuration: 0.15, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
+            UIView.animate(withDuration: 0.15 , delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
         })
     }
     
     @IBAction func closePhotoModeButtonPressed(_ sender: Any) {
-        isTakingPhoto = false
+        if !measurementMode {
+            isTakingPhoto = false
+            
+            setButtonsStatus(status: false)
+            takePhotoButton.isHidden = true
+            closePhotoModeButton.isHidden = true
+        } else {
+            self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
+                if node.name == "sphere" || node.name == "line" || node.name == "text" {
+                    node.removeFromParentNode()
+                }
+            }
+            
+            measurementMode = false
+            setButtonsStatus(status: false)
+            closePhotoModeButton.isHidden = true
+        }
         
-        setButtonsStatus(status: false)
-        takePhotoButton.isHidden = true
-        closePhotoModeButton.isHidden = true
     }
     
     @IBAction func hideUnhide(_ sender: Any) {
