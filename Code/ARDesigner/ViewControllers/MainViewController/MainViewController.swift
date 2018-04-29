@@ -41,6 +41,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     @IBOutlet weak var text2: UITextView!
     @IBOutlet weak var text3: UITextView!
     @IBOutlet weak var text4: UITextView!
+    @IBOutlet weak var text5: UITextView!
     
     var openOnce = false
     
@@ -79,6 +80,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         text2.layer.cornerRadius = 5.0
         text3.layer.cornerRadius = 5.0
         text4.layer.cornerRadius = 5.0
+        text5.layer.cornerRadius = 5.0
         
         selectModelButton.layer.cornerRadius = 5.0
         setTableView()
@@ -357,6 +359,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             text2.isHidden = false
             text3.isHidden = false
             text4.isHidden = false
+            text5.isHidden = false
             
             questionPressed = true
             instructionButton.isHidden = true
@@ -365,6 +368,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             text2.isHidden = true
             text3.isHidden = true
             text4.isHidden = true
+            text5.isHidden = true
             
             questionPressed = false
         }

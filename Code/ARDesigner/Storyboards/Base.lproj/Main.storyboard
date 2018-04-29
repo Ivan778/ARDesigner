@@ -172,6 +172,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-Wp-3P7">
+                                <rect key="frame" x="123" y="286" width="129" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="BEI-ye-xE7"/>
+                                    <constraint firstAttribute="width" constant="129" id="qy0-I3-0Pq"/>
+                                </constraints>
+                                <string key="text">To open model management menu, touch and hold on any model. After that will appear menu, where you can select model management option. By simple swipe up/down apply new settings.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -179,6 +190,7 @@
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="top" secondItem="G3X-mM-qoD" secondAttribute="bottom" constant="18" id="160-RS-XHX"/>
                             <constraint firstItem="gWi-ue-DLK" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="1Wm-Of-Tlr"/>
                             <constraint firstItem="CIB-cF-s0u" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="2DG-xb-wrH"/>
+                            <constraint firstItem="YCR-Wp-3P7" firstAttribute="centerY" secondItem="oce-9i-xQA" secondAttribute="centerY" id="4JJ-4v-Nzj"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="trailing" secondItem="fe1-gE-ma2" secondAttribute="trailing" id="4br-9r-gMb"/>
                             <constraint firstItem="DqW-du-xa4" firstAttribute="trailing" secondItem="Osa-Kz-m5q" secondAttribute="trailing" id="6hk-dP-odx"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="Osa-Kz-m5q" secondAttribute="trailing" constant="20" id="7MS-hr-ZdS"/>
@@ -194,6 +206,7 @@
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="k3J-qp-X0t" secondAttribute="bottom" constant="20" id="Rz9-xm-Cqf"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
+                            <constraint firstItem="YCR-Wp-3P7" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="bHB-fB-7Fn"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="Osa-Kz-m5q" secondAttribute="bottom" constant="20" id="c2X-eB-fNp"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="c3B-T3-BHW"/>
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="cHy-gB-kcv"/>
@@ -227,6 +240,7 @@
                         <outlet property="text2" destination="rM8-bo-VZb" id="dfR-KX-azm"/>
                         <outlet property="text3" destination="G3X-mM-qoD" id="1fC-PI-g6Q"/>
                         <outlet property="text4" destination="DqW-du-xa4" id="xkh-rb-J3O"/>
+                        <outlet property="text5" destination="YCR-Wp-3P7" id="m1h-XD-W2D"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22N-Ql-XrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
