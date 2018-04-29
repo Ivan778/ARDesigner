@@ -95,10 +95,10 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-ue-DLK">
-                                <rect key="frame" x="153" y="577" width="70" height="70"/>
+                                <rect key="frame" x="163.5" y="598" width="49" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="ch2-c7-zF2"/>
-                                    <constraint firstAttribute="width" constant="70" id="tVK-Xj-pbd"/>
+                                    <constraint firstAttribute="height" constant="49" id="ch2-c7-zF2"/>
+                                    <constraint firstAttribute="width" constant="49" id="tVK-Xj-pbd"/>
                                 </constraints>
                                 <state key="normal" image="take_photo_black">
                                     <color key="titleColor" red="0.59711371527777779" green="0.4360116920757735" blue="0.73848564171838282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,10 +108,10 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3J-qp-X0t">
-                                <rect key="frame" x="285" y="577" width="70" height="70"/>
+                                <rect key="frame" x="306" y="598" width="49" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="9Mh-OB-HRD"/>
-                                    <constraint firstAttribute="height" constant="70" id="BNe-8g-SrW"/>
+                                    <constraint firstAttribute="width" constant="49" id="9Mh-OB-HRD"/>
+                                    <constraint firstAttribute="height" constant="49" id="BNe-8g-SrW"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="close_photo_mode"/>
                                 <connections>
@@ -184,10 +184,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEZ-ey-04O">
-                                <rect key="frame" x="20" y="577" width="70" height="70"/>
+                                <rect key="frame" x="20" y="598" width="49" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="pG3-mi-pcs"/>
-                                    <constraint firstAttribute="height" constant="70" id="xqF-ef-CGK"/>
+                                    <constraint firstAttribute="width" constant="49" id="pG3-mi-pcs"/>
+                                    <constraint firstAttribute="height" constant="49" id="xqF-ef-CGK"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="share_icon"/>
                                 <connections>

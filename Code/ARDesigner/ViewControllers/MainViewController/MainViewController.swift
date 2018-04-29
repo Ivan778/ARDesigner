@@ -415,6 +415,12 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             closePhotoModeButton.isHidden = true
             shareButton.isHidden = true
             lastImage = nil
+            
+            for plane in allPlanes {
+                plane.isHidden = false
+            }
+            isHidden = false
+            hidePlanesButton.setImage(#imageLiteral(resourceName: "hide"), for: .normal)
         } else {
             self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
                 if node.name == "sphere" || node.name == "line" || node.name == "text" {
