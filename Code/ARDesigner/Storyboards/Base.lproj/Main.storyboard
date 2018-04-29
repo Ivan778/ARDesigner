@@ -183,6 +183,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEZ-ey-04O">
+                                <rect key="frame" x="20" y="577" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="pG3-mi-pcs"/>
+                                    <constraint firstAttribute="height" constant="70" id="xqF-ef-CGK"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="share_icon"/>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="aC0-0A-EPr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -204,6 +215,7 @@
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="top" secondItem="DqW-du-xa4" secondAttribute="bottom" constant="18" id="O0z-Xw-bUe"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="k3J-qp-X0t" secondAttribute="bottom" constant="20" id="Rz9-xm-Cqf"/>
+                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="aEZ-ey-04O" secondAttribute="bottom" constant="20" id="TMs-9J-I1w"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="YCR-Wp-3P7" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="bHB-fB-7Fn"/>
@@ -218,6 +230,7 @@
                             <constraint firstItem="rM8-bo-VZb" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" id="jFD-hd-GME"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k3J-qp-X0t" secondAttribute="trailing" constant="20" id="opJ-zV-7DD"/>
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="q7E-Tx-u0I"/>
+                            <constraint firstItem="aEZ-ey-04O" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="rfn-HW-Rdp"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="top" secondItem="oce-9i-xQA" secondAttribute="top" id="sTL-SD-PJV"/>
                             <constraint firstItem="bnl-u0-bRn" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="tV6-hD-bC3"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="CIB-cF-s0u" secondAttribute="bottom" constant="20" id="yeX-cp-y8q"/>
@@ -235,6 +248,7 @@
                         <outlet property="restartSessionButton" destination="bnl-u0-bRn" id="Vvh-5s-nHY"/>
                         <outlet property="sceneView" destination="BvM-jR-ZlU" id="Ubg-Cp-jsn"/>
                         <outlet property="selectModelButton" destination="BUf-RL-8fP" id="9mf-22-u16"/>
+                        <outlet property="shareButton" destination="aEZ-ey-04O" id="rlw-N3-ncl"/>
                         <outlet property="takePhotoButton" destination="gWi-ue-DLK" id="Tjc-bX-tgV"/>
                         <outlet property="text1" destination="Tgv-Rc-v9f" id="vNN-Pd-8Gw"/>
                         <outlet property="text2" destination="rM8-bo-VZb" id="dfR-KX-azm"/>
@@ -374,10 +388,11 @@
     <resources>
         <image name="DownloadButton" width="512" height="512"/>
         <image name="camera" width="100" height="100"/>
-        <image name="close_photo_mode" width="512" height="512"/>
+        <image name="close_photo_mode" width="489" height="489"/>
         <image name="hide" width="626" height="626"/>
         <image name="question" width="200" height="200"/>
         <image name="restart" width="200" height="200"/>
+        <image name="share_icon" width="512" height="512"/>
         <image name="take_photo_black" width="1200" height="1200"/>
     </resources>
 </document>

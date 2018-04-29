@@ -91,10 +91,12 @@ class PhotoAndVideoRecorder {
         })
     }
     
-    class func takePhoto(sceneView: ARSCNView) {
+    class func takePhoto(sceneView: ARSCNView) -> UIImage {
         var image = UIImage()
         image = sceneView.toImage()
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        
+        return image
     }
     
     @objc func changeAlertTitle() {

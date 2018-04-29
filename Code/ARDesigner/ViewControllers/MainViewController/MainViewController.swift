@@ -33,6 +33,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var closePhotoModeButton: UIButton!
     @IBOutlet weak var hidePlanesButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -66,6 +67,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     
     var measurementMode = false
     var measurementTool = MeasurementTool()
+    
+    var lastImage: UIImage? = nil
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -133,7 +136,6 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             let constant: Float = 0.02
             let sign = (Int(sender.translation(in: self.sceneView).y) > previousValue) ? Float(1) : Float(-1)
             
-            let sign2 = (Int(sender.translation(in: self.sceneView).x) > previousValue) ? Float(1) : Float(-1)
             switch axis {
             case .x:
                 objectToManage.eulerAngles.x += sign * constant
@@ -317,8 +319,13 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             self.isTakingPhoto = true
             self.takePhotoButton.isHidden = false
             self.closePhotoModeButton.isHidden = false
+            self.shareButton.isHidden = false
             
-            //PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
+            for plane in self.allPlanes {
+                plane.isHidden = true
+            }
+            self.isHidden = true
+            self.hidePlanesButton.setImage(#imageLiteral(resourceName: "unhide"), for: .normal)
         }))
         alert.addAction(UIAlertAction(title: "Video", style: .default, handler: {(UIAlertAction) -> Void in
             self.isVideoRecording = true
@@ -375,12 +382,28 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
     }
     
     @IBAction func takePhotoPressed(_ sender: Any) {
-        PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
+        lastImage = PhotoAndVideoRecorder.takePhoto(sceneView: self.sceneView)
         
         let blurView = self.view.viewWithTag(111)
         UIView.animate(withDuration: 0.15, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 1.0 }, completion: { (Bool) -> Void in
             UIView.animate(withDuration: 0.15 , delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: { blurView?.alpha = 0.0 }, completion: nil)
         })
+    }
+    
+    @IBAction func shareButtonPressed(_ sender: Any) {
+        if lastImage != nil {
+            let imageShare = [lastImage!]
+            let activityViewController = UIActivityViewController(activityItems: imageShare , applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "No photo", message: "Take photo first. This option allows you to share the last taken photo.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (UIAlertAction) -> Void in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func closePhotoModeButtonPressed(_ sender: Any) {
@@ -390,6 +413,8 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             setButtonsStatus(status: false)
             takePhotoButton.isHidden = true
             closePhotoModeButton.isHidden = true
+            shareButton.isHidden = true
+            lastImage = nil
         } else {
             self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
                 if node.name == "sphere" || node.name == "line" || node.name == "text" {
