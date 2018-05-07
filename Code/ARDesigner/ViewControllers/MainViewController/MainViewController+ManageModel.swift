@@ -13,9 +13,11 @@ import ARKit
 extension MainViewController {
     @objc func manageModels(withGestureRecognizer recognizer: UIGestureRecognizer) {
         if !shouldRotateOrResizeModel && !isVideoRecording && !isTakingPhoto {
-            // Taptic feedback
-            let generator = UIImpactFeedbackGenerator(style: .heavy)
-            generator.impactOccurred()
+            if !measurementMode {
+                // Taptic feedback
+                let generator = UIImpactFeedbackGenerator(style: .heavy)
+                generator.impactOccurred()
+            }
             
             let tapLocation = recognizer.location(in: sceneView)
             
@@ -81,7 +83,7 @@ extension MainViewController {
                 self.addDoneButton()
             }
             
-            let measurementMode = UIAlertAction(title: "Measure tool", style: UIAlertActionStyle.default) { UIAlertAction in
+            let measurementModeAction = UIAlertAction(title: "Measure tool", style: UIAlertActionStyle.default) { UIAlertAction in
                 self.setButtonsStatus(status: true)
                 self.measurementMode = true
                 self.closePhotoModeButton.isHidden = false
@@ -92,7 +94,7 @@ extension MainViewController {
             
             let object = (res.first?.node)!
             if object.name == "plane" {
-                alertController.addAction(measurementMode)
+                alertController.addAction(measurementModeAction)
                 alertController.addAction(cancelAction)
             } else {
                 alertController.addAction(moveAction)
@@ -105,7 +107,9 @@ extension MainViewController {
                 alertController.addAction(cancelAction)
             }
             
-            self.present(alertController, animated: true, completion: nil)
+            if !measurementMode {
+                self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     

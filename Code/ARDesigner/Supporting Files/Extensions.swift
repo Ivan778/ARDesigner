@@ -82,3 +82,15 @@ extension SCNGeometry {
         return SCNGeometry(sources: [source], elements: [element])
     }
 }
+
+extension UIScrollView {
+    func setScrollAlwaysVisible() {
+        Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true, block: { (Timer) -> Void in
+            for v in self.subviews {
+                if v.frame.width == 2.5 {
+                    v.alpha = 1.0
+                }
+            }
+        })
+    }
+}

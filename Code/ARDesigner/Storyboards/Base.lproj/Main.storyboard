@@ -95,10 +95,10 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWi-ue-DLK">
-                                <rect key="frame" x="163.5" y="598" width="49" height="49"/>
+                                <rect key="frame" x="153" y="577" width="70" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="ch2-c7-zF2"/>
-                                    <constraint firstAttribute="width" constant="49" id="tVK-Xj-pbd"/>
+                                    <constraint firstAttribute="height" constant="70" id="ch2-c7-zF2"/>
+                                    <constraint firstAttribute="width" constant="70" id="tVK-Xj-pbd"/>
                                 </constraints>
                                 <state key="normal" image="take_photo_black">
                                     <color key="titleColor" red="0.59711371527777779" green="0.4360116920757735" blue="0.73848564171838282" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,10 +108,10 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k3J-qp-X0t">
-                                <rect key="frame" x="306" y="598" width="49" height="49"/>
+                                <rect key="frame" x="315" y="592" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="9Mh-OB-HRD"/>
-                                    <constraint firstAttribute="height" constant="49" id="BNe-8g-SrW"/>
+                                    <constraint firstAttribute="width" constant="40" id="9Mh-OB-HRD"/>
+                                    <constraint firstAttribute="height" constant="40" id="BNe-8g-SrW"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="close_photo_mode"/>
                                 <connections>
@@ -131,7 +131,7 @@
                                     <action selector="hideUnhide:" destination="Ld3-Ue-aQ9" eventType="touchUpInside" id="lQs-L0-mVI"/>
                                 </connections>
                             </button>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Press this button to hide blue planes." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-Rc-v9f">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" text="Press this button to hide blue planes." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-Rc-v9f">
                                 <rect key="frame" x="20" y="97" width="192" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -141,7 +141,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Press this button to restart session. Restart of the session will remove all objects from the scene and all detected planes." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rM8-bo-VZb">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" text="Press this button to restart session. Restart of the session will remove all objects from the scene and all detected planes." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rM8-bo-VZb">
                                 <rect key="frame" x="226" y="97" width="129" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -151,7 +151,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-mM-qoD">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3X-mM-qoD">
                                 <rect key="frame" x="20" y="486" width="129" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -162,7 +162,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Click this button to select camera mode. You are able to take photos or videos." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-du-xa4">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" text="Click this button to select camera mode. You are able to take photos or videos." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqW-du-xa4">
                                 <rect key="frame" x="226" y="486" width="129" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -172,7 +172,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-Wp-3P7">
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-Wp-3P7">
                                 <rect key="frame" x="123" y="286" width="129" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -184,10 +184,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEZ-ey-04O">
-                                <rect key="frame" x="20" y="598" width="49" height="49"/>
+                                <rect key="frame" x="20" y="592" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="49" id="pG3-mi-pcs"/>
-                                    <constraint firstAttribute="height" constant="49" id="xqF-ef-CGK"/>
+                                    <constraint firstAttribute="width" constant="40" id="pG3-mi-pcs"/>
+                                    <constraint firstAttribute="height" constant="40" id="xqF-ef-CGK"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="share_icon"/>
                                 <connections>
@@ -214,8 +214,6 @@
                             <constraint firstItem="Tgv-Rc-v9f" firstAttribute="trailing" secondItem="Toy-Gw-Pdk" secondAttribute="trailing" id="Jh8-VU-mdu"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" id="MnI-1c-VcX"/>
                             <constraint firstItem="BUf-RL-8fP" firstAttribute="top" secondItem="DqW-du-xa4" secondAttribute="bottom" constant="18" id="O0z-Xw-bUe"/>
-                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="k3J-qp-X0t" secondAttribute="bottom" constant="20" id="Rz9-xm-Cqf"/>
-                            <constraint firstItem="fe1-gE-ma2" firstAttribute="bottom" secondItem="aEZ-ey-04O" secondAttribute="bottom" constant="20" id="TMs-9J-I1w"/>
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="16" id="aDJ-ke-0Uw"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" constant="20" id="ap9-4m-CvP"/>
                             <constraint firstItem="YCR-Wp-3P7" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="bHB-fB-7Fn"/>
@@ -223,11 +221,13 @@
                             <constraint firstItem="k9h-Wc-oKh" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="c3B-T3-BHW"/>
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="cHy-gB-kcv"/>
                             <constraint firstItem="BvM-jR-ZlU" firstAttribute="bottom" secondItem="fe1-gE-ma2" secondAttribute="bottom" id="cTR-ej-d2Z"/>
+                            <constraint firstItem="aEZ-ey-04O" firstAttribute="centerY" secondItem="gWi-ue-DLK" secondAttribute="centerY" id="cnS-B2-B4B"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k9h-Wc-oKh" secondAttribute="trailing" constant="16" id="enC-DV-8PX"/>
                             <constraint firstItem="Toy-Gw-Pdk" firstAttribute="centerX" secondItem="oce-9i-xQA" secondAttribute="centerX" id="gB3-0C-LIp"/>
                             <constraint firstItem="rM8-bo-VZb" firstAttribute="top" secondItem="bnl-u0-bRn" secondAttribute="bottom" constant="8" id="iTL-ir-Exa"/>
                             <constraint firstItem="Toy-Gw-Pdk" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="isR-Pn-LKP"/>
                             <constraint firstItem="rM8-bo-VZb" firstAttribute="trailing" secondItem="bnl-u0-bRn" secondAttribute="trailing" id="jFD-hd-GME"/>
+                            <constraint firstItem="k3J-qp-X0t" firstAttribute="centerY" secondItem="gWi-ue-DLK" secondAttribute="centerY" id="kDg-Kb-1D0"/>
                             <constraint firstItem="fe1-gE-ma2" firstAttribute="trailing" secondItem="k3J-qp-X0t" secondAttribute="trailing" constant="20" id="opJ-zV-7DD"/>
                             <constraint firstItem="8lv-X8-wsi" firstAttribute="top" secondItem="fe1-gE-ma2" secondAttribute="top" constant="20" id="q7E-Tx-u0I"/>
                             <constraint firstItem="aEZ-ey-04O" firstAttribute="leading" secondItem="fe1-gE-ma2" secondAttribute="leading" constant="20" id="rfn-HW-Rdp"/>

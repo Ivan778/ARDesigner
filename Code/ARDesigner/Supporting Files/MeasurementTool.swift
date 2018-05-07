@@ -45,4 +45,9 @@ class MeasurementTool {
             return c2 - (c2 - c1) / 2
         }
     }
+    
+    func freeMT() {
+        firstNode = nil
+        secondNode = nil
+    }
 }

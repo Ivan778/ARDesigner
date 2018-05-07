@@ -110,6 +110,42 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
         NotificationCenter.default.addObserver(self, selector: #selector(getModel), name: Notification.Name("getModel"), object: nil)
     }
     
+    func addGestureToView(view: UIView) {
+        let gesture1 = UITapGestureRecognizer(target: self, action: #selector(doubleTap(sender:)))
+        gesture1.numberOfTapsRequired = 2
+        view.addGestureRecognizer(gesture1)
+        
+        let gesture2 = UITapGestureRecognizer(target: self, action: #selector(doubleTap(sender:)))
+        gesture2.numberOfTapsRequired = 1
+        view.addGestureRecognizer(gesture2)
+        
+        let gesture3 = UILongPressGestureRecognizer(target: self, action: #selector(doubleTap(sender:)))
+        view.addGestureRecognizer(gesture3)
+        
+        let gesture4 = UISwipeGestureRecognizer(target: self, action: #selector(doubleTap(sender:)))
+        gesture4.direction = .left
+        view.addGestureRecognizer(gesture4)
+        
+        let gesture5 = UISwipeGestureRecognizer(target: self, action: #selector(doubleTap(sender:)))
+        gesture5.direction = .right
+        view.addGestureRecognizer(gesture5)
+        
+        let gesture6 = UITapGestureRecognizer(target: self, action: #selector(doubleTap(sender:)))
+        gesture6.numberOfTouchesRequired = 2
+        view.addGestureRecognizer(gesture6)
+    }
+    
+    @objc func doubleTap(sender: UIScrollView) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.01) {
+            self.text1.setScrollAlwaysVisible()
+            self.text2.setScrollAlwaysVisible()
+            self.text3.setScrollAlwaysVisible()
+            self.text4.setScrollAlwaysVisible()
+            self.text5.setScrollAlwaysVisible()
+        }
+        print("rgegergergerqer")
+    }
+    
     @objc func getModel() {
         let alert = UIAlertController(title: "New Model", message: "New model(s) was(were) successfully added!", preferredStyle: UIAlertControllerStyle.actionSheet)
         self.present(alert, animated: true, completion: nil)
@@ -368,6 +404,18 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             text4.isHidden = false
             text5.isHidden = false
             
+            self.view.bringSubview(toFront: text1)
+            self.view.bringSubview(toFront: text2)
+            self.view.bringSubview(toFront: text3)
+            self.view.bringSubview(toFront: text4)
+            self.view.bringSubview(toFront: text5)
+            
+            self.text1.setScrollAlwaysVisible()
+            self.text2.setScrollAlwaysVisible()
+            self.text3.setScrollAlwaysVisible()
+            self.text4.setScrollAlwaysVisible()
+            self.text5.setScrollAlwaysVisible()
+            
             questionPressed = true
             instructionButton.isHidden = true
         } else {
@@ -431,6 +479,7 @@ class MainViewController: UIViewController, SelectDownloadSourceDelegate, UIDocu
             measurementMode = false
             setButtonsStatus(status: false)
             closePhotoModeButton.isHidden = true
+            measurementTool.freeMT()
         }
         
     }
